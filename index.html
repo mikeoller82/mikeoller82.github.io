@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boost Your Productivity with AI Tools - 40% Off Premium SaaS</title>
+    <title>Supercharge Your Productivity with AI Tools</title>
     <style>
         * {
             margin: 0;
@@ -24,47 +24,13 @@
             padding: 0 20px;
         }
         
-        header {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #FFD700;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #FFD700;
-        }
-        
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
-            padding: 5rem 0;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 100px 0;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
         
         .hero::before {
@@ -74,7 +40,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23FFD700;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%230a0a0a;stop-opacity:0.1"/></linearGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23FFD700" opacity="0.03"/><circle cx="75" cy="75" r="1" fill="%23FFD700" opacity="0.03"/><circle cx="50" cy="10" r="0.5" fill="%23FFD700" opacity="0.02"/><circle cx="10" cy="50" r="0.5" fill="%23FFD700" opacity="0.02"/><circle cx="90" cy="30" r="0.5" fill="%23FFD700" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
             opacity: 0.3;
         }
         
@@ -84,245 +50,253 @@
         }
         
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
-            margin-bottom: 1rem;
-            color: #FFD700;
-            text-shadow: 2px 2px 4px rgba(255,215,0,0.3);
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .hero p {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: #e0e0e0;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
         
         .cta-button {
             display: inline-block;
             background: #FFD700;
             color: #0a0a0a;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
+            padding: 15px 40px;
             border-radius: 50px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
         
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
         }
         
+        /* Benefits Section */
         .benefits {
-            padding: 4rem 0;
-            background: #1a1a0a;
+            padding: 80px 0;
+            background: #1a1a1a;
         }
         
         .benefits h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #FFD700;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 40px;
+            margin-bottom: 60px;
         }
         
         .benefit-card {
             background: #0a0a0a;
-            padding: 2rem;
-            border-radius: 15px;
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid rgba(255,215,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         
         .benefit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(255,215,0,0.2);
-        }
-        
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #FFD700;
+            transform: translateY(-10px);
+            border-color: #FFD700;
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
         }
         
         .benefit-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
+            margin-bottom: 15px;
+            color: #FFD700;
         }
         
         .benefit-card p {
-            color: #b0b0b0;
+            color: #cccccc;
             line-height: 1.6;
         }
         
+        /* Features Section */
         .features {
-            padding: 4rem 0;
+            padding: 80px 0;
         }
         
         .features h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #FFD700;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .features-list {
             max-width: 800px;
             margin: 0 auto;
-            background: #0a0a0a;
-            padding: 2rem;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #1a1a1a;
             border-radius: 15px;
-            border: 1px solid rgba(255,215,0,0.1);
         }
         
-        .features-list ul {
-            list-style: none;
-        }
-        
-        .features-list li {
-            padding: 1rem 0;
-            border-bottom: 1px solid rgba(255,215,0,0.1);
+        .feature-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
+            margin-right: 25px;
+            font-size: 1.5rem;
+            color: #0a0a0a;
         }
         
-        .features-list li::before {
-            content: '✓';
-            color: #FFD700;
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 1.2rem;
+        .feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
         
-        .features-list li:last-child {
-            border-bottom: none;
+        .feature-content p {
+            color: #cccccc;
         }
         
+        /* Testimonials Section */
         .testimonials {
-            padding: 4rem 0;
-            background: #1a1a0a;
+            padding: 80px 0;
+            background: #1a1a1a;
         }
         
         .testimonials h2 {
             text-align: center;
             font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #FFD700;
+            margin-bottom: 60px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 40px;
         }
         
-        .testimonial {
+        .testimonial-card {
             background: #0a0a0a;
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(255,215,0,0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
         }
         
-        .testimonial p {
-            color: #b0b0b0;
-            margin-bottom: 1rem;
+        .testimonial-text {
             font-style: italic;
+            color: #cccccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
         .testimonial-author {
             font-weight: 600;
-            color: #ffffff;
+            color: #FFD700;
         }
         
-        .testimonial-author .company {
-            color: #FFD700;
-            font-weight: 400;
-            display: block;
+        .testimonial-role {
+            color: #999999;
             font-size: 0.9rem;
         }
         
-        .cta-section {
-            padding: 4rem 0;
+        /* CTA Section */
+        .final-cta {
+            padding: 100px 0;
             text-align: center;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
         }
         
-        .cta-section h2 {
+        .final-cta h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #FFD700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
-        .cta-section p {
+        .final-cta p {
             font-size: 1.25rem;
-            color: #e0e0e0;
-            margin-bottom: 2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
         }
         
-        .final-cta-button {
-            display: inline-block;
-            background: #FFD700;
-            color: #0a0a0a;
-            padding: 1.5rem 3rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 50px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
-        }
-        
-        .final-cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
-        }
-        
-        footer {
+        /* Footer */
+        .footer {
+            padding: 60px 0;
             background: #0a0a0a;
-            padding: 2rem 0;
             text-align: center;
-            border-top: 1px solid rgba(255,215,0,0.1);
         }
         
-        footer p {
-            color: #666;
+        .footer p {
+            color: #666666;
         }
         
-        footer a {
+        .footer a {
             color: #FFD700;
             text-decoration: none;
         }
         
-        footer a:hover {
+        .footer a:hover {
             text-decoration: underline;
         }
         
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: #ffffff;
-            font-size: 1.5rem;
-        }
-        
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
+            .hero {
+                padding: 60px 0;
             }
             
-            .mobile-menu-toggle {
-                display: block;
+            .benefits {
+                padding: 60px 0;
+            }
+            
+            .features {
+                padding: 60px 0;
+            }
+            
+            .testimonials {
+                padding: 60px 0;
+            }
+            
+            .final-cta {
+                padding: 80px 0;
+            }
+            
+            .footer {
+                padding: 40px 0;
             }
             
             .hero h1 {
@@ -330,122 +304,140 @@
             }
             
             .hero p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
             
-            .benefits h2,
-            .features h2,
-            .testimonials h2,
-            .cta-section h2 {
-                font-size: 2rem;
+            .features-list {
+                margin: 0 20px;
+            }
+            
+            .feature-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+            
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">AI Tools Pro</div>
-                <button class="mobile-menu-toggle">☰</button>
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#features">Features</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#cta">Get Started</a>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
+    <!-- Hero Section -->
+    <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Supercharge Your Productivity with AI Tools</h1>
-                <p>Discover premium SaaS tools that save you 20+ hours per week. Get 40% off your first year!</p>
-                <a href="#cta" class="cta-button">Get 40% Off Now</a>
+                <h1>Unlock Your Productivity with AI</h1>
+                <p>Transform your workflow with cutting-edge AI tools that save you time and boost efficiency</p>
+                <a href="https://www.monday.com/" class="cta-button" target="_blank">Get Started with Monday.com</a>
             </div>
         </div>
     </section>
 
+    <!-- Benefits Section -->
     <section class="benefits">
         <div class="container">
-            <h2>Why Choose Our AI Tools?</h2>
+            <h2>Why Choose AI Productivity Tools?</h2>
             <div class="benefits-grid">
                 <div class="benefit-card">
-                    <div class="benefit-icon">🚀</div>
-                    <h3>Lightning Fast</h3>
-                    <p>Automate repetitive tasks in seconds, not hours. Focus on what matters most.</p>
+                    <h3>🚀 Lightning Fast</h3>
+                    <p>Automate repetitive tasks and get more done in less time with AI-powered automation</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">💬</div>
-                    <h3>Seamless Integration</h3>
-                    <p>Works with your existing tools. No learning curve, just instant productivity.</p>
+                    <h3>💡 Smart Insights</h3>
+                    <p>AI analyzes your data to provide actionable insights and help you make better decisions</p>
                 </div>
                 <div class="benefit-card">
-                    <div class="benefit-icon">💰</div>
-                    <h3>Save Money</h3>
-                    <p>40% discount on premium tools means you pay less for more features.</p>
+                    <h3>💻 Seamless Integration</h3>
+                    <p>Connect all your favorite tools and apps in one centralized platform</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2>Premium Features Included</h2>
+            <h2>Powerful Features That Drive Results</h2>
             <div class="features-list">
-                <ul>
-                    <li>AI-powered content generation for blogs, emails, and social media</li>
-                    <li>Automated data analysis and reporting with real-time insights</li>
-                    <li>Smart scheduling and calendar optimization</li>
-                    <li>Advanced team collaboration with shared workspaces</li>
-                    <li>24/7 priority customer support with dedicated success manager</li>
-                </ul>
+                <div class="feature-item">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-content">
+                        <h3>AI-Powered Automation</h3>
+                        <p>Let AI handle routine tasks while you focus on strategic work that matters</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-content">
+                        <h3>Smart Analytics</h3>
+                        <p>Get real-time insights and predictive analytics to optimize your workflow</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤝</div>
+                    <div class="feature-content">
+                        <h3>Team Collaboration</h3>
+                        <p>Work seamlessly with your team using AI-enhanced communication tools</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔗</div>
+                    <div class="feature-content">
+                        <h3>Unlimited Integrations</h3>
+                        <p>Connect with 200+ apps including Slack, Zoom, Google Workspace, and more</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📱</div>
+                    <div class="feature-content">
+                        <h3>Mobile-First Design</h3>
+                        <p>Access your workspace from anywhere with fully responsive mobile apps</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
             <h2>What Our Users Say</h2>
             <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>"These AI tools completely transformed how we work. We've doubled our output without hiring anyone new."</p>
-                    <div class="testimonial-author">
-                        Sarah Johnson<br>
-                        <span class="company">Marketing Director</span>
-                    </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Monday.com's AI features have completely transformed how our team works. We've increased productivity by 40% in just 3 months!"</p>
+                    <p class="testimonial-author">Sarah Johnson</p>
+                    <p class="testimonial-role">Marketing Director</p>
                 </div>
-                <div class="testimonial">
-                    <p>"The 40% discount made premium tools affordable for our startup. ROI was positive within the first month."</p>
-                    <div class="testimonial-author">
-                        Mike Chen<br>
-                        <span class="company">Tech Entrepreneur</span>
-                    </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The automation capabilities are mind-blowing. What used to take hours now takes minutes, and the AI insights are incredibly accurate."</p>
+                    <p class="testimonial-author">Mike Chen</p>
+                    <p class="testimonial-role">CEO, Tech Startup</p>
                 </div>
-                <div class="testimonial">
-                    <p>"I was skeptical about AI tools, but now I can't imagine working without them. Best investment I've made this year."</p>
-                    <div class="testimonial-author">
-                        Emily Davis<br>
-                        <span class="company">Freelance Writer</span>
-                    </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"As a small business owner, Monday.com has been a game-changer. The AI helps me stay organized and focused on growth."</p>
+                    <p class="testimonial-author">Emily Rodriguez</p>
+                    <p class="testimonial-role">Small Business Owner</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <!-- Final CTA Section -->
+    <section class="final-cta">
         <div class="container">
-            <h2>Ready to Transform Your Workflow?</h2>
-            <p>Join thousands of professionals already saving time and money with our AI tools. Offer ends soon!</p>
-            <a href="#cta" class="final-cta-button">Get 40% Off Now</a>
+            <h2>Ready to Transform Your Productivity?</h2>
+            <p>Join thousands of teams already using AI to work smarter, not harder</p>
+            <a href="https://www.monday.com/" class="cta-button" target="_blank">Start Your Free Trial Today</a>
         </div>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 AI Tools Pro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2026 AI Productivity Tools. All rights reserved. | <a href="https://www.monday.com/" target="_blank">Powered by Monday.com</a></p>
         </div>
     </footer>
 
