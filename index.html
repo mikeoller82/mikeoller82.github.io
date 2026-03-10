@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transform Your Workflow with Monday.com - The Ultimate AI-Powered Project Management Platform</title>
+    <title>Boost Your Productivity with AI Tools - 40% Off Premium SaaS</title>
     <style>
         * {
             margin: 0;
@@ -12,60 +12,58 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
             color: #ffffff;
             line-height: 1.6;
-            overflow-x: hidden;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 20px;
         }
         
         header {
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            padding: 30px 0;
-            position: relative;
-            z-index: 10;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         
-        .header-content {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #FFD700;
         }
         
-        .nav {
+        .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 2rem;
         }
         
-        .nav a {
+        .nav-links a {
             color: #ffffff;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        .nav a:hover {
+        .nav-links a:hover {
             color: #FFD700;
         }
         
         .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+            padding: 5rem 0;
             text-align: center;
-            padding: 100px 0;
             position: relative;
         }
         
@@ -76,7 +74,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,215,0,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23FFD700;stop-opacity:0.1"/><stop offset="100%" style="stop-color:%230a0a0a;stop-opacity:0.1"/></linearGradient></defs><rect width="1200" height="600" fill="url(%23grad)"/></svg>');
             opacity: 0.3;
         }
         
@@ -87,331 +85,246 @@
         
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 0 0 20px rgba(255,215,0,0.5);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #FFD700;
+            text-shadow: 2px 2px 4px rgba(255,215,0,0.3);
         }
         
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-        
-        .hero p span {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: bold;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+            background: #FFD700;
             color: #0a0a0a;
-            padding: 20px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
             text-decoration: none;
             border-radius: 50px;
-            box-shadow: 0 10px 30px rgba(255,215,0,0.4);
             transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            margin: 10px;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255,215,0,0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
         }
         
-        .section {
-            padding: 80px 0;
+        .benefits {
+            padding: 4rem 0;
+            background: #1a1a0a;
         }
         
-        .section:nth-child(even) {
-            background: rgba(255,215,0,0.03);
-        }
-        
-        .content {
-            max-width: 800px;
-            margin: 0 auto;
+        .benefits h2 {
             text-align: center;
-        }
-        
-        .content h2 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 3rem;
             color: #FFD700;
         }
         
-        .content p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-        
-        .features {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
         
-        .feature-card {
-            background: rgba(255,255,255,0.05);
-            padding: 30px;
+        .benefit-card {
+            background: #0a0a0a;
+            padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255,215,0,0.1);
         }
         
-        .feature-card:hover {
+        .benefit-card:hover {
             transform: translateY(-5px);
-            background: rgba(255,255,255,0.08);
+            box-shadow: 0 10px 30px rgba(255,215,0,0.2);
         }
         
-        .feature-icon {
+        .benefit-icon {
             font-size: 3rem;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
             color: #FFD700;
         }
         
-        .feature-card h3 {
+        .benefit-card h3 {
             font-size: 1.5rem;
-            margin-bottom: 15px;
+            margin-bottom: 1rem;
             color: #ffffff;
         }
         
-        .feature-card p {
-            opacity: 0.8;
+        .benefit-card p {
+            color: #b0b0b0;
+            line-height: 1.6;
         }
         
-        .social-proof {
-            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,165,0,0.1) 100%);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 40px 0;
+        .features {
+            padding: 4rem 0;
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #FFD700;
+        }
+        
+        .features-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #0a0a0a;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,215,0,0.1);
+        }
+        
+        .features-list ul {
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,215,0,0.1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            color: #FFD700;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
         }
         
         .testimonials {
+            padding: 4rem 0;
+            background: #1a1a0a;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #FFD700;
+        }
+        
+        .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
         
         .testimonial {
-            background: rgba(0,0,0,0.3);
-            padding: 25px;
-            border-radius: 10px;
+            background: #0a0a0a;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255,215,0,0.1);
             text-align: center;
         }
         
         .testimonial p {
+            color: #b0b0b0;
+            margin-bottom: 1rem;
             font-style: italic;
-            opacity: 0.9;
-            margin-bottom: 15px;
         }
         
         .testimonial-author {
-            font-weight: bold;
-            color: #FFD700;
+            font-weight: 600;
+            color: #ffffff;
         }
         
         .testimonial-author .company {
-            opacity: 0.7;
-            font-weight: normal;
+            color: #FFD700;
+            font-weight: 400;
+            display: block;
             font-size: 0.9rem;
         }
         
-        .pricing-section {
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-            padding: 60px 0;
-        }
-        
-        .pricing-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .pricing-card {
-            background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            padding: 30px;
+        .cta-section {
+            padding: 4rem 0;
             text-align: center;
-            transition: all 0.3s;
-            position: relative;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
         }
         
-        .pricing-card.featured {
-            background: linear-gradient(135deg, rgba(255,215,0,0.1) 0%, rgba(255,165,0,0.1) 100%);
-            transform: scale(1.05);
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #FFD700;
         }
         
-        .pricing-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+        .cta-section p {
+            font-size: 1.25rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        
+        .final-cta-button {
+            display: inline-block;
+            background: #FFD700;
             color: #0a0a0a;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-        
-        .pricing-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.08);
-        }
-        
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-5px);
-        }
-        
-        .price {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #FFD700;
-            margin: 20px 0;
-        }
-        
-        .price span {
-            font-size: 1rem;
-            opacity: 0.7;
-        }
-        
-        .plan-name {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #ffffff;
-        }
-        
-        .plan-features {
-            list-style: none;
-            margin: 20px 0;
-            text-align: left;
-        }
-        
-        .plan-features li {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            opacity: 0.8;
-        }
-        
-        .plan-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .plan-features li::before {
-            content: '✓';
-            color: #FFD700;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-        
-        .faq-section {
-            padding: 80px 0;
-        }
-        
-        .faq {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            padding: 20px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s;
-        }
-        
-        .faq-question:hover {
-            background: rgba(255,255,255,0.08);
-        }
-        
-        .faq-question h4 {
-            color: #FFD700;
-            font-size: 1.1rem;
-        }
-        
-        .faq-arrow {
-            transition: transform 0.3s;
-        }
-        
-        .faq-item.active .faq-arrow {
-            transform: rotate(180deg);
-        }
-        
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
             transition: all 0.3s;
-            opacity: 0;
+            box-shadow: 0 4px 15px rgba(255,215,0,0.3);
         }
         
-        .faq-item.active .faq-answer {
-            padding: 0 20px 20px;
-            max-height: 500px;
-            opacity: 1;
-        }
-        
-        .faq-answer p {
-            opacity: 0.9;
-            margin-bottom: 10px;
+        .final-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
         }
         
         footer {
-            background: rgba(0,0,0,0.5);
+            background: #0a0a0a;
+            padding: 2rem 0;
             text-align: center;
-            padding: 30px 0;
-            margin-top: 60px;
+            border-top: 1px solid rgba(255,215,0,0.1);
         }
         
-        .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
+        footer p {
+            color: #666;
         }
         
-        .footer-content a {
-            color: #ffffff;
+        footer a {
+            color: #FFD700;
             text-decoration: none;
-            opacity: 0.7;
-            transition: opacity 0.3s;
         }
         
-        .footer-content a:hover {
-            opacity: 1;
+        footer a:hover {
+            text-decoration: underline;
         }
         
-        .footer-content span {
-            opacity: 0.5;
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.5rem;
         }
         
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -420,84 +333,121 @@
                 font-size: 1rem;
             }
             
-            .content h2 {
+            .benefits h2,
+            .features h2,
+            .testimonials h2,
+            .cta-section h2 {
                 font-size: 2rem;
             }
-            
-            .header-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .nav {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-        }
-        
-        .highlight {
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">Monday.com</div>
-                <nav class="nav">
+            <nav>
+                <div class="logo">AI Tools Pro</div>
+                <button class="mobile-menu-toggle">☰</button>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
                     <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#testimonials">Reviews</a>
-                </nav>
-            </div>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#cta">Get Started</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transform Your Workflow with Monday.com</h1>
-                <p>The <span>AI-powered</span> project management platform that 152,000+ teams trust to get things done</p>
-                <p>Join today and get <strong>14-day free trial</strong> + <strong>20% off</strong> your first 3 months</p>
-                <button class="cta-button" onclick="window.open('https://www.monday.com/pricing', '_blank')">Start Your Free Trial</button>
+                <h1>Supercharge Your Productivity with AI Tools</h1>
+                <p>Discover premium SaaS tools that save you 20+ hours per week. Get 40% off your first year!</p>
+                <a href="#cta" class="cta-button">Get 40% Off Now</a>
             </div>
         </div>
     </section>
 
-    <section class="section" id="features">
+    <section class="benefits">
         <div class="container">
-            <div class="content">
-                <h2>Why Monday.com is the #1 Choice for Teams</h2>
-                <p>Stop juggling multiple tools. Monday.com brings everything together in one powerful platform.</p>
+            <h2>Why Choose Our AI Tools?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Lightning Fast</h3>
+                    <p>Automate repetitive tasks in seconds, not hours. Focus on what matters most.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💬</div>
+                    <h3>Seamless Integration</h3>
+                    <p>Works with your existing tools. No learning curve, just instant productivity.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Save Money</h3>
+                    <p>40% discount on premium tools means you pay less for more features.</p>
+                </div>
             </div>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-                    <h3>AI-Powered Automation</h3>
-                    <p>Let AI handle repetitive tasks while you focus on what matters. Automate workflows, generate insights, and predict project outcomes.</p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Premium Features Included</h2>
+            <div class="features-list">
+                <ul>
+                    <li>AI-powered content generation for blogs, emails, and social media</li>
+                    <li>Automated data analysis and reporting with real-time insights</li>
+                    <li>Smart scheduling and calendar optimization</li>
+                    <li>Advanced team collaboration with shared workspaces</li>
+                    <li>24/7 priority customer support with dedicated success manager</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Users Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"These AI tools completely transformed how we work. We've doubled our output without hiring anyone new."</p>
+                    <div class="testimonial-author">
+                        Sarah Johnson<br>
+                        <span class="company">Marketing Director</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Real-Time Analytics</h3>
-                    <p>Make data-driven decisions with customizable dashboards and reports. Track progress, identify bottlenecks, and optimize performance.</p>
+                <div class="testimonial">
+                    <p>"The 40% discount made premium tools affordable for our startup. ROI was positive within the first month."</p>
+                    <div class="testimonial-author">
+                        Mike Chen<br>
+                        <span class="company">Tech Entrepreneur</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3>Team Collaboration</h3>
-                    <p>Keep everyone on the same page with seamless communication, file sharing, and task management in one unified workspace.</p>
+                <div class="testimonial">
+                    <p>"I was skeptical about AI tools, but now I can't imagine working without them. Best investment I've made this year."</p>
+                    <div class="testimonial-author">
+                        Emily Davis<br>
+                        <span class="company">Freelance Writer</span>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Scalable Solutions</h3>
-                    <p>Whether you're a startup or enterprise, Monday.com grows with you. Flexible plans and features for every team size.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Cross-Platform Access</h3>
-                    <p>Work from anywhere with web, mobile, and desktop apps. Sync across devices and never{
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Workflow?</h2>
+            <p>Join thousands of professionals already saving time and money with our AI tools. Offer ends soon!</p>
+            <a href="#cta" class="final-cta-button">Get 40% Off Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 AI Tools Pro. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
