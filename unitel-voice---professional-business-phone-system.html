@@ -3,303 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unitel Voice - Professional Business Phone System</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
+    <title>Unitel Voice - Professional Business Phone System — Affiliate Insider</title>
 
-        body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 100px 20px 80px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #FFD700, #FFA500);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: #cccccc;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #FFD700;
-            color: #0a0a0a;
-            padding: 18px 40px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-        }
-
-        /* Benefits Section */
-        .benefits {
-            padding: 80px 20px;
-            background-color: #111111;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: #FFD700;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .benefit-card {
-            background-color: #1a1a1a;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid #333333;
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-            border-color: #FFD700;
-        }
-
-        .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .benefit-card h3 {
-            color: #FFD700;
-            margin-bottom: 15px;
-            font-size: 1.4rem;
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 20px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-item {
-            background-color: #111111;
-            padding: 30px;
-            border-radius: 12px;
-            border-left: 4px solid #FFD700;
-        }
-
-        .feature-item h3 {
-            color: #FFD700;
-            margin-bottom: 12px;
-            font-size: 1.2rem;
-        }
-
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 20px;
-            background-color: #111111;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background-color: #1a1a1a;
-            padding: 35px 25px;
-            border-radius: 15px;
-            text-align: center;
-            border: 2px solid #333333;
-        }
-
-        .pricing-card.popular {
-            border-color: #FFD700;
-            position: relative;
-        }
-
-        .pricing-card.popular::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #FFD700;
-            color: #0a0a0a;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-
-        .pricing-card h3 {
-            color: #FFD700;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin: 20px 0 30px;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: #999999;
-        }
-
-        .features-list {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 30px;
-        }
-
-        .features-list li {
-            padding: 8px 0;
-            color: #cccccc;
-            border-bottom: 1px solid #2a2a2a;
-        }
-
-        .features-list li:last-child {
-            border-bottom: none;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 80px 20px;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background-color: #111111;
-            padding: 30px;
-            border-radius: 12px;
-            border-top: 4px solid #FFD700;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: #cccccc;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            color: #FFD700;
-            font-weight: 600;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            text-align: center;
-            padding: 100px 20px;
-            background: linear-gradient(180deg, #111111 0%, #0a0a0a 100%);
-        }
-
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #FFD700;
-        }
-
-        .cta-section p {
-            max-width: 600px;
-            margin: 0 auto 40px;
-            color: #cccccc;
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 20px;
-            background-color: #050505;
-            text-align: center;
-            color: #666666;
-            font-size: 0.9rem;
-            border-top: 1px solid #222222;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .cta-section h2 {
-                font-size: 2rem;
-            }
-
-            .btn {
-                padding: 16px 32px;
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#06060c">
+  <meta property="og:title" content="Unitel Voice - Professional Business Phone System — Affiliate Insider">
+  <meta property="og:description" content="Realistic AI voice generation at scale.">
+  <meta property="og:type" content="website">
 </head>
 <body>
+  <nav class="pill-nav">
+    <a href="/" class="active">🏠 Home</a>
+    <a href="/blog/">📝 Blog</a>
+  </nav>
+
+  <div class="lp-text">
+<div class="lp-hero-img">
+    <img src="unitel-voice---professional-business-phone-system-hero.png" alt="Unitel Voice - Professional Business Phone System" loading="lazy">
+  </div>
+
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Unitel Voice: Your Professional Business Phone System</h1>
+            <h1><span class="cyan">Unitel Voice: Your Professional Business Phone System</span></h1>
             <p>Run your business from anywhere with a powerful virtual phone system. Get a professional presence, unlimited calling, and advanced features starting at just $9.99/month. No long-term contracts. 30-day risk-free trial.</p>
             <a href="https://unitelvoice.partnerlinks.io/be1z1oh28pph" class="btn">Start Free Trial</a>
         </div>
@@ -389,13 +117,21 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
+  </div>
+
+  <footer>
+    <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
+    <div class="container">
             <p>© 2026 Unitel Voice. All rights reserved. Unitel Voice is a registered trademark.</p>
             <p>Pricing: StartUp $9.99/mo (3 users, 500 min), Unlimited $24.99/mo, Office $29.99/mo, Office-Max $69.99/mo. Add'l users $9.99/mo each.</p>
             <p>30-day risk-free trial. No long-term contracts. 24/7 USA-based support. Features, pricing subject to change.</p>
-            <p style="margin-top: 20px; font-size: 0.8rem; color: #444444;">This is an affiliate landing page. We may receive a commission if you sign up for Unitel Voice services through our links at no extra cost to you.</p>
+            <p>This is an affiliate landing page. We may receive a commission if you sign up for Unitel Voice services through our links at no extra cost to you.</p>
         </div>
-    </footer>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </footer>
 </body>
 </html>
