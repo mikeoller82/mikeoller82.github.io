@@ -3,200 +3,322 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Affiliate Insider - Top AI & SaaS Deals</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
-    header { background: linear-gradient(135deg, #0a0a0a, #1a1a2e); padding: 60px 20px; text-align: center; border-bottom: 2px solid #FFD700; }
-    header h1 { font-size: 2.5em; color: #FFD700; margin-bottom: 10px; }
-    header p { color: #ccc; font-size: 1.1em; }
-    nav { display: flex; justify-content: center; gap: 30px; padding: 20px; background: #111; border-bottom: 1px solid #222; }
-    nav a { color: #FFD700; text-decoration: none; font-weight: bold; padding: 8px 20px; border-radius: 6px; border: 1px solid #FFD700; transition: all 0.2s; }
-    nav a:hover { background: #FFD700; color: #000; }
-    .section-title { text-align: center; color: #FFD700; font-size: 1.6em; padding: 40px 20px 10px; }
-    .section-sub { text-align: center; color: #888; padding: 0 20px 20px; }
-    .grid { display: flex; flex-wrap: wrap; gap: 24px; padding: 20px 40px 40px; max-width: 1200px; margin: 0 auto; justify-content: center; }
-    .card { background: #1a1a2e; border: 1px solid #333; border-radius: 12px; padding: 24px; width: 300px; overflow: hidden; transition: transform 0.2s, border-color 0.2s; }
-    .card:hover { transform: translateY(-4px); border-color: #FFD700; }
-    .card h2 { font-size: 1em; color: #FFD700; margin-bottom: 12px; line-height: 1.4; }
-    .card a { display: inline-block; padding: 10px 20px; background: #FFD700; color: #000; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.9em; margin-top: 10px; }
-    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.75em; margin-bottom: 10px; font-weight: bold; }
-    .badge-offer { background: #0f3460; color: #FFD700; }
-    .badge-blog { background: #1a3320; color: #4CAF50; }
-    .date { color: #888; font-size: 0.82em; margin-bottom: 6px; }
-    .divider { width: 100%; max-width: 1200px; margin: 0 auto; border: none; border-top: 1px solid #222; }
-    .view-all { text-align: center; padding: 0 0 40px; }
-    .view-all a { color: #FFD700; text-decoration: none; font-weight: bold; border-bottom: 1px solid #FFD700; padding-bottom: 2px; }
-    footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 40px; }
-  </style>
+  <title>Affiliate Insider — Top AI & SaaS Deals, Curated by AI Agents</title>
+  <meta name="description" content="Curated AI and SaaS deals updated automatically every 4 hours by autonomous agents. Discover the best tools for your business.">
+  <meta name="theme-color" content="#06060c">
+  <meta property="og:title" content="Affiliate Insider — Top AI & SaaS Deals">
+  <meta property="og:description" content="Curated AI and SaaS deals updated automatically every 4 hours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mikeoller82.github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header>
-    <h1>🏆 Affiliate Insider</h1>
-    <p>Top AI & SaaS deals — updated automatically every 4 hours</p>
-  </header>
-  <nav>
-    <a href="/">🏠 Home</a>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-line"></div>
+    <div class="hero-badge"><span class="live-dot"></span> AI AGENTS ACTIVE · UPDATED EVERY 4 HOURS</div>
+    <h1><span class="cyan">Affiliate</span> <span class="purple">Insider</span></h1>
+    <p>Top AI &amp; SaaS deals — curated and updated automatically every 4 hours by autonomous agents. Last updated March 13, 2026.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">18</span>
+        <span class="hero-stat-label">Offers</span>
+      </div>
+      <div class="hero-stat-dot"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value purple-val">12</span>
+        <span class="hero-stat-label">Blog Posts</span>
+      </div>
+      <div class="hero-stat-dot"></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value gold-val">24/7</span>
+        <span class="hero-stat-label">AI Active</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="pill-nav">
+    <a href="/" class="active">🏠 Home</a>
     <a href="/blog/">📝 Blog</a>
   </nav>
-  <h2 class="section-title">🔥 Top Affiliate Offers</h2>
-  <p class="section-sub">Hand-picked deals with the highest conversion potential right now</p>
-  <div class="grid">
+
+  <!-- Top Affiliate Offers -->
+  <div class="section-header">
+    <h2><span class="icon">🔥</span> Top Affiliate Offers</h2>
+    <p>// hand-picked deals with the highest conversion potential right now</p>
+  </div>
+  <div class="bento-grid">
     <div class="card">
-      <img src="capsule-transpond-review-2026-simple-crm-ema-hero.png" alt="Capsule & Transpond Review 2026 — Simple CRM + Email Marketing for Small Business" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Capsule & Transpond Review 2026 — Simple CRM + Email Marketing for Small Business</h2>
-      <a href="capsule-transpond-review-2026-simple-crm-ema.html">View Deal →</a>
+      <div class="card-img"><img src="capsule-transpond-review-2026-simple-crm-ema-hero.png" alt="Capsule & Transpond — Simple CRM + Email Marketin..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-featured">⭐ Featured</span>
+        <h3>Capsule & Transpond — Simple CRM + Email Marketin...</h3>
+        <p>Powerful email marketing for creators.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Marketing</span><span class="tag tag-green">Sales</span></div>
+        <a href="capsule-transpond-review-2026-simple-crm-ema.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="tidio-review-2026-ai-customer-service-agent-that-hero.png" alt="Tidio Review 2026 — AI Customer Service Agent That Actually Works" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Tidio Review 2026 — AI Customer Service Agent That Actually Works</h2>
-      <a href="tidio-review-2026-ai-customer-service-agent-that.html">View Deal →</a>
+      <div class="card-img"><img src="tidio-review-2026-ai-customer-service-agent-that-hero.png" alt="Tidio — AI Customer Service Agent That Actually W..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-featured">⭐ Featured</span>
+        <h3>Tidio — AI Customer Service Agent That Actually W...</h3>
+        <p>AI chatbot for your business.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="tidio-review-2026-ai-customer-service-agent-that.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="kit-convertkit-review-2026-email-marketing-bui-hero.png" alt="Kit (ConvertKit) Review 2026 — Email Marketing Built for Creators" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Kit (ConvertKit) Review 2026 — Email Marketing Built for Creators</h2>
-      <a href="kit-convertkit-review-2026-email-marketing-bui.html">View Deal →</a>
+      <div class="card-img"><img src="kit-convertkit-review-2026-email-marketing-bui-hero.png" alt="Kit (ConvertKit) — Email Marketing Built for Crea..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-featured">⭐ Featured</span>
+        <h3>Kit (ConvertKit) — Email Marketing Built for Crea...</h3>
+        <p>Powerful email marketing for creators.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Marketing</span></div>
+        <a href="kit-convertkit-review-2026-email-marketing-bui.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="kartra-review-2026-the-all-in-one-marketing-plat-hero.png" alt="Kartra Review 2026 — The All-in-One Marketing Platform That Replaces 7+ Tools" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Kartra Review 2026 — The All-in-One Marketing Platform That Replaces 7+ Tools</h2>
-      <a href="kartra-review-2026-the-all-in-one-marketing-plat.html">View Deal →</a>
+      <div class="card-img"><img src="kartra-review-2026-the-all-in-one-marketing-plat-hero.png" alt="Kartra — The All-in-One Marketing Platform That R..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Kartra — The All-in-One Marketing Platform That R...</h3>
+        <p>All-in-one marketing funnels.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">SaaS</span><span class="tag tag-gold">Marketing</span></div>
+        <a href="kartra-review-2026-the-all-in-one-marketing-plat.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="flowith-review-2026-the-ai-workspace-that-thinks-hero.png" alt="Flowith Review 2026 — The AI Workspace That Thinks, Creates, and Executes" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Flowith Review 2026 — The AI Workspace That Thinks, Creates, and Executes</h2>
-      <a href="flowith-review-2026-the-ai-workspace-that-thinks.html">View Deal →</a>
+      <div class="card-img"><img src="flowith-review-2026-the-ai-workspace-that-thinks-hero.png" alt="Flowith — The AI Workspace That Thinks, Creates, ..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Flowith — The AI Workspace That Thinks, Creates, ...</h3>
+        <p>AI workflow automation for teams.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="flowith-review-2026-the-ai-workspace-that-thinks.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="eleven-labs-review-2026-ai-voice-generator-that-hero.png" alt="Eleven Labs Review 2026 — AI Voice Generator That Sounds Human" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Eleven Labs Review 2026 — AI Voice Generator That Sounds Human</h2>
-      <a href="eleven-labs-review-2026-ai-voice-generator-that.html">View Deal →</a>
+      <div class="card-img"><img src="eleven-labs-review-2026-ai-voice-generator-that-hero.png" alt="Eleven Labs — AI Voice Generator That Sounds Human" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Eleven Labs — AI Voice Generator That Sounds Human</h3>
+        <p>Realistic AI voice generation at scale.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">Media</span></div>
+        <a href="eleven-labs-review-2026-ai-voice-generator-that.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="diginius-insight-ppc-analytics-reporting-for-m-hero.png" alt="Diginius Insight - PPC Analytics & Reporting for Marketing Agencies" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Diginius Insight - PPC Analytics & Reporting for Marketing Agencies</h2>
-      <a href="diginius-insight-ppc-analytics-reporting-for-m.html">View Deal →</a>
+      <div class="card-img"><img src="diginius-insight-ppc-analytics-reporting-for-m-hero.png" alt="Diginius Insight - PPC Analytics & Reporting for ..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Diginius Insight - PPC Analytics & Reporting for ...</h3>
+        <p>All-in-one marketing funnels.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Marketing</span></div>
+        <a href="diginius-insight-ppc-analytics-reporting-for-m.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="webydo-professional-website-builder-for-designer-hero.png" alt="Webydo - Professional Website Builder for Designers & Agencies" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Webydo - Professional Website Builder for Designers & Agencies</h2>
-      <a href="webydo-professional-website-builder-for-designer.html">View Deal →</a>
+      <div class="card-img"><img src="webydo-professional-website-builder-for-designer-hero.png" alt="Webydo - Professional Website Builder for Designe..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Webydo - Professional Website Builder for Designe...</h3>
+        <p>Professional website design platform.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="webydo-professional-website-builder-for-designer.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="partnerstack-the-1-partner-ecosystem-platform-f-hero.png" alt="PartnerStack - The #1 Partner Ecosystem Platform for B2B SaaS" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>PartnerStack - The #1 Partner Ecosystem Platform for B2B SaaS</h2>
-      <a href="partnerstack-the-1-partner-ecosystem-platform-f.html">View Deal →</a>
+      <div class="card-img"><img src="partnerstack-the-1-partner-ecosystem-platform-f-hero.png" alt="PartnerStack - The #1 Partner Ecosystem Platform ..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>PartnerStack - The #1 Partner Ecosystem Platform ...</h3>
+        <p>Grow your affiliate partnerships.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">SaaS</span></div>
+        <a href="partnerstack-the-1-partner-ecosystem-platform-f.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="partnerstack---the-1-partner-ecosystem-platform-fo-hero.png" alt="PartnerStack - The #1 Partner Ecosystem Platform for B2B SaaS" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>PartnerStack - The #1 Partner Ecosystem Platform for B2B SaaS</h2>
-      <a href="partnerstack---the-1-partner-ecosystem-platform-fo.html">View Deal →</a>
+      <div class="card-img"><img src="partnerstack---the-1-partner-ecosystem-platform-fo-hero.png" alt="PartnerStack - The #1 Partner Ecosystem Platform ..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>PartnerStack - The #1 Partner Ecosystem Platform ...</h3>
+        <p>Grow your affiliate partnerships.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">SaaS</span></div>
+        <a href="partnerstack---the-1-partner-ecosystem-platform-fo.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="diginius-insight---ppc--marketing-analytics-for-ag-hero.png" alt="Diginius Insight - PPC & Marketing Analytics for Agencies" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Diginius Insight - PPC & Marketing Analytics for Agencies</h2>
-      <a href="diginius-insight---ppc--marketing-analytics-for-ag.html">View Deal →</a>
+      <div class="card-img"><img src="diginius-insight---ppc--marketing-analytics-for-ag-hero.png" alt="Diginius Insight - PPC & Marketing Analytics for ..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Diginius Insight - PPC & Marketing Analytics for ...</h3>
+        <p>All-in-one marketing funnels.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Marketing</span></div>
+        <a href="diginius-insight---ppc--marketing-analytics-for-ag.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="whatconverts---track-every-lead-prove-every-dollar-hero.png" alt="WhatConverts - Track Every Lead, Prove Every Dollar" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>WhatConverts - Track Every Lead, Prove Every Dollar</h2>
-      <a href="whatconverts---track-every-lead-prove-every-dollar.html">View Deal →</a>
+      <div class="card-img"><img src="whatconverts---track-every-lead-prove-every-dollar-hero.png" alt="WhatConverts - Track Every Lead, Prove Every Dollar" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>WhatConverts - Track Every Lead, Prove Every Dollar</h3>
+        <p>Powerful email marketing for creators.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-green">Sales</span></div>
+        <a href="whatconverts---track-every-lead-prove-every-dollar.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="whatconverts---lead-tracking-for-marketing-agencie-hero.png" alt="WhatConverts - Lead Tracking for Marketing Agencies" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>WhatConverts - Lead Tracking for Marketing Agencies</h2>
-      <a href="whatconverts---lead-tracking-for-marketing-agencie.html">View Deal →</a>
+      <div class="card-img"><img src="whatconverts---lead-tracking-for-marketing-agencie-hero.png" alt="WhatConverts - Lead Tracking for Marketing Agencies" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>WhatConverts - Lead Tracking for Marketing Agencies</h3>
+        <p>Powerful email marketing for creators.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Marketing</span><span class="tag tag-green">Sales</span></div>
+        <a href="whatconverts---lead-tracking-for-marketing-agencie.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="learnworlds---create--sell-online-courses-hero.png" alt="LearnWorlds - Create & Sell Online Courses" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>LearnWorlds - Create & Sell Online Courses</h2>
-      <a href="learnworlds---create--sell-online-courses.html">View Deal →</a>
+      <div class="card-img"><img src="learnworlds---create--sell-online-courses-hero.png" alt="LearnWorlds - Create & Sell Online Courses" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>LearnWorlds - Create & Sell Online Courses</h3>
+        <p>Create and sell online courses with ease.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Education</span></div>
+        <a href="learnworlds---create--sell-online-courses.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="unitel-voice---professional-business-phone-system-hero.png" alt="Unitel Voice - Professional Business Phone System" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Unitel Voice - Professional Business Phone System</h2>
-      <a href="unitel-voice---professional-business-phone-system.html">View Deal →</a>
+      <div class="card-img"><img src="unitel-voice---professional-business-phone-system-hero.png" alt="Unitel Voice - Professional Business Phone System" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Unitel Voice - Professional Business Phone System</h3>
+        <p>Realistic AI voice generation at scale.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">Media</span></div>
+        <a href="unitel-voice---professional-business-phone-system.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="eleven-labs-ai-voice-generator---transform-your-co-hero.png" alt="Eleven Labs AI Voice Generator - Transform Your Content Today" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Eleven Labs AI Voice Generator - Transform Your Content Today</h2>
-      <a href="eleven-labs-ai-voice-generator---transform-your-co.html">View Deal →</a>
+      <div class="card-img"><img src="eleven-labs-ai-voice-generator---transform-your-co-hero.png" alt="Eleven Labs AI Voice Generator - Transform Your C..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Eleven Labs AI Voice Generator - Transform Your C...</h3>
+        <p>Realistic AI voice generation at scale.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">Media</span></div>
+        <a href="eleven-labs-ai-voice-generator---transform-your-co.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="descript-ai-powered-video--audio-editing--edit-lik-hero.png" alt="Descript: AI-Powered Video & Audio Editing | Edit Like Never Before" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Descript: AI-Powered Video & Audio Editing | Edit Like Never Before</h2>
-      <a href="descript-ai-powered-video--audio-editing--edit-lik.html">View Deal →</a>
+      <div class="card-img"><img src="descript-ai-powered-video--audio-editing--edit-lik-hero.png" alt="Descript: AI-Powered Video & Audio Editing | Edit..." loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Descript: AI-Powered Video & Audio Editing | Edit...</h3>
+        <p>AI-powered video editing made simple.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-purple">Media</span></div>
+        <a href="descript-ai-powered-video--audio-editing--edit-lik.html" class="btn btn-gold">View Deal →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="supercharge-your-productivity-with-ai-tools-hero.png" alt="Supercharge Your Productivity with AI Tools" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-offer">🔥 Hot Offer</span>
-      <h2>Supercharge Your Productivity with AI Tools</h2>
-      <a href="supercharge-your-productivity-with-ai-tools.html">View Deal →</a>
-    </div></div>
+      <div class="card-img"><img src="supercharge-your-productivity-with-ai-tools-hero.png" alt="Supercharge Your Productivity with AI Tools" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-offer">🔥 Hot Offer</span>
+        <h3>Supercharge Your Productivity with AI Tools</h3>
+        <p>Powerful software to grow your business.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="supercharge-your-productivity-with-ai-tools.html" class="btn btn-gold">View Deal →</a>
+      </div>
+    </div>
+  </div>
+
   <hr class="divider">
-  <h2 class="section-title">📝 Latest Blog Posts</h2>
-  <p class="section-sub">In-depth guides and reviews — new posts every 4 hours</p>
-  <div class="grid">
+
+  <!-- Latest Blog Posts -->
+  <div class="section-header">
+    <h2><span class="icon">📝</span> Latest Blog Posts</h2>
+    <p>// in-depth guides and reviews — new posts every 4 hours</p>
+  </div>
+  <div class="bento-grid">
     <div class="card">
-      <img src="blog/2026-03-13-0852-trainual.png" alt="Trainual Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-13</div>
-      <h2>Trainual Review 2026</h2>
-      <a href="blog/2026-03-13-0852-trainual.html" style="color:#4CAF50;">Read Post →</a>
+      <div class="card-img"><img src="blog/2026-03-13-0852-trainual.png" alt="Trainual" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>Trainual</h3>
+        <p>Create and sell online courses with ease.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="blog/2026-03-13-0852-trainual.html" class="btn btn-cyan">Read Post →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="blog/2026-03-13-0734-partnerstack.png" alt="PartnerStack Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-13</div>
-      <h2>PartnerStack Review 2026</h2>
-      <a href="blog/2026-03-13-0734-partnerstack.html" style="color:#4CAF50;">Read Post →</a>
+      <div class="card-img"><img src="blog/2026-03-13-0734-partnerstack.png" alt="PartnerStack" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>PartnerStack</h3>
+        <p>Grow your affiliate partnerships.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="blog/2026-03-13-0734-partnerstack.html" class="btn btn-cyan">Read Post →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="blog/2026-03-13-0346-learnworlds.png" alt="LearnWorlds Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-13</div>
-      <h2>LearnWorlds Review 2026</h2>
-      <a href="blog/2026-03-13-0346-learnworlds.html" style="color:#4CAF50;">Read Post →</a>
+      <div class="card-img"><img src="blog/2026-03-13-0346-learnworlds.png" alt="LearnWorlds" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>LearnWorlds</h3>
+        <p>Create and sell online courses with ease.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span><span class="tag tag-gold">Education</span></div>
+        <a href="blog/2026-03-13-0346-learnworlds.html" class="btn btn-cyan">Read Post →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="blog/2026-03-13-0051-whatconverts.png" alt="WhatConverts Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-13</div>
-      <h2>WhatConverts Review 2026</h2>
-      <a href="blog/2026-03-13-0051-whatconverts.html" style="color:#4CAF50;">Read Post →</a>
+      <div class="card-img"><img src="blog/2026-03-13-0051-whatconverts.png" alt="WhatConverts" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>WhatConverts</h3>
+        <p>Powerful email marketing for creators.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="blog/2026-03-13-0051-whatconverts.html" class="btn btn-cyan">Read Post →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="blog/2026-03-12-2053-refresh-me.png" alt="Refresh.me Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-12</div>
-      <h2>Refresh.me Review 2026</h2>
-      <a href="blog/2026-03-12-2053-refresh-me.html" style="color:#4CAF50;">Read Post →</a>
+      <div class="card-img"><img src="blog/2026-03-12-2053-refresh-me.png" alt="Refresh.me" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>Refresh.me</h3>
+        <p>Build and manage your personal brand.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="blog/2026-03-12-2053-refresh-me.html" class="btn btn-cyan">Read Post →</a>
+      </div>
     </div>
     <div class="card">
-      <img src="blog/2026-03-12-2046-quillbot.png" alt="QuillBot Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <span class="badge badge-blog">📝 Blog Post</span>
-      <div class="date">2026-03-12</div>
-      <h2>QuillBot Review 2026</h2>
-      <a href="blog/2026-03-12-2046-quillbot.html" style="color:#4CAF50;">Read Post →</a>
-    </div></div>
-  <div class="view-all"><a href="/blog/">View All Blog Posts →</a></div>
-  <footer><p>Affiliate Insider · Updated automatically by AI agents every 4 hours</p></footer>
+      <div class="card-img"><img src="blog/2026-03-12-2046-quillbot.png" alt="QuillBot" loading="lazy"></div>
+      <div class="card-body">
+        <span class="badge badge-blog">📝 Blog Post</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>QuillBot</h3>
+        <p>AI writing assistant for faster content.</p>
+        <div class="tags"><span class="tag tag-cyan">AI</span></div>
+        <a href="blog/2026-03-12-2046-quillbot.html" class="btn btn-cyan">Read Post →</a>
+      </div>
+    </div>
+  </div>
+  <div class="view-all"><a href="/blog/">View All 12 Blog Posts →</a></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
+    <p>Updated automatically by AI agents every 4 hours · March 13, 2026</p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+    </div>
+  </footer>
+
 </body>
 </html>
