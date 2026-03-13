@@ -905,3 +905,257 @@ footer .footer-links a:hover { color: var(--cyan); }
   border: none;
   padding: 0;
 }
+
+/* ── Landing Page Components ───────────────────────────────────── */
+
+/* Hero CTA button (inline, not full-width) */
+.hero .btn {
+  width: auto;
+  display: inline-flex;
+  padding: 16px 40px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+  margin-top: 32px;
+}
+
+/* Product screenshot showcase */
+.lp-hero-img {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px 56px;
+  position: relative;
+  z-index: 1;
+}
+
+.lp-hero-img img {
+  width: 100%;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-hover);
+  transition: transform var(--transition-smooth);
+}
+
+.lp-hero-img img:hover {
+  transform: scale(1.015);
+}
+
+/* Image fade overlay */
+.lp-hero-img::after {
+  content: '';
+  position: absolute;
+  bottom: 56px; left: 28px; right: 28px;
+  height: 80px;
+  background: linear-gradient(transparent, var(--bg-base));
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  pointer-events: none;
+}
+
+/* Wider text section (vs narrow post-content) */
+.lp-text {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 28px 48px;
+}
+
+.lp-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.lp-text ul, .lp-text ol {
+  margin: 16px 0 24px 24px;
+  color: var(--text-secondary);
+}
+
+.lp-text li {
+  margin-bottom: 12px;
+  line-height: 1.65;
+  font-size: 1.02rem;
+}
+
+.lp-text li strong {
+  color: var(--text-primary);
+}
+
+.lp-text a {
+  color: var(--cyan);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.lp-text a:hover { color: var(--cyan-soft); }
+
+/* CTA Banner Section */
+.lp-cta-banner {
+  text-align: center;
+  padding: 64px 28px;
+  margin: 0 auto;
+  max-width: 1280px;
+  position: relative;
+}
+
+.lp-cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0 28px;
+  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-elevated) 100%);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  z-index: -1;
+}
+
+.lp-cta-banner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 28px; right: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, var(--cyan-border) 50%, transparent 90%);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.lp-cta-banner h2 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+}
+
+.lp-cta-banner p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.lp-cta-banner .btn {
+  width: auto;
+  display: inline-flex;
+  padding: 16px 40px;
+  font-size: 15px;
+  border-radius: var(--radius-md);
+}
+
+/* 2-Column Grid (pros/cons, comparisons) */
+.lp-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px 48px;
+}
+
+/* Landing page info card */
+.lp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-smooth);
+}
+
+.lp-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.lp-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.3px;
+}
+
+.lp-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lp-card li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.lp-card li:last-child { border-bottom: none; }
+
+.lp-card-pros h3 { color: var(--green); }
+.lp-card-cons h3 { color: var(--red); }
+
+/* Pricing cards in bento grid */
+.card .price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--cyan);
+  letter-spacing: -1px;
+  margin: 8px 0 4px;
+}
+
+.card .price-period {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.card .price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.card .price-features li {
+  padding: 6px 0;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card .price-features li:last-child { border-bottom: none; }
+
+/* Landing page responsive */
+@media (max-width: 768px) {
+  .lp-grid-2 {
+    grid-template-columns: 1fr;
+    padding: 0 16px 36px;
+  }
+  .lp-hero-img {
+    padding: 0 16px 36px;
+  }
+  .lp-text {
+    padding: 0 16px 36px;
+  }
+  .lp-cta-banner {
+    padding: 48px 16px;
+  }
+  .lp-cta-banner::before { inset: 0 16px; }
+  .lp-cta-banner::after { left: 16px; right: 16px; }
+  .lp-cta-banner h2 { font-size: 1.6rem; }
+  .lp-card { padding: 24px; }
+  .hero .btn {
+    padding: 14px 32px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lp-hero-img { padding: 0 16px 28px; }
+  .lp-hero-img::after { bottom: 28px; left: 16px; right: 16px; }
+  .lp-cta-banner { padding: 40px 16px; }
+  .lp-card { padding: 20px; }
+}
