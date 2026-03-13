@@ -4,91 +4,248 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Affiliate Insider</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #0a0a0a; color: #fff; }
-    header { background: #1a1a2e; padding: 20px; text-align: center; border-bottom: 2px solid #FFD700; }
-    header a { color: #FFD700; text-decoration: none; font-size: 1.2em; font-weight: bold; }
-    h1 { text-align: center; color: #FFD700; padding: 40px 20px 20px; font-size: 2em; }
-    .grid { display: flex; flex-wrap: wrap; gap: 24px; padding: 20px; max-width: 1200px; margin: 0 auto; justify-content: center; }
-    .card { background: #1a1a2e; border: 1px solid #333; border-radius: 12px; padding: 24px; width: 320px; overflow: hidden; transition: border-color 0.2s; }
-    .card:hover { border-color: #FFD700; }
-    .date { color: #888; font-size: 0.85em; margin-bottom: 8px; }
-    .card h2 { color: #fff; font-size: 1em; margin-bottom: 16px; line-height: 1.4; }
-    .card a { color: #FFD700; text-decoration: none; font-weight: bold; }
-    footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 40px; }
-  </style>
+  <meta name="description" content="AI and SaaS reviews, guides, and tutorials updated every 4 hours.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header><a href="/">🏆 Affiliate Insider</a></header>
-  <h1>Blog</h1>
-  <div class="grid">
-    <div class="card">
-      <img src="2026-03-13-0734-partnerstack.png" alt="PartnerStack Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-13</div>
-      <h2>PartnerStack Review 2026</h2>
-      <a href="2026-03-13-0734-partnerstack.html">Read Post →</a>
+  <!-- Animated Background -->
+  <div class="bg-effects">
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <div class="particles"></div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-badge">
+      <span class="live-dot"></span>
+      11 ARTICLES · NEW CONTENT EVERY 4 HOURS
     </div>
-    <div class="card">
-      <img src="2026-03-13-0346-learnworlds.png" alt="LearnWorlds Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-13</div>
-      <h2>LearnWorlds Review 2026</h2>
-      <a href="2026-03-13-0346-learnworlds.html">Read Post →</a>
+    <h1>
+      📝 <span class="cyan">Blog</span>
+    </h1>
+    <p>In-depth AI &amp; SaaS reviews, tutorials, and guides — written and published automatically every 4 hours.</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="pill-nav" role="navigation">
+    <a href="/">🏠 Home</a>
+    <a href="/blog/" class="active" aria-current="page">📝 Blog</a>
+  </nav>
+
+  <!-- Search -->
+  <div class="search-filters">
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search articles... (press / to focus)" autocomplete="off">
     </div>
-    <div class="card">
-      <img src="2026-03-13-0051-whatconverts.png" alt="WhatConverts Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-13</div>
-      <h2>WhatConverts Review 2026</h2>
-      <a href="2026-03-13-0051-whatconverts.html">Read Post →</a>
+  </div>
+
+  <!-- All Posts -->
+  <main class="container">
+    <div class="section-header">
+      <h2><span class="icon">📚</span> All Articles</h2>
+      <p>// 11 in-depth guides and reviews</p>
     </div>
-    <div class="card">
-      <img src="2026-03-12-ai-tools-trending.png" alt="AI Tools Trending" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-12</div>
-      <h2>AI Tools Trending</h2>
-      <a href="2026-03-12-ai-tools-trending.html">Read Post →</a>
+    
+    <div class="bento-grid" id="blog-grid">
+      
+    <article class="card featured">
+      <div class="card-img">
+          <img src="2026-03-13-0734-partnerstack.png" alt="PartnerStack" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>PartnerStack</h3>
+        <p>Grow your affiliate partnerships. Maximize commissions with smart tracking.</p>
+        <div class="tags"><span class="tag tag-cyan">Top Pick</span></div>
+        <a href="2026-03-13-0734-partnerstack.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-13-0346-learnworlds.png" alt="LearnWorlds" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>LearnWorlds</h3>
+        <p>Create and sell online courses with ease. Monetize your expertise effortlessly.</p>
+        <div class="tags"><span class="tag tag-gold">Education</span></div>
+        <a href="2026-03-13-0346-learnworlds.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-13-0051-whatconverts.png" alt="WhatConverts" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-13</div>
+        <h3>WhatConverts</h3>
+        <p>Powerful email marketing for creators. Build lists, automate sequences, and grow your audience.</p>
+        <div class="tags"><span class="tag tag-cyan">Top Pick</span></div>
+        <a href="2026-03-13-0051-whatconverts.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-12-2053-refresh-me.png" alt="Refresh.me" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>Refresh.me</h3>
+        <p>Powerful AI-powered software to grow your business. Start your free trial today.</p>
+        <div class="tags"><span class="tag tag-cyan">Top Pick</span></div>
+        <a href="2026-03-12-2053-refresh-me.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-12-2046-quillbot.png" alt="QuillBot" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>QuillBot</h3>
+        <p>AI writing assistant for faster content. Generate blogs, emails, and copy in seconds.</p>
+        <div class="tags"><span class="tag tag-cyan">Top Pick</span></div>
+        <a href="2026-03-12-2046-quillbot.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-12-1957-printify.png" alt="Printify" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>Printify</h3>
+        <p>Print-on-demand for entrepreneurs. Sell custom merch with zero inventory.</p>
+        <div class="tags"><span class="tag tag-cyan">Top Pick</span></div>
+        <a href="2026-03-12-1957-printify.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-12-ai-tools-trending.png" alt="AI Tools Trending" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-12</div>
+        <h3>AI Tools Trending</h3>
+        <p>Powerful AI-powered software to grow your business. Start your free trial today.</p>
+        <div class="tags"><span class="tag tag-cyan">AI Powered</span></div>
+        <a href="2026-03-12-ai-tools-trending.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-11-descript-ai-video-audio-editing.png" alt="Descript AI video/audio editing" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-11</div>
+        <h3>Descript AI video/audio editing</h3>
+        <p>AI-powered video editing made simple. Cut, polish, and publish professional content fast.</p>
+        <div class="tags"><span class="tag tag-cyan">AI Powered</span><span class="tag tag-pink">Media</span></div>
+        <a href="2026-03-11-descript-ai-video-audio-editing.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-11-eleven-labs-ai-voice-technology-market-exploding-to--18b--by.png" alt="Eleven Labs AI voice technology market exploding to ..." loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-11</div>
+        <h3>Eleven Labs AI voice technology market exploding to ...</h3>
+        <p>Realistic AI voice generation at scale. Create natural-sounding audio for any project.</p>
+        <div class="tags"><span class="tag tag-cyan">AI Powered</span><span class="tag tag-pink">Media</span></div>
+        <a href="2026-03-11-eleven-labs-ai-voice-technology-market-exploding-to--18b--by.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-10-descript-ai-video-audio-editing-trending-as-creators-need-fa.png" alt="Descript AI video/audio editing trending as creators..." loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-10</div>
+        <h3>Descript AI video/audio editing trending as creators...</h3>
+        <p>AI-powered video editing made simple. Cut, polish, and publish professional content fast.</p>
+        <div class="tags"><span class="tag tag-cyan">AI Powered</span><span class="tag tag-pink">Media</span></div>
+        <a href="2026-03-10-descript-ai-video-audio-editing-trending-as-creators-need-fa.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-img">
+          <img src="2026-03-10-descript---ai-powered-video-audio-editing-with-underlord-ass.png" alt="Descript" loading="lazy">
+        </div>
+      <div class="card-body">
+        <span class="badge badge-blog">📖 Article</span>
+        <div class="card-date">2026-03-10</div>
+        <h3>Descript</h3>
+        <p>AI-powered video editing made simple. Cut, polish, and publish professional content fast.</p>
+        <div class="tags"><span class="tag tag-cyan">AI Powered</span><span class="tag tag-pink">Media</span></div>
+        <a href="2026-03-10-descript---ai-powered-video-audio-editing-with-underlord-ass.html" class="btn btn-cyan">
+          <span>Read Article</span>
+          <span>→</span>
+        </a>
+      </div>
+    </article>
     </div>
-    <div class="card">
-      <img src="2026-03-12-2053-refresh-me.png" alt="Refresh.me Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-12</div>
-      <h2>Refresh.me Review 2026</h2>
-      <a href="2026-03-12-2053-refresh-me.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-12-2046-quillbot.png" alt="QuillBot Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-12</div>
-      <h2>QuillBot Review 2026</h2>
-      <a href="2026-03-12-2046-quillbot.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-12-1957-printify.png" alt="Printify Review 2026" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-12</div>
-      <h2>Printify Review 2026</h2>
-      <a href="2026-03-12-1957-printify.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-11-eleven-labs-ai-voice-technology-market-exploding-to--18b--by.png" alt="Eleven Labs AI voice technology market exploding to $18B+ by 2025 with 50% YoY growth, 65% of consumers can't distinguish AI from human narration" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-11</div>
-      <h2>Eleven Labs AI voice technology market exploding to $18B+ by 2025 with 50% YoY growth, 65% of consumers can't distinguish AI from human narration</h2>
-      <a href="2026-03-11-eleven-labs-ai-voice-technology-market-exploding-to--18b--by.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-11-descript-ai-video-audio-editing.png" alt="Descript AI video/audio editing" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-11</div>
-      <h2>Descript AI video/audio editing</h2>
-      <a href="2026-03-11-descript-ai-video-audio-editing.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-10-descript-ai-video-audio-editing-trending-as-creators-need-fa.png" alt="Descript AI video/audio editing trending as creators need faster content production" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-10</div>
-      <h2>Descript AI video/audio editing trending as creators need faster content production</h2>
-      <a href="2026-03-10-descript-ai-video-audio-editing-trending-as-creators-need-fa.html">Read Post →</a>
-    </div>
-    <div class="card">
-      <img src="2026-03-10-descript---ai-powered-video-audio-editing-with-underlord-ass.png" alt="Descript" style="width:100%;height:160px;object-fit:cover;border-radius:8px 8px 0 0;margin:-24px -24px 16px -24px;">
-      <div class="date">2026-03-10</div>
-      <h2>Descript</h2>
-      <a href="2026-03-10-descript---ai-powered-video-audio-editing-with-underlord-ass.html">Read Post →</a>
-    </div></div>
-  <footer><p>Auto-published by AI agents · New posts every 4 hours</p></footer>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <strong>Affiliate Insider Blog</strong> · New posts published automatically every 4 hours<br>
+      <a href="/">← Back to Deals</a>
+    </p>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="/scripts.js"></script>
 </body>
 </html>
