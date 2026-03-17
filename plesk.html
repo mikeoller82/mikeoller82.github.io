@@ -1,224 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plesk — Affiliate Insider</title>
-  <meta name="description" content="Get exclusive access to Plesk — features, pricing, and special deals.">
-  <meta name="theme-color" content="#06060c">
-  <meta property="og:title" content="Plesk — Affiliate Insider">
-  <meta property="og:description" content="Get exclusive access to Plesk — features, pricing, and special deals.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mikeoller82.github.io/plesk.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plesk — Web Hosting Control Panel — Affiliate Insider</title>
+<meta name="description" content="Plesk review: the web hosting control panel that simplifies server management. One dashboard for WordPress, security, backups, and multi-site hosting.">
+<meta name="theme-color" content="#06060c">
+<meta property="og:title" content="Plesk — Web Hosting Control Panel — Affiliate Insider">
+<meta property="og:description" content="The web hosting control panel that simplifies server management. WordPress, security, backups, and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mikeoller82.github.io/plesk.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
+.lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+.lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
+.lp-proof-item { text-align:center; }
+.lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
+.lp-proof-num.gold { color:var(--gold); }
+.lp-proof-num.purple { color:var(--purple); }
+.lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
+.lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
+.lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
+.lp-section h2 .cyan { color:var(--cyan); }
+.lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
+.lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
+.lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
+.lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+.lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
+.lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
+.lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
+.lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
+.lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
+.lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
+.lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-faq { margin:32px 0; }
+.lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+.lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
+.lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
+.lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
+.lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
+.lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
+.lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
+@media(max-width:768px){ .lp-proof-grid { gap:24px; } .lp-proof-num { font-size:1.6rem; } .lp-steps { grid-template-columns:1fr; } .lp-feature-grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
-<!-- SECTION 1 — HERO -->
 <div class="hero">
-  <div class="hero-line"></div>
-  <div class="hero-badge"><span class="live-dot"></span> EXCLUSIVE OFFER</div>
-  <h1><span class="cyan">Plesk</span></h1>
-  <p>Web hosting control panel that simplifies server management—secure, automate, and manage websites from one intuitive dashboard.</p>
-  <div class="hero-stats">
-    <div class="hero-stat">
-      <span class="hero-stat-value">380K+</span>
-      <span class="hero-stat-label">Servers</span>
-    </div>
-    <div class="hero-stat-dot"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-value purple-val">11M+</span>
-      <span class="hero-stat-label">Sites</span>
-    </div>
-    <div class="hero-stat-dot"></div>
-    <div class="hero-stat">
-      <span class="hero-stat-value gold-val">Free</span>
-      <span class="hero-stat-label">Trial</span>
-    </div>
-  </div>
-  <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Start Free Trial →</a>
+<div class="hero-line"></div>
+<div class="hero-badge"><span class="live-dot"></span> HOSTING CONTROL PANEL</div>
+<h1>Web Hosting <span class="cyan">Without the Terminal</span></h1>
+<p>Plesk puts your server management in a clean dashboard. Manage WordPress sites, SSL certificates, backups, and email — no SSH required. Works on any cloud or VPS.</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-value">380K+</span><span class="hero-stat-label">Servers</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value purple-val">WP</span><span class="hero-stat-label">Optimized</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value gold-val">1-Click</span><span class="hero-stat-label">Everything</span></div>
+</div>
 </div>
 
-<!-- SECTION 2 — NAV -->
-<nav class="pill-nav">
-  <a href="/" class="active">🏠 Home</a>
-  <a href="/blog/">📝 Blog</a>
-</nav>
+<nav class="pill-nav"><a href="/" class="active">🏠 Home</a><a href="/blog/">📝 Blog</a></nav>
 
-<!-- SECTION 3 — HERO IMAGE -->
-<div class="lp-hero-img">
-  <img src="plesk-hero.png" alt="Plesk" loading="lazy">
+<div class="lp-proof">
+<div class="lp-proof-label">Trusted worldwide</div>
+<div class="lp-proof-grid">
+<div class="lp-proof-item"><div class="lp-proof-num">380K+</div><div class="lp-proof-desc">Servers</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num gold">11M+</div><div class="lp-proof-desc">Websites</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num purple">32</div><div class="lp-proof-desc">Languages</div></div>
+</div>
 </div>
 
-<!-- SECTION 4 — KEY FEATURES -->
-<div class="section-header">
-  <h2><span class="icon">⚡</span> Key Features</h2>
-  <p>// why web professionals choose Plesk</p>
+<div class="lp-section">
+<h2>Command-line hosting is <span class="cyan">not a business strategy</span></h2>
+<p>You could manage your VPS from the terminal. Install nginx, configure PHP, set up Let's Encrypt, manage MySQL databases, configure cron jobs — one typo and your site is down. Or you could spend $12/month on Plesk and do all of it from a dashboard in minutes.</p>
+<p>Plesk abstracts away the complexity of server management while keeping full power underneath. Whether you host 1 site or 100, it gives you control without requiring sysadmin skills.</p>
 </div>
-<div class="bento-grid">
-  <div class="card">
-    <div class="card-body">
-      <h3>🖥️ Unified Dashboard</h3>
-      <p>Manage all your servers, websites, domains, and applications from one clean, intuitive interface. No more SSH-ing into servers for routine tasks.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h3>🔒 Security Toolkit</h3>
-      <p>Built-in SSL/TLS management, firewall, fail2ban, malware scanning, and automatic security patches. Keep your servers hardened without manual configuration.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h3>🔄 Automated Backups</h3>
-      <p>Schedule automatic backups to local or remote storage. One-click restore for individual sites or entire servers. Never lose data again.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h3>🌐 WordPress Toolkit</h3>
-      <p>Manage all WordPress installations from one dashboard. Clone, stage, update, and secure WordPress sites with one-click operations.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h3>📧 Email Management</h3>
-      <p>Built-in mail server management with spam filtering, DKIM, SPF, and DMARC. Create email accounts and manage mailing lists easily.</p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <h3>🔌 Extensions Ecosystem</h3>
-      <p>Hundreds of extensions for CDN, SEO, monitoring, Docker, Git, and more. Extend functionality without command-line complexity.</p>
-    </div>
-  </div>
-</div>
-
-<!-- SECTION 5 — MID-PAGE CTA -->
-<div class="lp-cta-banner">
-  <h2>Ready to <span class="cyan">Simplify</span> Server Management?</h2>
-  <p>Join 380,000+ servers already managed with Plesk worldwide.</p>
-  <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Try Plesk Free →</a>
-</div>
-
 <hr class="divider">
 
-<!-- SECTION 6 — WHO IT'S FOR -->
-<div class="section-header">
-  <h2><span class="icon">👥</span> Who It's For</h2>
-  <p>// built for web professionals who value their time</p>
+<div class="lp-section">
+<h2>Server tools that <span class="cyan">just work</span></h2>
+<div class="lp-feature-grid">
+<div class="lp-feature">
+<div class="lp-feature-icon">🌐</div>
+<h4>Multi-Site Dashboard</h4>
+<p>Manage all your domains and sites from one panel. Add sites, configure DNS, and manage databases without touching a terminal.</p>
 </div>
-<div class="lp-text">
-  <p>Plesk is designed for anyone who manages web servers but doesn't want to spend their life in the command line. Whether you're hosting client websites, running a development agency, or managing your own infrastructure, Plesk provides the GUI-based control panel that makes server administration accessible and efficient.</p>
-  <p>The platform is particularly valuable for web professionals who manage multiple servers or client sites. Instead of remembering dozens of commands and config file locations, Plesk puts everything in one searchable, intuitive dashboard that saves time and reduces errors.</p>
-  <ul>
-    <li><strong>Web Hosting Providers</strong> — offer managed hosting to clients with a professional control panel they can access themselves</li>
-    <li><strong>Digital Agencies</strong> — manage dozens of client websites and WordPress installations from one dashboard</li>
-    <li><strong>Freelance Developers</strong> — focus on building instead of server administration with automated backups, security, and updates</li>
-    <li><strong>IT Teams</strong> — standardize server management across teams with role-based access and audit logs</li>
-  </ul>
+<div class="lp-feature">
+<div class="lp-feature-icon">🔒</div>
+<h4>Auto SSL & Security</h4>
+<p>Free Let's Encrypt SSL with auto-renewal. Built-in firewall, malware scanning, and fail2ban protection.</p>
 </div>
-
+<div class="lp-feature">
+<div class="lp-feature-icon">💾</div>
+<h4>Scheduled Backups</h4>
+<p>Automatic daily backups to local or cloud storage (S3, Google Drive, Dropbox). One-click restore when things go wrong.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">⚡</div>
+<h4>WordPress Toolkit</h4>
+<p>Clone, stage, update, and secure WordPress sites. One-click hardening and mass updates across all sites.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">📧</div>
+<h4>Email Management</h4>
+<p>Create mailboxes, set up forwarding, configure SPF/DKIM. Full email hosting from the same panel.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">☁️</div>
+<h4>Works Everywhere</h4>
+<p>AWS, DigitalOcean, Azure, Linode, Vultr — Plesk runs on any cloud VPS or dedicated server.</p>
+</div>
+</div>
+</div>
 <hr class="divider">
 
-<!-- SECTION 7 — PROS & CONS -->
-<div class="section-header">
-  <h2><span class="icon">⚖️</span> Pros &amp; Cons</h2>
-  <p>// our honest assessment</p>
+<div class="lp-section">
+<h2>Get set up in <span class="cyan">three steps</span></h2>
+<div class="lp-steps">
+<div class="lp-step">
+<div class="lp-step-num">01</div>
+<h4>Deploy Plesk</h4>
+<p>One-click install on your VPS from major cloud providers, or use Plesk's managed hosting.</p>
 </div>
-<div class="lp-grid-2">
-  <div class="lp-card lp-card-pros">
-    <h3>✅ Pros</h3>
-    <ul>
-      <li>Intuitive GUI that makes server management accessible to non-sysadmins</li>
-      <li>Comprehensive WordPress Toolkit for managing multiple installations</li>
-      <li>Built-in security tools reduce attack surface without manual configuration</li>
-      <li>One-click SSL/TLS installation with Let's Encrypt integration</li>
-      <li>Automated backups with one-click restore</li>
-      <li>Rich extensions ecosystem for CDN, Git, Docker, and more</li>
-    </ul>
-  </div>
-  <div class="lp-card lp-card-cons">
-    <h3>❌ Cons</h3>
-    <ul>
-      <li>Licensing costs add up for multiple servers</li>
-      <li>Resource overhead compared to lightweight panels or bare command line</li>
-      <li>Learning curve for advanced features beyond basic hosting management</li>
-    </ul>
-  </div>
+<div class="lp-step">
+<div class="lp-step-num">02</div>
+<h4>Add Your Sites</h4>
+<p>Point your domains and use the WordPress Toolkit or site builder to go live in minutes.</p>
 </div>
-
+<div class="lp-step">
+<div class="lp-step-num">03</div>
+<h4>Automate & Secure</h4>
+<p>Enable auto-updates, scheduled backups, SSL, and security scanning. Plesk handles the rest.</p>
+</div>
+</div>
+</div>
 <hr class="divider">
 
-<!-- SECTION 8 — PRICING -->
-<div class="section-header">
-  <h2><span class="icon">💰</span> Pricing</h2>
-  <p>// plans for every server setup</p>
+<div class="lp-section">
+<h2>Common questions</h2>
+<div class="lp-faq">
+<div class="lp-faq-item">
+<div class="lp-faq-q">Plesk vs cPanel — which is better?</div>
+<div class="lp-faq-a">Plesk offers a more modern UI, better WordPress tools, and runs on both Linux and Windows. cPanel is Linux-only with a dated interface. For WordPress hosting and modern workflows, Plesk is the stronger choice.</div>
 </div>
-<div class="bento-grid">
-  <div class="card">
-    <div class="card-body">
-      <span class="badge badge-offer">WEB HOST EDITION</span>
-      <div class="price">$12.75</div>
-      <div class="price-period">per month</div>
-      <ul class="price-features">
-        <li>Up to 10 domains</li>
-        <li>WordPress Toolkit</li>
-        <li>Let's Encrypt SSL</li>
-        <li>Automated backups</li>
-      </ul>
-      <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Choose Plan →</a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <span class="badge badge-featured">WEB HOST PRO — BEST VALUE</span>
-      <div class="price">$20.25</div>
-      <div class="price-period">per month</div>
-      <ul class="price-features">
-        <li>Unlimited domains</li>
-        <li>Full WordPress Toolkit</li>
-        <li>Security Core (ModSecurity)</li>
-        <li>Docker & Git support</li>
-      </ul>
-      <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Choose Plan →</a>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-      <span class="badge badge-offer">DEDICATED HOST</span>
-      <div class="price">$31.50</div>
-      <div class="price-period">per month</div>
-      <ul class="price-features">
-        <li>Everything in Web Host Pro</li>
-        <li>Dedicated server support</li>
-        <li>Advanced monitoring</li>
-        <li>Priority support & SLA</li>
-      </ul>
-      <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Choose Plan →</a>
-    </div>
-  </div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Do I need a VPS to use Plesk?</div>
+<div class="lp-faq-a">Yes, Plesk runs on a VPS or dedicated server. It's not shared hosting — you get full server control with a friendly dashboard. DigitalOcean droplets start at $6/month plus Plesk licensing.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">How much does Plesk cost?</div>
+<div class="lp-faq-a">Plans start at $12/month for up to 10 domains (Web Admin Edition). Web Pro (30 domains) and Web Host (unlimited) plans are available. Free 14-day trial included.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Is it good for agencies?</div>
+<div class="lp-faq-a">Absolutely. Plesk's multi-site management, client accounts, and white-label options make it ideal for agencies hosting multiple client sites on a single server.</div>
+</div>
+</div>
 </div>
 
-<!-- SECTION 9 — FINAL CTA -->
-<div class="lp-cta-banner">
-  <h2>Get <span class="cyan">Plesk</span> Today</h2>
-  <p>Start your free trial and simplify server management—no credit card required.</p>
-  <a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Claim Your Deal →</a>
+<div class="lp-cta-box">
+<h2>Manage servers <span class="cyan">from a dashboard</span></h2>
+<p>WordPress toolkit, auto SSL, scheduled backups, and multi-site management. Professional hosting made simple.</p>
+<a href="https://try.plesk.com/958m0mv2x4df" class="btn btn-gold">Start Plesk Free Trial →</a>
+<div class="lp-urgency">⚡ 14-day free trial · From $12/mo · Works on any VPS</div>
 </div>
 
-<!-- SECTION 10 — FOOTER -->
 <footer>
-  <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
-  <p>Affiliate Insider · Exclusive deals updated regularly</p>
-  <div class="footer-links">
-    <a href="/">Home</a>
-    <a href="/blog/">Blog</a>
-  </div>
+<div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
+<p>Affiliate Insider · Exclusive deals updated regularly</p>
+<div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
 </footer>
-
 </body>
 </html>

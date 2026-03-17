@@ -1,192 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuillBot — Affiliate Insider</title>
-  <meta name="description" content="Get exclusive access to QuillBot — AI paraphraser, grammar checker, summarizer, and writing assistant.">
-  <meta name="theme-color" content="#06060c">
-  <meta property="og:title" content="QuillBot — Affiliate Insider">
-  <meta property="og:description" content="Get exclusive access to QuillBot — AI paraphraser, grammar checker, summarizer, and writing assistant.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mikeoller82.github.io/quillbot.html">
-  <meta property="og:image" content="https://mikeoller82.github.io/quillbot-hero.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QuillBot — AI Writing That Sounds Like You — Affiliate Insider</title>
+<meta name="description" content="QuillBot review: AI writing assistant that paraphrases, summarizes, checks grammar, and detects plagiarism. Write better content in half the time.">
+<meta name="theme-color" content="#06060c">
+<meta property="og:title" content="QuillBot — AI Writing That Sounds Like You — Affiliate Insider">
+<meta property="og:description" content="AI writing assistant for paraphrasing, grammar, summarizing, and plagiarism detection. Write better, faster.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mikeoller82.github.io/quillbot.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
+.lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+.lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
+.lp-proof-item { text-align:center; }
+.lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
+.lp-proof-num.gold { color:var(--gold); }
+.lp-proof-num.purple { color:var(--purple); }
+.lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
+.lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
+.lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
+.lp-section h2 .cyan { color:var(--cyan); }
+.lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
+.lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
+.lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
+.lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+.lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
+.lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
+.lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
+.lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
+.lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
+.lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
+.lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-faq { margin:32px 0; }
+.lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+.lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
+.lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
+.lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
+.lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
+.lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
+.lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
+@media(max-width:768px){ .lp-proof-grid { gap:24px; } .lp-proof-num { font-size:1.6rem; } .lp-steps { grid-template-columns:1fr; } .lp-feature-grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="hero-line"></div>
-    <div class="hero-badge"><span class="live-dot"></span> EXCLUSIVE OFFER</div>
-    <h1><span class="cyan">QuillBot</span></h1>
-    <p>The AI writing assistant that paraphrases, summarizes, checks grammar, and makes your writing clearer — in seconds.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-value">50M+</span>
-        <span class="hero-stat-label">Users</span>
-      </div>
-      <div class="hero-stat-dot"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value purple-val">7</span>
-        <span class="hero-stat-label">Writing Modes</span>
-      </div>
-      <div class="hero-stat-dot"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value gold-val">$9.95</span>
-        <span class="hero-stat-label">Premium/mo</span>
-      </div>
-    </div>
-    <a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Start Free Trial →</a>
-  </div>
+<div class="hero">
+<div class="hero-line"></div>
+<div class="hero-badge"><span class="live-dot"></span> AI WRITING ASSISTANT</div>
+<h1>Write Better Content <span class="cyan">In Half the Time</span></h1>
+<p>QuillBot is the AI writing assistant that paraphrases, summarizes, checks grammar, and detects plagiarism. Whether you're writing emails, essays, or blog posts — it helps you say it better.</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-value">56M+</span><span class="hero-stat-label">Users</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value purple-val">7</span><span class="hero-stat-label">Paraphrase Modes</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value gold-val">Free</span><span class="hero-stat-label">Tier</span></div>
+</div>
+</div>
 
-  <nav class="pill-nav">
-    <a href="/" class="active">🏠 Home</a>
-    <a href="/blog/">📝 Blog</a>
-  </nav>
+<nav class="pill-nav"><a href="/" class="active">🏠 Home</a><a href="/blog/">📝 Blog</a></nav>
 
-  <div class="lp-hero-img">
-    <img src="quillbot-hero.png" alt="QuillBot" loading="lazy">
-  </div>
+<div class="lp-proof">
+<div class="lp-proof-label">Writers trust QuillBot</div>
+<div class="lp-proof-grid">
+<div class="lp-proof-item"><div class="lp-proof-num">56M+</div><div class="lp-proof-desc">Users</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num gold">4.5★</div><div class="lp-proof-desc">Chrome Store</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num purple">Free</div><div class="lp-proof-desc">Plan Available</div></div>
+</div>
+</div>
 
-  <div class="section-header">
-    <h2><span class="icon">⚡</span> Key Features</h2>
-    <p>// why 50 million writers trust QuillBot</p>
-  </div>
-  <div class="bento-grid">
-    <div class="card"><div class="card-body">
-      <h3>🔄 Paraphraser</h3>
-      <p>Rewrite any text in 7 different modes — Standard, Fluency, Formal, Simple, Creative, Expand, or Shorten. Paste your text, pick your tone, and QuillBot rewrites it while preserving meaning. The core feature that made 50 million users switch.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>✅ Grammar Checker</h3>
-      <p>Catches spelling errors, punctuation mistakes, and grammatical issues in real time. Works across English, German, French, and more. No more embarrassing typos in client emails or published content. Integrated directly into the writing flow.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>📝 Summarizer</h3>
-      <p>Condense long articles, research papers, or documents into key points instantly. Choose paragraph or bullet-point output. Perfect for students processing dense readings, professionals reviewing reports, or anyone who needs the gist without the fluff.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>📚 Citation Generator</h3>
-      <p>Automatically create citations in APA, MLA, Chicago, and 8 other formats. Paste a URL, DOI, or book title and get a perfectly formatted citation. Saves hours on academic papers and research projects. No more manual formatting.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>🌍 Translator</h3>
-      <p>Translate text across 40+ languages directly within the platform. AI-powered translations that capture nuance, not just word-for-word conversion. Translate your paraphrased text to reach multilingual audiences without switching tools.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>🔌 Extensions &amp; Integrations</h3>
-      <p>Chrome extension, Microsoft Word add-in, Google Docs integration, and desktop apps. QuillBot works where you write — in your browser, your documents, your email. No copy-pasting between tabs. Rewrite, check, and improve without leaving your workflow.</p>
-    </div></div>
-  </div>
+<div class="lp-section">
+<h2>Good writing takes <span class="cyan">too long to create</span></h2>
+<p>You stare at the screen. You write a sentence, delete it, write it again. You know what you want to say but can't find the right words. Your draft takes three hours when it should take one. And after all that effort, you're still not sure if it reads well.</p>
+<p>QuillBot cuts your writing time in half. Paste your text, choose a tone, and get polished alternatives instantly. It's not AI that writes for you — it's AI that makes your writing better, faster.</p>
+</div>
+<hr class="divider">
 
-  <div class="lp-cta-banner">
-    <h2>Write <span class='cyan'>Better</span> in Seconds</h2>
-    <p>Free tier available — paraphrase up to 125 words at a time, no credit card required.</p>
-    <a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Try QuillBot Free →</a>
-  </div>
+<div class="lp-section">
+<h2>Writing tools that <span class="cyan">elevate your words</span></h2>
+<div class="lp-feature-grid">
+<div class="lp-feature">
+<div class="lp-feature-icon">🔄</div>
+<h4>Smart Paraphraser</h4>
+<p>Rewrite sentences in 7 different modes — standard, formal, simple, creative, expand, shorten, and custom.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">📝</div>
+<h4>Grammar Checker</h4>
+<p>Fix grammar, spelling, and punctuation in real time. Catches errors that spell-check misses.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">📄</div>
+<h4>AI Summarizer</h4>
+<p>Condense long articles, papers, or reports into key points. Save hours on research and reading.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">🔍</div>
+<h4>Plagiarism Checker</h4>
+<p>Scan your content against billions of web pages. Ensure your writing is original before publishing.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">🌐</div>
+<h4>Chrome & Word Extensions</h4>
+<p>Use QuillBot directly in Google Docs, Microsoft Word, and any text field in Chrome.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">📊</div>
+<h4>Citation Generator</h4>
+<p>Generate APA, MLA, and Chicago citations automatically. Perfect for academic writing and research.</p>
+</div>
+</div>
+</div>
+<hr class="divider">
 
-  <hr class="divider">
+<div class="lp-section">
+<h2>Write better in <span class="cyan">three steps</span></h2>
+<div class="lp-steps">
+<div class="lp-step">
+<div class="lp-step-num">01</div>
+<h4>Paste Your Text</h4>
+<p>Drop in your draft, paragraph, or rough notes. QuillBot reads it instantly.</p>
+</div>
+<div class="lp-step">
+<div class="lp-step-num">02</div>
+<h4>Choose Your Mode</h4>
+<p>Select formal, simple, creative, or custom tone. QuillBot rewrites with your preferred style.</p>
+</div>
+<div class="lp-step">
+<div class="lp-step-num">03</div>
+<h4>Refine & Export</h4>
+<p>Accept changes, adjust tone, and copy your polished text. Ready to publish or submit.</p>
+</div>
+</div>
+</div>
+<hr class="divider">
 
-  <div class="section-header">
-    <h2><span class="icon">👥</span> Who It's For</h2>
-    <p>// anyone who writes regularly and wants to write better</p>
-  </div>
-  <div class="lp-text">
-    <p>QuillBot doesn't try to generate content from scratch like ChatGPT or Jasper. Its job is to make your existing writing better — clearer, more concise, more polished, and error-free. That focused mission makes it fast, reliable, and genuinely useful for daily writing tasks.</p>
-    <p>The free tier alone handles the basics: paraphrasing short passages, checking grammar, and summarizing moderate-length documents. Premium unlocks unlimited paraphrasing in all 7 modes, longer document processing, and the full AI writer. Most users find the free tier enough for occasional use, and Premium essential for daily workflows.</p>
-    <ul>
-      <li><strong>Students &amp; academics</strong> — Paraphrase research without plagiarizing, generate citations automatically, and summarize dense papers into study notes. The citation generator alone saves hours per semester. Fluency mode helps non-native English speakers write natural-sounding essays.</li>
-      <li><strong>Non-native English speakers</strong> — Rewrite awkward phrasing into natural, idiomatic English. QuillBot's Fluency mode is specifically designed for this — it doesn't just fix grammar, it makes your writing sound like a native speaker wrote it. Business emails, proposals, and presentations all improve instantly.</li>
-      <li><strong>Content creators &amp; marketers</strong> — Generate multiple variations of copy for different platforms, rewrite content to avoid duplication, and maintain consistent quality across high-volume output. Creative mode adds flair; Formal mode cleans up rough drafts.</li>
-      <li><strong>Professionals</strong> — Polish emails, reports, and proposals before sending. Quick grammar checks prevent embarrassing errors. Summarizer distills long reports into executive summaries. Every written communication benefits from a second pass through QuillBot.</li>
-    </ul>
-  </div>
+<div class="lp-section">
+<h2>Common questions</h2>
+<div class="lp-faq">
+<div class="lp-faq-item">
+<div class="lp-faq-q">Is QuillBot free?</div>
+<div class="lp-faq-a">Yes. The free plan includes paraphrasing (125 words at a time), grammar checking, and summarizing. Premium ($9.95/month) unlocks unlimited paraphrasing, all modes, plagiarism detection, and faster processing.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Will it make my writing sound like AI?</div>
+<div class="lp-faq-a">No. QuillBot rewrites your words — it doesn't generate content from scratch. Your voice and ideas stay intact, just expressed more clearly. Most readers can't tell anything was edited.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Does it work with Google Docs?</div>
+<div class="lp-faq-a">Yes. QuillBot has extensions for Google Docs, Microsoft Word, and Chrome. Use it directly in any writing environment without switching tabs.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Is it good for non-native English speakers?</div>
+<div class="lp-faq-a">Absolutely. QuillBot is especially popular with non-native speakers who want to write natural-sounding English. The "Simple" mode is perfect for clarity, while "Formal" works for academic and professional writing.</div>
+</div>
+</div>
+</div>
 
-  <hr class="divider">
+<div class="lp-cta-box">
+<h2>Write <span class="cyan">better today</span></h2>
+<p>AI-powered paraphrasing, grammar checking, and summarizing. Free to start, premium for unlimited power.</p>
+<a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Try QuillBot Free →</a>
+<div class="lp-urgency">⚡ Free plan · Premium from $9.95/mo · 56M+ users</div>
+</div>
 
-  <div class="section-header">
-    <h2><span class="icon">⚖️</span> Pros &amp; Cons</h2>
-    <p>// our honest assessment</p>
-  </div>
-  <div class="lp-grid-2">
-    <div class="lp-card lp-card-pros">
-      <h3>✅ Pros</h3>
-      <ul>
-        <li>7 paraphrasing modes cover virtually every writing context — from academic to creative</li>
-        <li>Free tier is genuinely usable — not just a trial, actually works for daily light use</li>
-        <li>Chrome extension and Google Docs integration mean you never leave your workflow</li>
-        <li>Grammar checker catches errors that other tools miss — especially punctuation and style</li>
-        <li>Citation generator supports 10+ formats and auto-generates from URLs and DOIs</li>
-        <li>Fast — paraphrasing results appear in under 2 seconds</li>
-        <li>Intuitive interface with virtually zero learning curve</li>
-      </ul>
-    </div>
-    <div class="lp-card lp-card-cons">
-      <h3>❌ Cons</h3>
-      <ul>
-        <li>Free version limits paraphrasing to 125 words per use — too short for paragraphs</li>
-        <li>Can occasionally alter meaning on technical or nuanced passages — always review output</li>
-        <li>No built-in plagiarism checker — a notable gap for academic users</li>
-        <li>AI Writer is basic compared to dedicated tools like Jasper or ChatGPT</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="section-header">
-    <h2><span class="icon">💰</span> Pricing</h2>
-    <p>// start free, upgrade when you need more</p>
-  </div>
-  <div class="bento-grid">
-    <div class="card"><div class="card-body">
-      <span class="badge badge-offer">Free</span>
-      <div class="price">$0</div>
-      <div class="price-period">per month — forever</div>
-      <ul class="price-features">
-        <li>2 paraphrasing modes (Standard, Fluency)</li>
-        <li>125-word paraphrase limit</li>
-        <li>Grammar checker</li>
-        <li>Summarizer (1,200-word limit)</li>
-        <li>Limited AI writing</li>
-        <li>Chrome extension</li>
-      </ul>
-      <a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Get Started Free →</a>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <span class="badge badge-featured">Premium</span>
-      <div class="price">$9.95</div>
-      <div class="price-period">per month (annual: ~$4.17/mo)</div>
-      <ul class="price-features">
-        <li>All 7 paraphrasing modes</li>
-        <li>Unlimited word count</li>
-        <li>Advanced grammar &amp; tone</li>
-        <li>Full AI writer</li>
-        <li>Citation generator (all formats)</li>
-        <li>Plagiarism-free guarantee</li>
-        <li>Word add-in &amp; desktop apps</li>
-      </ul>
-      <a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Choose Plan →</a>
-    </div></div>
-  </div>
-
-  <div class="lp-cta-banner">
-    <h2>Get <span class='cyan'>QuillBot</span> Today</h2>
-    <p>Free forever plan available — upgrade to Premium for under $10/month.</p>
-    <a href="https://try.quillbot.com/fh07mm6n9be6" class="btn btn-gold">Claim Your Deal →</a>
-  </div>
-
-  <footer>
-    <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
-    <p>Affiliate Insider · Exclusive deals updated regularly · March 15, 2026</p>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </div>
-  </footer>
-
+<footer>
+<div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
+<p>Affiliate Insider · Exclusive deals updated regularly</p>
+<div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+</footer>
 </body>
 </html>

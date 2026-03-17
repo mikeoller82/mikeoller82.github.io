@@ -1,191 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Printify — Affiliate Insider</title>
-  <meta name="description" content="Get exclusive access to Printify — print-on-demand with 900+ products, global suppliers, and zero inventory.">
-  <meta name="theme-color" content="#06060c">
-  <meta property="og:title" content="Printify — Affiliate Insider">
-  <meta property="og:description" content="Get exclusive access to Printify — print-on-demand with 900+ products, global suppliers, and zero inventory.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mikeoller82.github.io/printify.html">
-  <meta property="og:image" content="https://mikeoller82.github.io/printify-hero.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printify — Print-on-Demand for Entrepreneurs — Affiliate Insider</title>
+<meta name="description" content="Printify review: start a print-on-demand business with zero inventory. Custom products, global fulfillment, and integrations with Shopify, Etsy, and more.">
+<meta name="theme-color" content="#06060c">
+<meta property="og:title" content="Printify — Print-on-Demand for Entrepreneurs — Affiliate Insider">
+<meta property="og:description" content="Start a print-on-demand business with zero inventory. Custom products and global fulfillment.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mikeoller82.github.io/printify.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
+.lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+.lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
+.lp-proof-item { text-align:center; }
+.lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
+.lp-proof-num.gold { color:var(--gold); }
+.lp-proof-num.purple { color:var(--purple); }
+.lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
+.lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
+.lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
+.lp-section h2 .cyan { color:var(--cyan); }
+.lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
+.lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
+.lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
+.lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+.lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
+.lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
+.lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
+.lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
+.lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
+.lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
+.lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+.lp-faq { margin:32px 0; }
+.lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+.lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
+.lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
+.lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
+.lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
+.lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
+.lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
+@media(max-width:768px){ .lp-proof-grid { gap:24px; } .lp-proof-num { font-size:1.6rem; } .lp-steps { grid-template-columns:1fr; } .lp-feature-grid { grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
-  <div class="hero">
-    <div class="hero-line"></div>
-    <div class="hero-badge"><span class="live-dot"></span> EXCLUSIVE OFFER</div>
-    <h1><span class="cyan">Printify</span></h1>
-    <p>Design products, sell them online, and let Printify handle printing and shipping — zero inventory, zero risk, unlimited designs.</p>
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <span class="hero-stat-value">900+</span>
-        <span class="hero-stat-label">Products</span>
-      </div>
-      <div class="hero-stat-dot"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value purple-val">Free</span>
-        <span class="hero-stat-label">Forever Plan</span>
-      </div>
-      <div class="hero-stat-dot"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value gold-val">Global</span>
-        <span class="hero-stat-label">Print Network</span>
-      </div>
-    </div>
-    <a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Start Free Trial →</a>
-  </div>
+<div class="hero">
+<div class="hero-line"></div>
+<div class="hero-badge"><span class="live-dot"></span> PRINT-ON-DEMAND</div>
+<h1>Start Selling Custom <span class="cyan">Products Today</span></h1>
+<p>Printify lets you design and sell custom products — shirts, mugs, phone cases, and 900+ items — with zero inventory. When a customer orders, Printify prints and ships it. You keep the profit.</p>
+<div class="hero-stats">
+<div class="hero-stat"><span class="hero-stat-value">900+</span><span class="hero-stat-label">Products</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value purple-val">Free</span><span class="hero-stat-label">To Start</span></div>
+<div class="hero-stat-dot"></div>
+<div class="hero-stat"><span class="hero-stat-value gold-val">Global</span><span class="hero-stat-label">Print Network</span></div>
+</div>
+</div>
 
-  <nav class="pill-nav">
-    <a href="/" class="active">🏠 Home</a>
-    <a href="/blog/">📝 Blog</a>
-  </nav>
+<nav class="pill-nav"><a href="/" class="active">🏠 Home</a><a href="/blog/">📝 Blog</a></nav>
 
-  <div class="lp-hero-img">
-    <img src="printify-hero.png" alt="Printify" loading="lazy">
-  </div>
+<div class="lp-proof">
+<div class="lp-proof-label">Entrepreneurs love Printify</div>
+<div class="lp-proof-grid">
+<div class="lp-proof-item"><div class="lp-proof-num">900+</div><div class="lp-proof-desc">Products</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num gold">Free</div><div class="lp-proof-desc">To Start</div></div>
+<div class="lp-proof-item"><div class="lp-proof-num purple">Global</div><div class="lp-proof-desc">Fulfillment</div></div>
+</div>
+</div>
 
-  <div class="section-header">
-    <h2><span class="icon">⚡</span> Key Features</h2>
-    <p>// launch a product line with zero inventory</p>
-  </div>
-  <div class="bento-grid">
-    <div class="card"><div class="card-body">
-      <h3>👕 900+ Products</h3>
-      <p>T-shirts, hoodies, mugs, phone cases, tote bags, wall art, hats, stickers, and 900+ more products ready for your designs. Every item is print-on-demand — produced only when someone orders it. No minimum quantities, no unsold inventory, no warehouse costs.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>🎨 Design Studio</h3>
-      <p>Upload your designs or create new ones directly in Printify's built-in design tool. Position artwork, add text, preview on products, and generate mockup images for your store. What you see is what your customer gets — pixel-perfect placement every time.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>🌍 Global Print Network</h3>
-      <p>Choose from print providers across the US, UK, EU, Canada, and Australia. Faster shipping, lower costs, and better quality by printing closer to your customers. Compare providers on price, speed, and quality ratings before selecting.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>🔌 E-Commerce Integrations</h3>
-      <p>Connects with Shopify, Etsy, WooCommerce, Wix, Squarespace, eBay, and more. Sync products, auto-fulfill orders, and track shipments — all from one dashboard. Orders flow from your store to Printify automatically. No manual order entry.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>💰 Profit Calculator</h3>
-      <p>Built-in pricing tool shows your costs, suggested retail prices, and profit margins per product. Set your own pricing strategy — Printify charges their base price, you keep everything above it. Transparent margins with no hidden fees.</p>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <h3>📦 Order Routing &amp; Quality Control</h3>
-      <p>Automatic order routing to the optimal print provider based on location, capacity, and quality ratings. Sample ordering lets you test products before selling them. Quality ratings from real customer feedback help you choose the best providers.</p>
-    </div></div>
-  </div>
+<div class="lp-section">
+<h2>E-commerce shouldn't require <span class="cyan">a warehouse</span></h2>
+<p>Traditional retail means buying inventory upfront, renting storage, packing boxes, and praying you don't get stuck with unsold stock. That's a $10K bet before you've made a single sale.</p>
+<p>Printify eliminates all of that. Design your products, list them in your store, and when orders come in, Printify's print network handles production and shipping. You never touch inventory. You only pay when something sells.</p>
+</div>
+<hr class="divider">
 
-  <div class="lp-cta-banner">
-    <h2>Ready to <span class='cyan'>Launch</span> Your Product Line?</h2>
-    <p>Start selling custom products with zero upfront investment.</p>
-    <a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Try Printify Free →</a>
-  </div>
+<div class="lp-section">
+<h2>Everything you need to <span class="cyan">launch a brand</span></h2>
+<div class="lp-feature-grid">
+<div class="lp-feature">
+<div class="lp-feature-icon">👕</div>
+<h4>900+ Products</h4>
+<p>T-shirts, hoodies, mugs, posters, phone cases, tote bags, and hundreds more. Something for every niche.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">🎨</div>
+<h4>Easy Design Tools</h4>
+<p>Upload your designs, position them on products, and preview mockups. No design degree required.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">🌍</div>
+<h4>Global Print Network</h4>
+<p>Print providers across the US, Europe, and beyond. Faster shipping, lower costs, local production.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">🔗</div>
+<h4>Store Integrations</h4>
+<p>Connect Shopify, Etsy, WooCommerce, Wix, eBay, and more. Orders sync automatically.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">💵</div>
+<h4>Transparent Pricing</h4>
+<p>See base costs before you set your retail price. Know your profit margin on every product.</p>
+</div>
+<div class="lp-feature">
+<div class="lp-feature-icon">📦</div>
+<h4>White-Label Shipping</h4>
+<p>Packages ship with your branding. Customers see your store, not Printify.</p>
+</div>
+</div>
+</div>
+<hr class="divider">
 
-  <hr class="divider">
+<div class="lp-section">
+<h2>Launch your store in <span class="cyan">three steps</span></h2>
+<div class="lp-steps">
+<div class="lp-step">
+<div class="lp-step-num">01</div>
+<h4>Choose Products</h4>
+<p>Browse the catalog and pick products that fit your niche. Compare print providers for best price and quality.</p>
+</div>
+<div class="lp-step">
+<div class="lp-step-num">02</div>
+<h4>Add Your Designs</h4>
+<p>Upload artwork, position on mockups, and set your retail price. Create your product listings in minutes.</p>
+</div>
+<div class="lp-step">
+<div class="lp-step-num">03</div>
+<h4>Connect & Sell</h4>
+<p>Link your Shopify, Etsy, or WooCommerce store. Orders auto-sync, Printify prints and ships. You collect profit.</p>
+</div>
+</div>
+</div>
+<hr class="divider">
 
-  <div class="section-header">
-    <h2><span class="icon">👥</span> Who It's For</h2>
-    <p>// anyone who wants to sell physical products without the risk</p>
-  </div>
-  <div class="lp-text">
-    <p>Traditional product businesses require upfront inventory investment, warehouse space, shipping logistics, and the risk of unsold stock. Printify eliminates all of it. You design the product, set the price, and list it for sale. When someone orders, Printify prints and ships it. You only pay for production after you've been paid by the customer.</p>
-    <p>This model unlocks entrepreneurship for people who couldn't previously afford to start a product business. No $5,000 minimum order from a factory. No garage full of unsold inventory. No shipping department. Just designs, a storefront, and the willingness to test what the market wants.</p>
-    <ul>
-      <li><strong>E-commerce entrepreneurs &amp; side hustlers</strong> — Launch a product line this weekend. Design 10 t-shirts, connect your Shopify store, and start selling today. Total investment: $0. Test designs, keep winners, drop losers. Scale what works without ever touching inventory.</li>
-      <li><strong>Artists &amp; designers</strong> — Monetize your art without manufacturing knowledge. Turn illustrations, patterns, and graphics into physical products — apparel, phone cases, wall art, stickers. Focus on creating; Printify handles production and fulfillment.</li>
-      <li><strong>Content creators &amp; influencers</strong> — Launch merch lines for your audience without pre-orders or minimum quantities. Connect to Etsy or Shopify and let fans buy branded products on demand. Revenue without inventory risk or fulfillment headaches.</li>
-      <li><strong>Agencies &amp; brands</strong> — Create branded merchandise, corporate gifts, or promotional products without warehousing. Order samples for quality control, then let Printify fulfill individual orders as they come in. Professional results without production infrastructure.</li>
-    </ul>
-  </div>
+<div class="lp-section">
+<h2>Common questions</h2>
+<div class="lp-faq">
+<div class="lp-faq-item">
+<div class="lp-faq-q">Is Printify really free?</div>
+<div class="lp-faq-a">Yes. The free plan lets you create unlimited designs and connect up to 5 stores. You only pay for products when they're ordered by customers. A Premium plan ($29/mo) offers product discounts of up to 20%.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">How's the print quality?</div>
+<div class="lp-faq-a">Quality depends on the print provider you choose. Printify shows ratings and reviews for each provider. Order samples before going live to ensure the quality meets your standards.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">Does Printify handle returns?</div>
+<div class="lp-faq-a">Printify handles returns for defective or misprinted items. For other returns, it depends on your store's return policy — Printify works with your existing process.</div>
+</div>
+<div class="lp-faq-item">
+<div class="lp-faq-q">What platforms can I sell on?</div>
+<div class="lp-faq-a">Shopify, Etsy, WooCommerce, Wix, Squarespace, eBay, and PrestaShop. You can also use the Printify API for custom integrations.</div>
+</div>
+</div>
+</div>
 
-  <hr class="divider">
+<div class="lp-cta-box">
+<h2>Start your POD business <span class="cyan">for free</span></h2>
+<p>No inventory, no risk. Design products, sell through your store, and let Printify handle the rest.</p>
+<a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Start Free on Printify →</a>
+<div class="lp-urgency">⚡ Free forever plan · 900+ products · Shopify & Etsy ready</div>
+</div>
 
-  <div class="section-header">
-    <h2><span class="icon">⚖️</span> Pros &amp; Cons</h2>
-    <p>// our honest assessment</p>
-  </div>
-  <div class="lp-grid-2">
-    <div class="lp-card lp-card-pros">
-      <h3>✅ Pros</h3>
-      <ul>
-        <li>Free forever plan with unlimited product designs and store connections</li>
-        <li>900+ products across apparel, accessories, home decor, and more</li>
-        <li>Global print network means faster shipping and lower costs by region</li>
-        <li>Seamless integrations with Shopify, Etsy, WooCommerce, and 5+ other platforms</li>
-        <li>Transparent profit calculator shows exact margins before you sell</li>
-        <li>No minimum orders — produce one unit at a time if needed</li>
-        <li>Provider quality ratings help you choose the best print partners</li>
-      </ul>
-    </div>
-    <div class="lp-card lp-card-cons">
-      <h3>❌ Cons</h3>
-      <ul>
-        <li>Quality varies between print providers — always order samples first</li>
-        <li>Shipping times depend on provider location and can be longer than Amazon</li>
-        <li>Profit margins are thinner than bulk manufacturing (the tradeoff for zero inventory)</li>
-        <li>Limited customization on some products compared to private-label manufacturing</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="divider">
-
-  <div class="section-header">
-    <h2><span class="icon">💰</span> Pricing</h2>
-    <p>// start free, upgrade for volume discounts</p>
-  </div>
-  <div class="bento-grid">
-    <div class="card"><div class="card-body">
-      <span class="badge badge-offer">Free</span>
-      <div class="price">$0</div>
-      <div class="price-period">per month — forever</div>
-      <ul class="price-features">
-        <li>Unlimited product designs</li>
-        <li>5 stores per account</li>
-        <li>All e-commerce integrations</li>
-        <li>Design mockup generator</li>
-        <li>Profit calculator</li>
-        <li>Manual order creation</li>
-      </ul>
-      <a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Get Started Free →</a>
-    </div></div>
-    <div class="card"><div class="card-body">
-      <span class="badge badge-featured">Premium</span>
-      <div class="price">$29</div>
-      <div class="price-period">per month (or $24.99/mo annual)</div>
-      <ul class="price-features">
-        <li>Everything in Free</li>
-        <li>10 stores per account</li>
-        <li>Up to 20% product discounts</li>
-        <li>Custom order import</li>
-        <li>Product transfer between stores</li>
-        <li>Priority support</li>
-      </ul>
-      <a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Choose Plan →</a>
-    </div></div>
-  </div>
-
-  <div class="lp-cta-banner">
-    <h2>Get <span class='cyan'>Printify</span> Today</h2>
-    <p>Free forever plan — start selling custom products with zero upfront cost.</p>
-    <a href="https://try.printify.com/dhumdw7eo2l9" class="btn btn-gold">Claim Your Deal →</a>
-  </div>
-
-  <footer>
-    <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
-    <p>Affiliate Insider · Exclusive deals updated regularly · March 16, 2026</p>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/blog/">Blog</a>
-    </div>
-  </footer>
-
+<footer>
+<div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
+<p>Affiliate Insider · Exclusive deals updated regularly</p>
+<div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+</footer>
 </body>
 </html>
