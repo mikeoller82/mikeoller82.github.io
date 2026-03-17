@@ -3,96 +3,220 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wispr Flow — Effortless Voice Dictation — Affiliate Insider</title>
-  <meta name="description" content="Wispr Flow review: The voice-to-text AI that turns speech into polished writing across every app. 4x faster than typing, 100+ languages.">
+  <title>Wispr Flow — Type at the Speed of Thought — Affiliate Insider</title>
+  <meta name="description" content="Wispr Flow review: Voice-to-text AI that turns speech into polished writing across every app. 4x faster than typing, 220 WPM, 100+ languages. 25% recurring commission.">
   <meta name="theme-color" content="#06060c">
-  <meta property="og:title" content="Wispr Flow — Effortless Voice Dictation — Affiliate Insider">
-  <meta property="og:description" content="The voice-to-text AI that turns speech into polished writing across every app. 4x faster than typing, 100+ languages.">
+  <meta property="og:title" content="Wispr Flow — Type at the Speed of Thought">
+  <meta property="og:description" content="Voice-to-text AI that turns speech into polished writing. 4x faster than typing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mikeoller82.github.io/wispr-flow.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <style>
+    .lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
+    .lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+    .lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
+    .lp-proof-item { text-align:center; }
+    .lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
+    .lp-proof-num.gold { color:var(--gold); }
+    .lp-proof-num.purple { color:var(--purple); }
+    .lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
+    .lp-speed-compare { display:grid; grid-template-columns:1fr 1fr; gap:0; max-width:500px; margin:32px auto; border-radius:12px; overflow:hidden; border:1px solid var(--border-card); }
+    .lp-speed-side { padding:32px 24px; text-align:center; }
+    .lp-speed-side.slow { background:var(--bg-card); }
+    .lp-speed-side.fast { background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(179,136,255,0.08)); }
+    .lp-speed-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
+    .lp-speed-value { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--text-primary); }
+    .lp-speed-unit { font-family:var(--font-mono); font-size:12px; color:var(--text-muted); }
+    .lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
+    .lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
+    .lp-section h2 .cyan { color:var(--cyan); }
+    .lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
+    .lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
+    .lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
+    .lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+    .lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
+    .lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
+    .lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+    .lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
+    .lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
+    .lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
+    .lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
+    .lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+    .lp-faq { margin:32px 0; }
+    .lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+    .lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
+    .lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
+    .lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
+    .lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
+    .lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
+    .lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
+    @media(max-width:768px){
+      .lp-proof-grid { gap:24px; }
+      .lp-proof-num { font-size:1.6rem; }
+      .lp-steps { grid-template-columns:1fr; }
+      .lp-feature-grid { grid-template-columns:1fr; }
+      .lp-speed-compare { grid-template-columns:1fr; }
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- HERO -->
   <div class="hero">
     <div class="hero-line"></div>
-    <div class="hero-badge"><span class="live-dot"></span> EXCLUSIVE OFFER</div>
-    <h1><span class="cyan">Wispr Flow</span></h1>
-    <p>The voice-to-text AI that turns speech into clear, polished writing in every app. Stop typing. Start flowing.</p>
+    <div class="hero-badge"><span class="live-dot"></span> VOICE-TO-TEXT · EVERY APP · EVERY DEVICE</div>
+    <h1>Stop typing.<br><span class="cyan">Start flowing.</span></h1>
+    <p>Wispr Flow turns your speech into clear, polished writing in every app on your phone or computer. Speak at the speed of thought — Flow handles the rest.</p>
     <div class="hero-stats">
       <div class="hero-stat">
         <span class="hero-stat-value">4x</span>
-        <span class="hero-stat-label">Faster Than Typing</span>
-      </div>
-      <div class="hero-stat-dot"></div>
-      <div class="hero-stat">
-        <span class="hero-stat-value">220</span>
-        <span class="hero-stat-label">Words Per Minute</span>
+        <span class="hero-stat-label">Faster</span>
       </div>
       <div class="hero-stat-dot"></div>
       <div class="hero-stat purple-val">
         <span class="hero-stat-value">100+</span>
-        <span class="hero-stat-label">Languages Supported</span>
+        <span class="hero-stat-label">Languages</span>
+      </div>
+      <div class="hero-stat-dot"></div>
+      <div class="hero-stat gold-val">
+        <span class="hero-stat-value">25%</span>
+        <span class="hero-stat-label">Recurring</span>
       </div>
     </div>
   </div>
 
-  <!-- NAVIGATION -->
   <nav class="pill-nav">
     <a href="/" class="active">🏠 Home</a>
     <a href="/blog/">📝 Blog</a>
   </nav>
 
-  <!-- CONTENT -->
-  <div class="post-content">
-
-    <img src="wispr-flow-hero.png" alt="Wispr Flow Voice Dictation" loading="lazy">
-
-    <h2>What is Wispr Flow?</h2>
-    <p>Wispr Flow is an AI-powered voice dictation tool that works across every application on your phone or computer. Speak naturally and Flow transcribes your voice into clear, polished, perfectly formatted text — instantly. It's not just transcription. Flow edits your rambling thoughts into structured writing, removing filler words and fixing grammar on the fly.</p>
-
-    <p>Available on Mac, Windows, iPhone, and Android — with your personal dictionary, snippet library, and tone settings synced across every device.</p>
-
-    <h2>Why Voice Dictation Is the Future</h2>
-    <p>The average person types 45 words per minute. Wispr Flow lets you speak at 220 words per minute — that's nearly 5x faster. After 150 years of keyboards, voice that actually works is finally here. Whether you're writing emails, coding, drafting content, or taking notes, Flow frees up hours every week.</p>
-
-    <h2>Key Features</h2>
-    <ul>
-      <li><strong>AI Auto Edits</strong> — Speak naturally and Flow cleans up your speech, turning rambled thoughts into clear, formatted text without the filler words</li>
-      <li><strong>Personal Dictionary</strong> — Flow learns your unique words, names, and jargon automatically</li>
-      <li><strong>Snippet Library</strong> — Create voice shortcuts for recurring text like scheduling links, FAQs, and canned responses</li>
-      <li><strong>App-Aware Tone</strong> — Flow automatically adjusts tone based on the app you're using. Sound professional in email, casual in chat</li>
-      <li><strong>100+ Languages</strong> — Automatic language detection and seamless switching between languages</li>
-      <li><strong>Cross-Platform Sync</strong> — Mac, Windows, iPhone, Android — your settings follow you everywhere</li>
-    </ul>
-
-    <h2>Built for Every Professional</h2>
-    <p>Wispr Flow isn't a one-size-fits-all tool. It adapts to how you work:</p>
-    <ul>
-      <li><strong>Developers</strong> — Dictate commit messages, code comments, and documentation without leaving your editor</li>
-      <li><strong>Sales Teams</strong> — Follow up instantly after meetings with personalized outreach, no typing required</li>
-      <li><strong>Customer Support</strong> — Speak naturally to resolve tickets faster with perfect replies across every channel</li>
-      <li><strong>Lawyers</strong> — Legal precision with HIPAA-ready transcription and SOC 2 Type II compliance</li>
-      <li><strong>Creators</strong> — Breeze through DMs, comments, and content drafts at the speed of thought</li>
-      <li><strong>Students</strong> — Capture notes, draft papers, and break through writer's block effortlessly</li>
-    </ul>
-
-    <h2>Privacy & Security</h2>
-    <p>Wispr Flow takes security seriously. HIPAA-ready on all plans and SOC 2 Type II compliant on Enterprise — making it suitable for healthcare, legal, and enterprise environments where data protection matters.</p>
-
-    <h2>Who Should Use Wispr Flow?</h2>
-    <p>If you spend more than 2 hours a day typing, Wispr Flow will save you time immediately. It's especially powerful for professionals who write across multiple apps and devices — email, Slack, documents, code editors, CRM systems — and want a single voice tool that works everywhere without friction.</p>
-
-    <a href="https://ref.wisprflow.ai/scott-oller" class="btn btn-gold">Get Wispr Flow Now →</a>
-
+  <!-- SPEED COMPARISON -->
+  <div class="lp-proof">
+    <div class="lp-proof-label">The speed difference is ridiculous</div>
+    <div class="lp-speed-compare">
+      <div class="lp-speed-side slow">
+        <div class="lp-speed-label">⌨️ Typing</div>
+        <div class="lp-speed-value">45</div>
+        <div class="lp-speed-unit">words per minute</div>
+      </div>
+      <div class="lp-speed-side fast">
+        <div class="lp-speed-label">🎤 Wispr Flow</div>
+        <div class="lp-speed-value" style="color:var(--cyan);">220</div>
+        <div class="lp-speed-unit">words per minute</div>
+      </div>
+    </div>
   </div>
 
-  <!-- FOOTER -->
+  <!-- PROBLEM -->
+  <div class="lp-section">
+    <h2>After 150 years, the keyboard is <span class="cyan">finally obsolete</span>.</h2>
+    <p>You think faster than you type. Everyone does. Your ideas, your emails, your messages, your code comments — they all get bottlenecked by how fast your fingers can move. And after a full day of typing, your wrists remind you about it.</p>
+    <p>Wispr Flow doesn't just transcribe. It <em>edits</em>. Speak naturally — with your "ums," your run-on sentences, your scattered thoughts — and Flow turns it into clear, formatted text. Automatically. In every app you use.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- FEATURES -->
+  <div class="lp-section">
+    <h2>Built for how you <span class="cyan">actually work</span></h2>
+    <div class="lp-feature-grid">
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🧠</div>
+        <h4>AI Auto Edits</h4>
+        <p>Speak naturally. Flow removes filler words, fixes grammar, and formats your text instantly.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">📚</div>
+        <h4>Personal Dictionary</h4>
+        <p>Flow learns your names, jargon, and unique words. It gets smarter every time you use it.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">⚡</div>
+        <h4>Snippet Library</h4>
+        <p>Voice shortcuts for recurring text. Say "calendar" and get your full scheduling link.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🎨</div>
+        <h4>App-Aware Tone</h4>
+        <p>Professional in email. Casual in Slack. Flow adjusts tone based on where you're typing.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🌍</div>
+        <h4>100+ Languages</h4>
+        <p>Auto-detects and switches languages seamlessly. Speak however you think.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">📱</div>
+        <h4>Every Device</h4>
+        <p>Mac, Windows, iPhone, Android. Your dictionary, snippets, and settings sync everywhere.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- WHO IT'S FOR -->
+  <div class="lp-section">
+    <h2>Who's <span class="cyan">flowing</span></h2>
+    <div class="lp-feature-grid">
+      <div class="lp-feature">
+        <div class="lp-feature-icon">💻</div>
+        <h4>Developers</h4>
+        <p>Dictate commit messages, code comments, and docs without leaving your editor.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">📈</div>
+        <h4>Sales Teams</h4>
+        <p>Follow up instantly after meetings. Personalized outreach, zero typing.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🎧</div>
+        <h4>Support Reps</h4>
+        <p>Speak perfect replies across tickets, chats, and DMs — naturally.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">⚖️</div>
+        <h4>Lawyers</h4>
+        <p>HIPAA-ready, SOC 2 compliant. Legal precision meets voice speed.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- FAQ -->
+  <div class="lp-section">
+    <h2>Common questions</h2>
+    <div class="lp-faq">
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">Does it work in any app?</div>
+        <div class="lp-faq-a">Yes — Wispr Flow works system-wide. Email, Slack, code editors, browsers, documents. If you can type in it, Flow works in it.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">What about privacy?</div>
+        <div class="lp-faq-a">HIPAA-ready on all plans. SOC 2 Type II compliant on Enterprise. Your voice data is encrypted and never used for training.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">How is this different from built-in dictation?</div>
+        <div class="lp-faq-a">Built-in dictation transcribes. Wispr Flow edits. It removes filler words, fixes grammar, adjusts tone, and formats text — automatically.</div>
+      </div>
+      <div class="lp-faq-item">
+        <div class="lp-faq-q">What's the affiliate commission?</div>
+        <div class="lp-faq-a">25% recurring per sale for 1 year. Every referral generates ongoing revenue as they continue using Flow.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="lp-cta-box">
+    <h2>Type at the speed of <span class="cyan">thought</span></h2>
+    <p>Stop bottlenecking your ideas at 45 WPM. Join the professionals who've already switched to voice.</p>
+    <a href="https://ref.wisprflow.ai/scott-oller" class="btn btn-gold">Get Wispr Flow Now →</a>
+    <div class="lp-urgency">⚡ 25% recurring · 1 year cookie · Works everywhere</div>
+  </div>
+
   <footer>
     <div class="footer-brand"><span class="cyan">Affiliate</span> <span class="purple">Insider</span></div>
     <p>Affiliate Insider · Exclusive deals updated regularly</p>
