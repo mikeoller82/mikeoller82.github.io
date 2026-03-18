@@ -257,8 +257,8 @@ footer .footer-links a:hover{color:var(--cyan)}
 }
 .ticker-track{
   display:flex;
-  gap:16px;
-  animation:ticker-scroll 60s linear infinite;
+  gap:12px;
+  animation:ticker-scroll 45s linear infinite;
   width:max-content;
 }
 .ticker-track:hover{
@@ -269,75 +269,33 @@ footer .footer-links a:hover{color:var(--cyan)}
   100%{transform:translateX(-50%)}
 }
 .ticker-item{
-  display:flex;
+  display:inline-flex;
   align-items:center;
-  gap:14px;
-  padding:14px 20px;
+  gap:10px;
+  padding:10px 18px;
   background:var(--bg-card);
   border:1px solid var(--border-card);
-  border-radius:12px;
-  min-width:320px;
-  max-width:420px;
+  border-radius:999px;
   text-decoration:none;
-  color:inherit;
+  color:var(--text-primary);
   flex-shrink:0;
   transition:border-color var(--transition-fast),box-shadow var(--transition-fast);
+  white-space:nowrap;
 }
 .ticker-item:hover{
   border-color:var(--cyan-border);
   box-shadow:0 4px 20px rgba(0,229,255,0.08);
 }
 .ticker-badge{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:32px;
-  height:32px;
-  border-radius:8px;
   font-size:14px;
+  line-height:1;
   flex-shrink:0;
-}
-.ticker-badge-gold{background:var(--gold-dim);border:1px solid var(--gold-border)}
-.ticker-badge-silver{background:rgba(192,192,192,0.10);border:1px solid rgba(192,192,192,0.20)}
-.ticker-badge-bronze{background:rgba(205,127,50,0.10);border:1px solid rgba(205,127,50,0.20)}
-.ticker-content{
-  flex:1;
-  min-width:0;
-  display:flex;
-  flex-direction:column;
-  gap:2px;
 }
 .ticker-name{
   font-family:var(--font-display);
-  font-weight:700;
-  font-size:0.88rem;
-  color:var(--text-primary);
+  font-weight:600;
+  font-size:0.82rem;
   letter-spacing:-0.2px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
-}
-.ticker-desc{
-  font-family:var(--font-body);
-  font-size:0.75rem;
-  color:var(--text-muted);
-  line-height:1.4;
-  display:-webkit-box;
-  -webkit-line-clamp:2;
-  -webkit-box-orient:vertical;
-  overflow:hidden;
-}
-.ticker-commission{
-  font-family:var(--font-mono);
-  font-size:10px;
-  color:var(--green);
-  letter-spacing:0.5px;
-  white-space:nowrap;
-  flex-shrink:0;
-  padding:4px 8px;
-  background:var(--green-dim);
-  border:1px solid var(--green-border);
-  border-radius:6px;
 }
 
 /* Responsive ticker */
@@ -345,12 +303,7 @@ footer .footer-links a:hover{color:var(--cyan)}
   .ticker-container{padding:0 16px 40px}
   .ticker-container::before{left:16px}
   .ticker-container::after{right:16px}
-  .ticker-item{min-width:280px;max-width:340px;padding:12px 16px}
-  .ticker-name{font-size:0.82rem}
-  .ticker-desc{font-size:0.7rem}
-}
-@media(max-width:480px){
-  .ticker-item{min-width:260px;padding:10px 14px;gap:10px}
-  .ticker-badge{width:28px;height:28px;font-size:12px}
-  .ticker-commission{font-size:9px;padding:3px 6px}
+  .ticker-item{padding:8px 14px;gap:8px}
+  .ticker-name{font-size:0.78rem}
+  .ticker-badge{font-size:12px}
 }
