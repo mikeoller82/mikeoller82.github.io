@@ -1,10 +1,11 @@
 // ============================================================================
-// AFFILIATE INSIDER - Cyberpunk Interactive Features
+// AFFILIATE INSIDER - Cyberpunk Interactive Features v2.0
+// NeuralNexus-inspired: Matrix rain, particle network, 3D tilt, glitch
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   initMatrixRain();
-  initFloatingParticles();
+  initParticleNetwork();
   initCard3DTilt();
   initGlitchText();
   initSearch();
@@ -12,10 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initCardAnimations();
   initCountUp();
+  initSmoothTransitions();
 });
 
 // ----------------------------------------------------------------------------
-// MATRIX RAIN CANVAS
+// MATRIX RAIN — full canvas background
 // ----------------------------------------------------------------------------
 function initMatrixRain() {
   let canvas = document.getElementById('matrix-canvas');
@@ -31,106 +33,128 @@ function initMatrixRain() {
     canvas.height = window.innerHeight;
   };
   resize();
-  window.addEventListener('resize', resize);
+  window.addEventListener('resize', () => { resize(); drops = Array(Math.floor(canvas.width / fontSize)).fill(1); });
 
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()アイウエオカキクケコサシスセソ';
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*アイウエオカキクケコサシスセソ';
   const fontSize = 13;
-  let columns = Math.floor(canvas.width / fontSize);
-  let drops = Array(columns).fill(1);
+  let drops = Array(Math.floor(canvas.width / fontSize)).fill(1);
+  const colors = ['#00ffd5', '#00ffd5', '#00ffd5', '#39ff14', '#ff00ff', '#ffffff'];
 
-  function draw() {
+  setInterval(() => {
     ctx.fillStyle = 'rgba(10,10,15,0.05)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-
     ctx.font = `${fontSize}px JetBrains Mono, monospace`;
-
     for (let i = 0; i < drops.length; i++) {
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      const x = i * fontSize;
-      const y = drops[i] * fontSize;
-      const r = Math.random();
-      ctx.fillStyle = r > 0.98 ? '#ffffff' : r > 0.9 ? '#00ffd5' : '#39ff14';
-      ctx.fillText(char, x, y);
-
-      if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+      ctx.fillText(chars[Math.floor(Math.random() * chars.length)], i * fontSize, drops[i] * fontSize);
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
       drops[i]++;
     }
-  }
-
-  setInterval(draw, 50);
+  }, 50);
 }
 
 // ----------------------------------------------------------------------------
-// FLOATING PARTICLES
+// PARTICLE NETWORK — floating connected particles
 // ----------------------------------------------------------------------------
-function initFloatingParticles() {
+function initParticleNetwork() {
+  let canvas = document.getElementById('particle-canvas');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'particle-canvas';
+    document.body.insertBefore(canvas, document.body.children[1] || null);
+  }
+  const ctx = canvas.getContext('2d');
+
+  const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+  resize();
+  window.addEventListener('resize', resize);
+
   const colors = ['#00ffd5', '#ff00ff', '#39ff14', '#ffd700'];
-  for (let i = 0; i < 25; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size = Math.random() * 4 + 1;
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    Object.assign(p.style, {
-      width:  size + 'px',
-      height: size + 'px',
-      left:   Math.random() * 100 + '%',
-      top:    Math.random() * 100 + '%',
-      background: color,
-      boxShadow: `0 0 6px ${color}`,
-      '--dur':   (10 + Math.random() * 15) + 's',
-      '--delay': (Math.random() * 8) + 's',
+  const particles = Array.from({ length: 60 }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    size: Math.random() * 2.5 + 0.5,
+    color: colors[Math.floor(Math.random() * colors.length)],
+    alpha: Math.random() * 0.4 + 0.15,
+  }));
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.alpha;
+      ctx.fill();
+      ctx.globalAlpha = 1;
     });
-    document.body.appendChild(p);
+    // Draw connection lines between nearby particles
+    for (let i = 0; i < particles.length; i++) {
+      for (let j = i + 1; j < particles.length; j++) {
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 140) {
+          ctx.beginPath();
+          ctx.strokeStyle = particles[i].color;
+          ctx.globalAlpha = 0.08 * (1 - dist / 140);
+          ctx.lineWidth = 0.6;
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.stroke();
+          ctx.globalAlpha = 1;
+        }
+      }
+    }
+    requestAnimationFrame(draw);
   }
+  draw();
 }
 
 // ----------------------------------------------------------------------------
-// 3D CARD TILT
+// 3D CARD TILT with glow overlay
 // ----------------------------------------------------------------------------
 function initCard3DTilt() {
   document.querySelectorAll('.card').forEach(card => {
-    // Add glow overlay if not present
     if (!card.querySelector('.card-glow-overlay')) {
       const overlay = document.createElement('div');
       overlay.className = 'card-glow-overlay';
       card.appendChild(overlay);
     }
-
     card.addEventListener('mousemove', e => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const rotX =  (y - cy) / 12;
-      const rotY = -(x - cx) / 12;
+      const rotX =  (y - rect.height / 2) / 12;
+      const rotY = -(x - rect.width  / 2) / 12;
       card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02,1.02,1.02)`;
+      card.style.transition = 'transform 0.08s ease-out';
     });
-
     card.addEventListener('mouseleave', () => {
       card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)';
       card.style.transition = 'transform 0.4s cubic-bezier(0.4,0,0.2,1)';
-    });
-
-    card.addEventListener('mouseenter', () => {
-      card.style.transition = 'transform 0.1s ease-out';
     });
   });
 }
 
 // ----------------------------------------------------------------------------
-// GLITCH TEXT EFFECT
+// GLITCH TEXT — random jitter + color flash
 // ----------------------------------------------------------------------------
 function initGlitchText() {
   document.querySelectorAll('.glitch').forEach(el => {
     if (!el.dataset.text) el.dataset.text = el.textContent;
-    
     setInterval(() => {
-      if (Math.random() > 0.96) {
-        el.style.transform = `translateX(${(Math.random()-0.5)*6}px)`;
-        setTimeout(() => { el.style.transform = ''; }, 80);
+      if (Math.random() > 0.95) {
+        el.style.transform = `translate(${(Math.random()-0.5)*5}px, ${(Math.random()-0.5)*3}px)`;
+        el.style.filter = Math.random() > 0.5 ? 'hue-rotate(90deg)' : '';
+        setTimeout(() => { el.style.transform = ''; el.style.filter = ''; }, 80);
       }
-    }, 150);
+    }, 160);
   });
 }
 
@@ -140,19 +164,17 @@ function initGlitchText() {
 function initSearch() {
   const searchInput = document.getElementById('search-input');
   if (!searchInput) return;
-
-  let debounceTimer;
+  let timer;
   searchInput.addEventListener('input', e => {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => filterCards(e.target.value.toLowerCase().trim()), 200);
+    clearTimeout(timer);
+    timer = setTimeout(() => filterCards(e.target.value.toLowerCase().trim()), 200);
   });
 }
 
 function filterCards(query) {
   let visible = 0;
   document.querySelectorAll('.card').forEach(card => {
-    const text = (card.textContent || '').toLowerCase();
-    const match = !query || text.includes(query);
+    const match = !query || card.textContent.toLowerCase().includes(query);
     card.style.display = match ? '' : 'none';
     if (match) visible++;
   });
@@ -164,11 +186,10 @@ function filterCards(query) {
 // FILTER PILLS
 // ----------------------------------------------------------------------------
 function initFilters() {
-  const pills = document.querySelectorAll('.filter-pill');
-  pills.forEach(pill => {
+  document.querySelectorAll('.filter-pill').forEach(pill => {
     pill.addEventListener('click', () => {
       const wasActive = pill.classList.contains('active');
-      pills.forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
       if (!wasActive) pill.classList.add('active');
       const filter = pill.classList.contains('active') ? pill.dataset.filter?.toLowerCase() : '';
       document.querySelectorAll('.card').forEach(card => {
@@ -195,74 +216,45 @@ function initScrollTop() {
 function initCardAnimations() {
   if (!('IntersectionObserver' in window)) return;
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animationPlayState = 'running';
-        obs.unobserve(entry.target);
-      }
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.animationPlayState = 'running'; obs.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
-
-  document.querySelectorAll('.card').forEach(card => {
-    card.style.animationPlayState = 'paused';
-    obs.observe(card);
-  });
+  document.querySelectorAll('.card').forEach(c => { c.style.animationPlayState = 'paused'; obs.observe(c); });
 }
 
 // ----------------------------------------------------------------------------
 // COUNT UP ANIMATION
 // ----------------------------------------------------------------------------
 function initCountUp() {
-  const stats = document.querySelectorAll('.stat-value[data-count], .trust-stat-num[data-count]');
-  if (!('IntersectionObserver' in window)) {
-    stats.forEach(s => s.textContent = s.dataset.count);
-    return;
-  }
+  const els = document.querySelectorAll('[data-count]');
+  if (!('IntersectionObserver' in window)) { els.forEach(e => e.textContent = e.dataset.count); return; }
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCount(entry.target, parseInt(entry.target.dataset.count));
-        obs.unobserve(entry.target);
-      }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target, parseInt(e.target.dataset.count)); obs.unobserve(e.target); }});
   }, { threshold: 0.5 });
-  stats.forEach(s => obs.observe(s));
+  els.forEach(e => obs.observe(e));
 }
 
 function animateCount(el, target) {
-  const dur = 1500;
-  const start = performance.now();
-  (function update(now) {
+  const dur = 1500, start = performance.now();
+  (function tick(now) {
     const t = Math.min((now - start) / dur, 1);
-    const ease = 1 - Math.pow(1 - t, 3);
-    el.textContent = Math.floor(ease * target).toLocaleString();
-    if (t < 1) requestAnimationFrame(update);
+    el.textContent = Math.floor((1 - Math.pow(1 - t, 3)) * target).toLocaleString();
+    if (t < 1) requestAnimationFrame(tick);
     else el.textContent = target.toLocaleString();
   })(start);
 }
 
 // ----------------------------------------------------------------------------
-// KEYBOARD SHORTCUTS
+// SMOOTH PAGE TRANSITIONS + KEYBOARD SHORTCUTS
 // ----------------------------------------------------------------------------
-document.addEventListener('keydown', e => {
-  const search = document.getElementById('search-input');
-  if (e.key === '/' && search && document.activeElement !== search) {
-    e.preventDefault();
-    search.focus();
-  }
-  if (e.key === 'Escape' && search && document.activeElement === search) {
-    search.blur();
-    search.value = '';
-    filterCards('');
-  }
-});
-
-// ----------------------------------------------------------------------------
-// SMOOTH TRANSITIONS
-// ----------------------------------------------------------------------------
-document.querySelectorAll('a[href^="/"], a[href^="./"]').forEach(link => {
-  link.addEventListener('click', () => {
-    document.body.style.opacity = '0.7';
-    document.body.style.transition = 'opacity 0.2s ease';
+function initSmoothTransitions() {
+  document.querySelectorAll('a[href^="/"], a[href^="./"]').forEach(link => {
+    link.addEventListener('click', () => { document.body.style.opacity = '0.7'; document.body.style.transition = 'opacity 0.2s ease'; });
   });
-});
+  document.addEventListener('keydown', e => {
+    const s = document.getElementById('search-input');
+    if (e.key === '/' && s && document.activeElement !== s) { e.preventDefault(); s.focus(); }
+    if (e.key === 'Escape' && s && document.activeElement === s) { s.blur(); s.value = ''; filterCards(''); }
+  });
+}
