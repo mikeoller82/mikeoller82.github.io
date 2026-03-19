@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codex Subagents vs Claude Code: Which AI Coding Agent Wins in 2026? — AI Tools Insider</title>
+  <meta name="description" content="OpenAI just launched parallel custom coding agents. Anthropic's been at it for months. We compare Codex Subagents vs Claude Code to find out which one developers actually need.">
+  <meta name="theme-color" content="#06060c">
+  <meta property="og:title" content="Codex Subagents vs Claude Code: Which AI Coding Agent Wins? — AI Tools Insider">
+  <meta property="og:description" content="Two approaches to AI coding agents. One clear winner depending on your workflow. Here's the breakdown.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mikeoller82.github.io/blog/2026-03-18-codex-subagents-vs-claude-code.html">
+  <meta property="og:image" content="https://mikeoller82.github.io/blog/2026-03-18-codex-subagents-vs-claude-code.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <div class="hero">
+    <div class="hero-line"></div>
+    <div class="hero-badge"><span class="live-dot"></span> BLOG POST · 2026-03-18</div>
+    <h1><span class="cyan">Codex Subagents</span> vs <span class="purple">Claude Code</span></h1>
+    <p>OpenAI launched parallel coding agents. Anthropic has months of head start. Two approaches to the same problem — and they're built for completely different developers.</p>
+  </div>
+
+  <nav class="pill-nav">
+    <a href="/">🏠 Home</a>
+    <a href="/blog/" class="active">📝 Reviews</a>
+  </nav>
+
+  <div class="post-content">
+    <img src="2026-03-18-codex-subagents-vs-claude-code.png" alt="Codex Subagents vs Claude Code comparison">
+
+    <h2>The AI Coding Agent Market Just Got Real</h2>
+    <p>For the last year, Claude Code has been the default answer for developers who want an AI agent working directly in their codebase. Anthropic had the first-mover advantage, the best model for code, and a workflow that clicked — terminal-first, agent-mode, understands the whole repo.</p>
+    <p>That changed this week. OpenAI launched <strong>Codex Subagents</strong> on Product Hunt — parallel custom coding agents that run in isolated environments, handle PR reviews, and execute multi-step feature builds. Based on Stripe, Ramp, and Coinbase's internal agent patterns. The developer community noticed immediately.</p>
+    <p>Both tools claim to do the same thing: write code for you. But they approach it from fundamentally different philosophies. And choosing the wrong one costs you real time.</p>
+
+    <h2>What Claude Code Does</h2>
+    <p><a href="https://code.claude.com/docs/en/overview">Claude Code</a> is Anthropic's agentic coding tool. It reads your codebase, edits files, runs commands, and integrates with your development tools. Available in terminal, VS Code, JetBrains, desktop app, browser, Slack, and CI/CD pipelines.</p>
+    <p>The key concept: <strong>single-agent, full-context awareness.</strong> Claude Code loads your entire project, understands the relationships between files, and makes changes based on that comprehensive understanding. You describe what you want in natural language, and the agent figures out the implementation.</p>
+    <p>What it does well:</p>
+    <ul>
+      <li><strong>Full codebase understanding:</strong> It reads your entire project, not just the file you're editing. Changes in one file automatically consider implications across the codebase.</li>
+      <li><strong>Terminal-first workflow:</strong> The CLI is the primary interface. No browser tabs, no web app. Your code, your terminal, your tools.</li>
+      <li><strong>Multi-environment support:</strong> VS Code with inline diffs, JetBrains IDEs, desktop app, browser, Slack integration, GitHub Actions, GitLab CI/CD. Same agent, any surface.</li>
+      <li><strong>CLAUDE.md context files:</strong> Drop a CLAUDE.md in your project root with project-specific instructions, conventions, and architecture notes. The agent respects them.</li>
+      <li><strong>Plan mode:</strong> See exactly what changes the agent proposes before it makes them. Review the plan, approve, and watch it execute.</li>
+      <li><strong>Background agents:</strong> Run long-running tasks in the background while you continue working. New feature in 2026.</li>
+    </ul>
+    <p>Available through Claude subscription (Pro, Max, Teams, Enterprise) or Anthropic Console with API access. Third-party provider support also available.</p>
+
+    <h2>What Codex Subagents Does</h2>
+    <p><a href="https://openai.com/index/codex-subagents/">Codex Subagents</a> is OpenAI's answer to the agentic coding problem. Launched on Product Hunt, it's based on patterns from Stripe, Ramp, and Coinbase — companies that built their own internal coding agents and shared the architectural blueprints.</p>
+    <p>The key concept: <strong>parallel, isolated agents for specific tasks.</strong> Instead of one agent that knows your whole codebase, Codex spawns multiple specialized agents that each handle a specific task in an isolated environment. One agent handles PR review, another builds a feature, another runs tests — all simultaneously.</p>
+    <p>What it does well:</p>
+    <ul>
+      <li><strong>Parallel execution:</strong> Run multiple coding agents at the same time. Feature build, PR review, bug fix — all happening simultaneously in separate environments.</li>
+      <li><strong>TOML-defined agents:</strong> Configure each agent's behavior, scope, and constraints using TOML files. Define what it can and can't touch.</li>
+      <li><strong>Isolated environments:</strong> Each agent runs in its own sandbox. No risk of one agent's changes conflicting with another's. Perfect for multi-branch workflows.</li>
+      <li><strong>PR review automation:</strong> Dedicated agents that review pull requests, check code quality, flag issues, and suggest improvements — no human reviewer needed for routine checks.</li>
+      <li><strong>Multi-step feature builds:</strong> Describe a feature in natural language, and the agent breaks it into steps, implements each one, and tests as it goes.</li>
+      <li><strong>Enterprise patterns:</strong> Built on production-tested patterns from companies handling massive codebases at scale.</li>
+    </ul>
+    <p>Uses OpenAI's API infrastructure. Pricing based on usage through the OpenAI platform.</p>
+
+    <h2>Head-to-Head: The Real Differences</h2>
+
+    <h3>Architecture</h3>
+    <p><strong>Claude Code:</strong> One smart agent that understands everything. Deep context, comprehensive understanding, single-threaded execution. When you ask it to change something, it considers the entire codebase before acting.</p>
+    <p><strong>Codex Subagents:</strong> Multiple focused agents that each do one thing well. Parallel execution, isolated contexts, task-specific optimization. When you ask it to change something, it spawns the right agent for the job while other agents keep working on other things.</p>
+
+    <h3>Workflow Philosophy</h3>
+    <p><strong>Claude Code:</strong> Conversational. You're working with the agent, iterating on changes, discussing approaches. It's a pair programmer that happens to be very smart.</p>
+    <p><strong>Codex Subagents:</strong> Declarative. You define what needs to happen (via TOML + natural language), and the agents execute. It's a project manager assigning tasks to specialists.</p>
+
+    <h3>Speed & Parallelism</h3>
+    <p><strong>Claude Code:</strong> Fast for single tasks, but sequential. One task at a time. The quality is high, but if you need 5 things done, you queue them.</p>
+    <p><strong>Codex Subagents:</strong> Fast for multiple tasks because they run in parallel. If you need a feature built AND a PR reviewed AND a bug fixed — all three happen simultaneously.</p>
+
+    <h3>Codebase Understanding</h3>
+    <p><strong>Claude Code wins here.</strong> Full project context means changes are more likely to be architecturally consistent. When it modifies a function, it knows everywhere that function is called.</p>
+    <p><strong>Codex Subagents</strong> understand their specific task context, but not necessarily the entire project. The isolation is a feature (safety) and a limitation (context).</p>
+
+    <h3>Configuration & Control</h3>
+    <p><strong>Codex Subagents wins on control.</strong> TOML-defined agents with explicit constraints means you can precisely control what each agent can touch. This matters in production codebases where accidental changes to critical paths are dangerous.</p>
+    <p><strong>Claude Code</strong> uses CLAUDE.md for project-level instructions, but doesn't offer the granular per-task configuration that TOML definitions provide.</p>
+
+    <h3>Developer Experience</h3>
+    <p><strong>Claude Code:</strong> Works everywhere — terminal, IDE, browser, Slack, CI/CD. The multi-environment support means you can use it wherever you already work. The install is one command.</p>
+    <p><strong>Codex Subagents:</strong> More setup required, but the TOML configuration gives you infrastructure-as-code for your AI agents. Better for teams that want to define, version control, and share their agent configurations.</p>
+
+    <h2>Pricing Comparison</h2>
+    <ul>
+      <li><strong>Claude Code:</strong> Included with Claude subscription (Pro $20/mo, Max $100/mo, Teams $30/seat/mo). API access through Anthropic Console for usage-based pricing.</li>
+      <li><strong>Codex Subagents:</strong> Usage-based through OpenAI API platform. Pricing depends on model used and tokens consumed.</li>
+    </ul>
+    <p>For individual developers, Claude Code's subscription model is simpler and more predictable. For teams that want fine-grained control over agent behavior, Codex's API-based pricing scales with actual usage.</p>
+
+    <h2>Who Should Use What?</h2>
+
+    <h3>Choose Claude Code If:</h3>
+    <ul>
+      <li>You want the fastest path from install to productive coding</li>
+      <li>You work in terminal and IDE (VS Code, JetBrains)</li>
+      <li>You need one agent that understands your whole project</li>
+      <li>You iterate on changes conversationally</li>
+      <li>You want CI/CD integration (GitHub Actions, GitLab)</li>
+      <li>You prefer subscription pricing over usage-based</li>
+    </ul>
+
+    <h3>Choose Codex Subagents If:</h3>
+    <ul>
+      <li>You need multiple tasks done simultaneously</li>
+      <li>You want PR review automated with explicit rules</li>
+      <li>Your team needs reproducible, version-controlled agent configs</li>
+      <li>You're already deep in the OpenAI ecosystem</li>
+      <li>You need granular control over what each agent can touch</li>
+      <li>You work with large codebases where isolation matters</li>
+    </ul>
+
+    <h2>The Honest Take</h2>
+    <p>These aren't competitors in the traditional sense. They're different answers to "how should AI write code?"</p>
+    <p><strong>Claude Code</strong> says: one smart agent, full context, conversational workflow. Think of it as replacing your junior developer who reads the whole codebase before touching anything.</p>
+    <p><strong>Codex Subagents</strong> says: many focused agents, isolated contexts, parallel execution. Think of it as replacing a team of specialists who each handle their domain without stepping on each other.</p>
+    <p>For solo developers and small teams, Claude Code is the faster start and simpler workflow. For larger teams with complex multi-branch development, Codex Subagents' parallel architecture and configuration-first approach has structural advantages.</p>
+    <p>The real test is trying both on your actual codebase. Both have free tiers or trial access. The winner is whichever one understands your project better on day one.</p>
+
+    <a href="https://code.claude.com/docs/en/overview" class="btn btn-cyan">Try Claude Code →</a>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><span class="cyan">AI Tools</span> <span class="purple">Insider</span></div>
+    <p>Discovering the best AI tools daily</p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Reviews</a>
+    </div>
+  </footer>
+
+</body>
+</html>
