@@ -1,11 +1,12 @@
-
 // ============================================================================
-// AFFILIATE INSIDER - Interactive Features
+// AFFILIATE INSIDER - Cyberpunk Interactive Features
 // ============================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize all features
-  initParticles();
+  initMatrixRain();
+  initFloatingParticles();
+  initCard3DTilt();
+  initGlitchText();
   initSearch();
   initFilters();
   initScrollTop();
@@ -14,118 +15,167 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ----------------------------------------------------------------------------
-// PARTICLE BACKGROUND
+// MATRIX RAIN CANVAS
 // ----------------------------------------------------------------------------
-function initParticles() {
-  const container = document.querySelector('.particles');
-  if (!container) return;
-  
-  const particleCount = 30;
-  
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement('div');
-    particle.className = 'particle';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.animationDelay = Math.random() * 8 + 's';
-    particle.style.animationDuration = (6 + Math.random() * 4) + 's';
-    
-    // Random colors
-    const colors = ['#00d4ff', '#a855f7', '#fbbf24', '#22c55e'];
-    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.boxShadow = `0 0 6px ${particle.style.background}`;
-    
-    container.appendChild(particle);
+function initMatrixRain() {
+  let canvas = document.getElementById('matrix-canvas');
+  if (!canvas) {
+    canvas = document.createElement('canvas');
+    canvas.id = 'matrix-canvas';
+    document.body.prepend(canvas);
+  }
+  const ctx = canvas.getContext('2d');
+
+  const resize = () => {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  };
+  resize();
+  window.addEventListener('resize', resize);
+
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()アイウエオカキクケコサシスセソ';
+  const fontSize = 13;
+  let columns = Math.floor(canvas.width / fontSize);
+  let drops = Array(columns).fill(1);
+
+  function draw() {
+    ctx.fillStyle = 'rgba(10,10,15,0.05)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.font = `${fontSize}px JetBrains Mono, monospace`;
+
+    for (let i = 0; i < drops.length; i++) {
+      const char = chars[Math.floor(Math.random() * chars.length)];
+      const x = i * fontSize;
+      const y = drops[i] * fontSize;
+      const r = Math.random();
+      ctx.fillStyle = r > 0.98 ? '#ffffff' : r > 0.9 ? '#00ffd5' : '#39ff14';
+      ctx.fillText(char, x, y);
+
+      if (y > canvas.height && Math.random() > 0.975) drops[i] = 0;
+      drops[i]++;
+    }
+  }
+
+  setInterval(draw, 50);
+}
+
+// ----------------------------------------------------------------------------
+// FLOATING PARTICLES
+// ----------------------------------------------------------------------------
+function initFloatingParticles() {
+  const colors = ['#00ffd5', '#ff00ff', '#39ff14', '#ffd700'];
+  for (let i = 0; i < 25; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = Math.random() * 4 + 1;
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    Object.assign(p.style, {
+      width:  size + 'px',
+      height: size + 'px',
+      left:   Math.random() * 100 + '%',
+      top:    Math.random() * 100 + '%',
+      background: color,
+      boxShadow: `0 0 6px ${color}`,
+      '--dur':   (10 + Math.random() * 15) + 's',
+      '--delay': (Math.random() * 8) + 's',
+    });
+    document.body.appendChild(p);
   }
 }
 
 // ----------------------------------------------------------------------------
-// SEARCH FUNCTIONALITY
+// 3D CARD TILT
+// ----------------------------------------------------------------------------
+function initCard3DTilt() {
+  document.querySelectorAll('.card').forEach(card => {
+    // Add glow overlay if not present
+    if (!card.querySelector('.card-glow-overlay')) {
+      const overlay = document.createElement('div');
+      overlay.className = 'card-glow-overlay';
+      card.appendChild(overlay);
+    }
+
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotX =  (y - cy) / 12;
+      const rotY = -(x - cx) / 12;
+      card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale3d(1.02,1.02,1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale3d(1,1,1)';
+      card.style.transition = 'transform 0.4s cubic-bezier(0.4,0,0.2,1)';
+    });
+
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.1s ease-out';
+    });
+  });
+}
+
+// ----------------------------------------------------------------------------
+// GLITCH TEXT EFFECT
+// ----------------------------------------------------------------------------
+function initGlitchText() {
+  document.querySelectorAll('.glitch').forEach(el => {
+    if (!el.dataset.text) el.dataset.text = el.textContent;
+    
+    setInterval(() => {
+      if (Math.random() > 0.96) {
+        el.style.transform = `translateX(${(Math.random()-0.5)*6}px)`;
+        setTimeout(() => { el.style.transform = ''; }, 80);
+      }
+    }, 150);
+  });
+}
+
+// ----------------------------------------------------------------------------
+// SEARCH
 // ----------------------------------------------------------------------------
 function initSearch() {
   const searchInput = document.getElementById('search-input');
   if (!searchInput) return;
-  
+
   let debounceTimer;
-  
-  searchInput.addEventListener('input', (e) => {
+  searchInput.addEventListener('input', e => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => {
-      const query = e.target.value.toLowerCase().trim();
-      filterCards(query);
-    }, 200);
+    debounceTimer = setTimeout(() => filterCards(e.target.value.toLowerCase().trim()), 200);
   });
 }
 
 function filterCards(query) {
-  const cards = document.querySelectorAll('.card');
-  let visibleCount = 0;
-  
-  cards.forEach(card => {
-    const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
-    const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
-    const tags = card.querySelector('.tags')?.textContent.toLowerCase() || '';
-    
-    const matches = !query || 
-      title.includes(query) || 
-      desc.includes(query) || 
-      tags.includes(query);
-    
-    if (matches) {
-      card.style.display = '';
-      card.style.animation = 'card-appear 0.4s ease forwards';
-      visibleCount++;
-    } else {
-      card.style.display = 'none';
-    }
+  let visible = 0;
+  document.querySelectorAll('.card').forEach(card => {
+    const text = (card.textContent || '').toLowerCase();
+    const match = !query || text.includes(query);
+    card.style.display = match ? '' : 'none';
+    if (match) visible++;
   });
-  
-  // Update results count if element exists
-  const resultsCount = document.getElementById('results-count');
-  if (resultsCount) {
-    resultsCount.textContent = `${visibleCount} result${visibleCount !== 1 ? 's' : ''}`;
-  }
+  const el = document.getElementById('results-count');
+  if (el) el.textContent = `${visible} result${visible !== 1 ? 's' : ''}`;
 }
 
 // ----------------------------------------------------------------------------
 // FILTER PILLS
 // ----------------------------------------------------------------------------
 function initFilters() {
-  const filterPills = document.querySelectorAll('.filter-pill');
-  
-  filterPills.forEach(pill => {
+  const pills = document.querySelectorAll('.filter-pill');
+  pills.forEach(pill => {
     pill.addEventListener('click', () => {
-      // Toggle active state
       const wasActive = pill.classList.contains('active');
-      
-      // Remove active from all if clicking different pill
-      if (!wasActive) {
-        filterPills.forEach(p => p.classList.remove('active'));
-      }
-      
-      pill.classList.toggle('active');
-      
-      // Get filter value
-      const filter = pill.classList.contains('active') ? 
-        pill.dataset.filter?.toLowerCase() : '';
-      
-      filterCardsByCategory(filter);
+      pills.forEach(p => p.classList.remove('active'));
+      if (!wasActive) pill.classList.add('active');
+      const filter = pill.classList.contains('active') ? pill.dataset.filter?.toLowerCase() : '';
+      document.querySelectorAll('.card').forEach(card => {
+        const tags = (card.querySelector('.tags')?.textContent || '').toLowerCase();
+        card.style.display = !filter || tags.includes(filter) ? '' : 'none';
+      });
     });
-  });
-}
-
-function filterCardsByCategory(category) {
-  const cards = document.querySelectorAll('.card');
-  
-  cards.forEach(card => {
-    const tags = card.querySelector('.tags')?.textContent.toLowerCase() || '';
-    const matches = !category || tags.includes(category);
-    
-    if (matches) {
-      card.style.display = '';
-      card.style.animation = 'card-appear 0.4s ease forwards';
-    } else {
-      card.style.display = 'none';
-    }
   });
 }
 
@@ -133,20 +183,10 @@ function filterCardsByCategory(category) {
 // SCROLL TO TOP
 // ----------------------------------------------------------------------------
 function initScrollTop() {
-  const scrollBtn = document.querySelector('.scroll-top');
-  if (!scrollBtn) return;
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      scrollBtn.classList.add('visible');
-    } else {
-      scrollBtn.classList.remove('visible');
-    }
-  });
-  
-  scrollBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  const btn = document.querySelector('.scroll-top');
+  if (!btn) return;
+  window.addEventListener('scroll', () => btn.classList.toggle('visible', window.scrollY > 500));
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
 // ----------------------------------------------------------------------------
@@ -154,103 +194,75 @@ function initScrollTop() {
 // ----------------------------------------------------------------------------
 function initCardAnimations() {
   if (!('IntersectionObserver' in window)) return;
-  
-  const observer = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.animationPlayState = 'running';
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.1 });
-  
+
   document.querySelectorAll('.card').forEach(card => {
     card.style.animationPlayState = 'paused';
-    observer.observe(card);
+    obs.observe(card);
   });
 }
 
 // ----------------------------------------------------------------------------
-// ANIMATED COUNT UP FOR STATS
+// COUNT UP ANIMATION
 // ----------------------------------------------------------------------------
 function initCountUp() {
-  const stats = document.querySelectorAll('.stat-value[data-count]');
-  
+  const stats = document.querySelectorAll('.stat-value[data-count], .trust-stat-num[data-count]');
   if (!('IntersectionObserver' in window)) {
-    stats.forEach(stat => {
-      stat.textContent = stat.dataset.count;
-    });
+    stats.forEach(s => s.textContent = s.dataset.count);
     return;
   }
-  
-  const observer = new IntersectionObserver((entries) => {
+  const obs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const target = parseInt(entry.target.dataset.count);
-        animateCount(entry.target, target);
-        observer.unobserve(entry.target);
+        animateCount(entry.target, parseInt(entry.target.dataset.count));
+        obs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.5 });
-  
-  stats.forEach(stat => observer.observe(stat));
+  stats.forEach(s => obs.observe(s));
 }
 
-function animateCount(element, target) {
-  const duration = 1500;
+function animateCount(el, target) {
+  const dur = 1500;
   const start = performance.now();
-  
-  function update(currentTime) {
-    const elapsed = currentTime - start;
-    const progress = Math.min(elapsed / duration, 1);
-    
-    // Easing function
-    const easeOut = 1 - Math.pow(1 - progress, 3);
-    const current = Math.floor(easeOut * target);
-    
-    element.textContent = current.toLocaleString();
-    
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    } else {
-      element.textContent = target.toLocaleString();
-    }
-  }
-  
-  requestAnimationFrame(update);
+  (function update(now) {
+    const t = Math.min((now - start) / dur, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    el.textContent = Math.floor(ease * target).toLocaleString();
+    if (t < 1) requestAnimationFrame(update);
+    else el.textContent = target.toLocaleString();
+  })(start);
 }
 
 // ----------------------------------------------------------------------------
-// KEYBOARD NAVIGATION
+// KEYBOARD SHORTCUTS
 // ----------------------------------------------------------------------------
-document.addEventListener('keydown', (e) => {
-  // Focus search on '/'
-  if (e.key === '/' && !e.ctrlKey && !e.metaKey) {
-    const searchInput = document.getElementById('search-input');
-    if (searchInput && document.activeElement !== searchInput) {
-      e.preventDefault();
-      searchInput.focus();
-    }
+document.addEventListener('keydown', e => {
+  const search = document.getElementById('search-input');
+  if (e.key === '/' && search && document.activeElement !== search) {
+    e.preventDefault();
+    search.focus();
   }
-  
-  // Close search on Escape
-  if (e.key === 'Escape') {
-    const searchInput = document.getElementById('search-input');
-    if (searchInput && document.activeElement === searchInput) {
-      searchInput.blur();
-      searchInput.value = '';
-      filterCards('');
-    }
+  if (e.key === 'Escape' && search && document.activeElement === search) {
+    search.blur();
+    search.value = '';
+    filterCards('');
   }
 });
 
 // ----------------------------------------------------------------------------
-// SMOOTH LINK TRANSITIONS
+// SMOOTH TRANSITIONS
 // ----------------------------------------------------------------------------
 document.querySelectorAll('a[href^="/"], a[href^="./"]').forEach(link => {
-  link.addEventListener('click', function(e) {
-    // Add page transition effect
-    document.body.style.opacity = '0.8';
+  link.addEventListener('click', () => {
+    document.body.style.opacity = '0.7';
     document.body.style.transition = 'opacity 0.2s ease';
   });
 });
