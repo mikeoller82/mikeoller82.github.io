@@ -237,6 +237,8 @@ footer .footer-links a:hover{color:var(--cyan)}
   overflow:hidden;
   padding:0 28px 48px;
   position:relative;
+  display:flex;
+  justify-content:center;
 }
 .ticker-container::before,
 .ticker-container::after{
@@ -258,8 +260,9 @@ footer .footer-links a:hover{color:var(--cyan)}
 .ticker-track{
   display:flex;
   gap:12px;
-  animation:ticker-scroll 45s linear infinite;
+  animation:ticker-scroll 15s linear infinite;
   width:max-content;
+  justify-content:center;
 }
 .ticker-track:hover{
   animation-play-state:paused;
