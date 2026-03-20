@@ -854,6 +854,28 @@ footer .footer-links a:hover { color: var(--cyan); }
 .post-content pre { background: var(--bg-surface); border: 1px solid var(--cyan-border); border-radius: var(--radius-md); padding: 20px; overflow-x: auto; margin: 24px 0; box-shadow: 0 0 20px rgba(0,255,213,0.05); }
 .post-content pre code { background: none; border: none; padding: 0; }
 
+/* Authority / external link box */
+.authority-box {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  padding: 18px 22px;
+  margin: 24px 0;
+  box-shadow: 0 0 20px rgba(255,215,0,0.06);
+}
+.authority-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+.authority-box a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.authority-box a:hover { color: var(--gold-soft); filter: drop-shadow(0 0 8px rgba(255,215,0,0.4)); }
+
 /* ── Landing Page Components ───────────────────────────────────── */
 .lp-hero-img { max-width: 1080px; margin: 0 auto; padding: 0 28px 56px; position: relative; z-index: 1; }
 .lp-hero-img img { width: 100%; border-radius: var(--radius-xl); border: 1px solid var(--cyan-border); box-shadow: 0 0 40px rgba(0,255,213,0.1), var(--shadow-hover); transition: transform var(--transition-smooth); }
