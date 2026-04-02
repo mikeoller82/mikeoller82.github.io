@@ -940,7 +940,7 @@ footer .footer-links a:hover { color: var(--cyan); }
 .ticker-track {
   display: flex;
   gap: 12px;
-  animation: ticker-scroll 60s linear infinite;
+  animation: ticker-scroll 120s linear infinite;
   width: max-content;
 }
 .ticker-track:hover { animation-play-state: paused; }
