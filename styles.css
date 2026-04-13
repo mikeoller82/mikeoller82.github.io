@@ -1223,3 +1223,43 @@ footer .footer-links a:hover { color: var(--cyan); }
   margin: 32px 0;
   width: 100%;
 }
+/* Buttons inside safe-cta-wrap are NEVER full-width */
+.safe-cta-wrap .btn {
+  width: auto !important;
+  display: inline-flex !important;
+  padding: 16px 40px;
+  font-size: 13px;
+  border-radius: var(--radius-md);
+}
+
+/* ── Landing page button width overrides ──────────────────────────
+   .btn defaults to width:100% for card contexts.
+   Every LP section context must override to auto-width.            */
+.lp-text .btn,
+.lp-text a.btn,
+.lp-faq .btn,
+.lp-faq a.btn,
+.faq-item p .btn,
+.faq-item p a.btn {
+  width: auto !important;
+  display: block;
+  margin: 20px auto;
+  max-width: fit-content;
+  padding: 14px 36px;
+  font-size: 12px;
+  border-radius: var(--radius-md);
+}
+
+/* ── lp-hero-img centering hardener ───────────────────────────────
+   Prevents left-drift when agent omits margin:auto on the wrapper  */
+.lp-hero-img {
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center;
+}
+.lp-hero-img img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
