@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="/styles.css">
   
   <style id="glitch-fx">
-    /* ── GLITCH EFFECT — Triggered during site optimization ── */
     .glitch{position:relative;display:inline-block;animation:g-skew 2.5s infinite linear alternate-reverse}
     .glitch::before,.glitch::after{content:attr(data-text);position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
     .glitch::before{color:#00f7ff;animation:g1 .65s infinite linear alternate-reverse;clip-path:polygon(0 0,100% 0,100% 42%,0 42%)}
@@ -27,7 +26,6 @@
     .opt-badge{position:fixed;top:10px;right:10px;background:rgba(0,247,255,.08);border:1px solid rgba(0,247,255,.25);color:#00f7ff;padding:5px 14px;border-radius:18px;font-family:'JetBrains Mono',monospace;font-size:10px;z-index:10000;animation:opt-p 2s infinite;backdrop-filter:blur(6px);letter-spacing:1.2px}
     @keyframes opt-p{0%,100%{opacity:1;box-shadow:0 0 8px rgba(0,247,255,.15)}50%{opacity:.55;box-shadow:0 0 20px rgba(0,247,255,.35)}}
     .glitch-block{animation:g-skew 4s infinite linear alternate-reverse}
-    /* ── LANDING PAGE HIGH-CONVERSION CARD ELEMENTS ── */
     .urgency-bar{background:linear-gradient(90deg,#ff3333,#ff6600,#ff3333);background-size:200% 100%;animation:urg-slide 3s infinite linear;color:#fff;text-align:center;padding:4px 10px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:2px;font-family:'JetBrains Mono',monospace;border-radius:6px 6px 0 0}
     @keyframes urg-slide{0%{background-position:0% 50%}100%{background-position:200% 50%}}
     .proof-row{display:flex;align-items:center;gap:6px;font-size:10px;color:rgba(255,255,255,.4);font-family:'JetBrains Mono',monospace;margin-top:8px}
@@ -36,34 +34,130 @@
     .trust-row{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
     .trust-chip{font-size:9px;padding:2px 7px;border-radius:4px;background:rgba(0,247,255,.05);border:1px solid rgba(0,247,255,.12);color:rgba(255,255,255,.5);font-family:'JetBrains Mono',monospace;white-space:nowrap}
     .cta-secondary{display:block;text-align:center;font-size:10px;color:rgba(255,255,255,.35);margin-top:4px;font-family:'JetBrains Mono',monospace;letter-spacing:.5px}
-    /* ── ENGAGING BLOG CARD ELEMENTS ── */
     .read-meta{display:flex;align-items:center;gap:8px;font-size:10px;color:rgba(255,255,255,.38);font-family:'JetBrains Mono',monospace;margin-top:6px}
     .card-excerpt{font-size:11px;color:rgba(255,255,255,.3);font-style:italic;margin-top:5px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
     .author-chip{display:inline-flex;align-items:center;gap:4px;font-size:9px;color:rgba(255,255,255,.45);background:rgba(180,74,255,.08);border:1px solid rgba(180,74,255,.15);padding:2px 8px;border-radius:10px;font-family:'JetBrains Mono',monospace}
     .engagement-row{display:flex;align-items:center;gap:10px;margin-top:6px;font-size:10px;color:rgba(255,255,255,.3);font-family:'JetBrains Mono',monospace}
-    /* ── VALUE PROP BANNER ── */
     .value-banner{text-align:center;padding:2rem 1.5rem;margin:1.5rem auto;max-width:700px}
     .value-banner h2{font-size:1.3rem;margin-bottom:.5rem}
     .value-banner p{font-size:.85rem;color:rgba(255,255,255,.5);margin-bottom:1rem}
   </style>
 </head>
 <body>
+  <!-- ========================================== -->
+  <!-- CYBERPUNK SQUEEZE GATEWAY                 -->
+  <!-- ========================================== -->
+  <style>
+    .squeeze-gate {
+      position: fixed; inset: 0; z-index: 999999;
+      background: #0a0a0f;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 24px;
+      transition: opacity 0.8s ease, visibility 0.8s ease;
+    }
+    .squeeze-content {
+      max-width: 500px; width: 100%;
+      border: 1px solid var(--cyan-border);
+      background: rgba(15,15,26,0.95);
+      padding: 48px 32px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 0 60px rgba(0,255,213,0.15), inset 0 0 20px rgba(0,255,213,0.05);
+      backdrop-filter: blur(16px);
+    }
+    .squeeze-gate.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .glitch-lock { font-size: 3.5rem; margin-bottom: 16px; animation: glitchTop 3s infinite; }
+    .squeeze-content h1 { font-family: var(--font-display); font-size: 1.8rem; color: #fff; text-transform: uppercase; margin-bottom: 12px; }
+    .squeeze-content p { color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6; }
+    .squeeze-content input {
+      width: 100%; padding: 18px 24px; margin-bottom: 16px;
+      background: #06060c; border: 1px solid var(--cyan-border);
+      color: #fff; font-family: var(--font-mono); border-radius: var(--radius-sm);
+      outline: none; text-align: center; text-transform: uppercase; font-size: 14px;
+    }
+    .squeeze-content input:focus { border-color: var(--cyan); box-shadow: 0 0 20px rgba(0,255,213,0.2); }
+    .squeeze-content button { width: 100%; padding: 18px; font-size: 14px; }
+    .squeeze-footer { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); margin-top: 24px; text-transform: uppercase; letter-spacing: 1px; }
+    body.locked { overflow: hidden; }
+  </style>
+
+  <div id="squeeze-gate" class="squeeze-gate">
+    <div class="squeeze-content" id="squeeze-inner">
+      <div class="glitch-lock">🔒</div>
+      <h1 class="glitch" data-text="RESTRICTED INTEL">RESTRICTED INTEL</h1>
+      <p>Enter your email to decrypt our private database of vetted AI tools, exclusive SaaS deals, and brutally honest reviews.</p>
+      
+      <!-- Hidden iframe catches the Brevo redirect so the user doesn't leave your site -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.squeezeSubmitted){ unlockSite(); }"></iframe>
+      
+      <!-- Replace YOUR_BREVO_URL below -->
+      <form action="https://e47a10f8.sibforms.com/serve/MUIFACTiGo8xGmC2wL81C70X1C8XwsAvp6kuoJEDsMVeAY-zuugdyql6eareiGoDka_QncUhUuhiWOcLBEWMVxGGH8XIg4eQyyQetr4xM7meJhrzSG-MVesLemfl9FQcYl2Qrmyz1bARQ5gstlrlZDtLVRjNFMxjqBRygWWcbOfn43dBkIUwK9Cea_R-ET0eqqj2lXNew6ADxWqmTw==" method="POST" target="hidden_iframe" onsubmit="window.squeezeSubmitted=true; document.getElementById('btn-decrypt').textContent='DECRYPTING...';">
+        <input type="email" name="EMAIL" placeholder="ENTER COMM-LINK (EMAIL)..." required>
+        <button type="submit" id="btn-decrypt" class="btn btn-gold">DECRYPT ACCESS →</button>
+        <input type="hidden" name="email_address_check" value="">
+        <input type="hidden" name="locale" value="en">
+      </form>
+      
+      <div class="squeeze-footer">NO SPAM. JUST WEEKLY INTEL. 1-CLICK UNSUBSCRIBE.</div>
+    </div>
+  </div>
+
+  <script>
+    // Check if user already unlocked the site
+    document.addEventListener("DOMContentLoaded", () => {
+      if(!localStorage.getItem('insider_access')) {
+        document.body.classList.add('locked');
+      } else {
+        document.getElementById('squeeze-gate').style.display = 'none';
+      }
+    });
+
+    // Function to unlock site after successful submission
+    function unlockSite() {
+      localStorage.setItem('insider_access', 'granted');
+      const inner = document.getElementById('squeeze-inner');
+      inner.innerHTML = '<div class="glitch-lock" style="color:var(--cyan);">🔓</div><h1 class="cyan">ACCESS GRANTED</h1><p>Initializing secure connection...</p>';
+      
+      setTimeout(() => {
+        document.getElementById('squeeze-gate').classList.add('hidden');
+        document.body.classList.remove('locked');
+      }, 1500); // 1.5 second cinematic delay before revealing the site
+    }
+  </script>
+  <!-- ========================================== -->
+  <!-- END CYBERPUNK SQUEEZE GATEWAY              -->
+  <!-- ========================================== -->
+
   <div class="glitch-scanline"></div>
   <div class="opt-badge">⚡ OPTIMIZED</div>
+
   <div class="hero">
+    <div class="hero-grid"></div>
     <div class="hero-line"></div>
+    <div class="float-shape float-shape-1"></div>
+    <div class="float-shape float-shape-2"></div>
+    <div class="float-shape float-shape-3"></div>
     <div class="hero-badge"><span class="live-dot"></span> AI AGENTS ACTIVE · UPDATED EVERY 4 HOURS</div>
     <h1><span class="glitch" data-text="AI Tool Insider"><span class="cyan">AI Tool</span> <span class="purple">Insider</span></span></h1>
-    <p>Stop overpaying for SaaS. We negotiate exclusive deals and vet every tool — so you don't have to. Updated April 12, 2026.</p>
+    <p>Stop overpaying for SaaS. We negotiate exclusive deals and vet every tool — so you don't have to. Updated April 13, 2026.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><span class="hero-stat-value">31</span><span class="hero-stat-label">Exclusive Deals</span></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value">31</span>
+        <span class="hero-stat-label">Exclusive Deals</span>
+      </div>
       <div class="hero-stat-dot"></div>
-      <div class="hero-stat"><span class="hero-stat-value purple-val">34</span><span class="hero-stat-label">Expert Reviews</span></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value purple-val">34</span>
+        <span class="hero-stat-label">Expert Reviews</span>
+      </div>
       <div class="hero-stat-dot"></div>
-      <div class="hero-stat"><span class="hero-stat-value gold-val">24/7</span><span class="hero-stat-label">AI Active</span></div>
+      <div class="hero-stat">
+        <span class="hero-stat-value gold-val">24/7</span>
+        <span class="hero-stat-label">AI Active</span>
+      </div>
     </div>
     <a href="#top-offers" class="btn btn-gold">Browse All Deals ↓</a>
   </div>
+
   <nav class="pill-nav">
     <a href="/" class="active">🏠 Home</a>
     <a href="/blog/">📝 Blog</a>
@@ -75,7 +169,7 @@
   </div>
 
   <div class="section-header">
-    <h2><span class="icon">🔍</span> Newly Discovered Tools</h2>
+    <h2><span class="icon">🔍</span> Newly Discovered</h2>
     <p>// fresh finds from Product Hunt, GitHub &amp; Hacker News — click any to visit</p>
   </div>
   <div class="ticker-container">
@@ -840,7 +934,7 @@
   <div class="bento-grid">
     <div class="card glitch-block">
       <div class="urgency-bar">🔥 LIMITED — Deal expires soon</div>
-      <div class="card-img"><img src="learnworlds-hero.png" alt="LearnWorlds" loading="lazy"></div>
+      <div class="card-img"><img src="learnworlds-hero.png.logo.png" alt="LearnWorlds" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-featured">⭐ Featured</span>
         <h3>LearnWorlds</h3>
@@ -854,7 +948,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⚡ EXCLUSIVE — Special pricing active</div>
-      <div class="card-img"><img src="diginius-hero.png" alt="Diginius" loading="lazy"></div>
+      <div class="card-img"><img src="diginius-hero.png.logo.png" alt="Diginius" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-featured">⭐ Featured</span>
         <h3>Diginius</h3>
@@ -868,7 +962,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🚀 TRENDING — High demand this week</div>
-      <div class="card-img"><img src="tapstitch-hero.png" alt="TapStitch" loading="lazy"></div>
+      <div class="card-img"><img src="tapstitch-hero.png.logo.png" alt="TapStitch" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-featured">⭐ Featured</span>
         <h3>TapStitch</h3>
@@ -882,7 +976,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💎 VERIFIED — Partner deal confirmed</div>
-      <div class="card-img"><img src="travel-code-hero.png" alt="Travel Code" loading="lazy"></div>
+      <div class="card-img"><img src="travel-code-hero.png.logo.png" alt="Travel Code" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Travel Code</h3>
@@ -896,7 +990,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⏰ ACT FAST — Slots filling up</div>
-      <div class="card-img"><img src="apollo-io-building-a-world-class-outbound-program-hero.png" alt="Apollo.io (Building a world-class outbound progra..." loading="lazy"></div>
+      <div class="card-img"><img src="apollo-io-building-a-world-class-outbound-program-hero.png.logo.png" alt="Apollo.io (Building a world-class outbound progra..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Apollo.io (Building a world-class outbound progra...</h3>
@@ -910,7 +1004,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🎯 HOT DEAL — Below market rate</div>
-      <div class="card-img"><img src="flowith-hero.png" alt="Flowith" loading="lazy"></div>
+      <div class="card-img"><img src="flowith-hero.png.logo.png" alt="Flowith" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Flowith</h3>
@@ -924,7 +1018,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🏆 TOP PICK — Editor's choice</div>
-      <div class="card-img"><img src="unitel-voice-professional-business-phone-lines-f-hero.png" alt="Unitel Voice" loading="lazy"></div>
+      <div class="card-img"><img src="unitel-voice-professional-business-phone-lines-f-hero.png.logo.png" alt="Unitel Voice" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Unitel Voice</h3>
@@ -938,7 +1032,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💰 SAVE BIG — Discount window open</div>
-      <div class="card-img"><img src="tagshop-ai-ai-ugc-video-ads-generator-ai-tools-hero.png" alt="Tagshop AI" loading="lazy"></div>
+      <div class="card-img"><img src="tagshop-ai-ai-ugc-video-ads-generator-ai-tools-hero.png.logo.png" alt="Tagshop AI" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Tagshop AI</h3>
@@ -952,7 +1046,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🔒 LOCKED IN — Price guaranteed today</div>
-      <div class="card-img"><img src="customers-ai-turn-anonymous-visitors-into-paying-hero.png" alt="Customers AI — Turn Anonymous Visitors Into Payin..." loading="lazy"></div>
+      <div class="card-img"><img src="customers-ai-turn-anonymous-visitors-into-paying-hero.png.logo.png" alt="Customers AI — Turn Anonymous Visitors Into Payin..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Customers AI — Turn Anonymous Visitors Into Payin...</h3>
@@ -966,7 +1060,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⭐ BEST VALUE — Lowest price we've found</div>
-      <div class="card-img"><img src="tidio-ai-chatbot-that-actually-closes-deals-ai-hero.png" alt="Tidio — AI Chatbot That Actually Closes Deals — A..." loading="lazy"></div>
+      <div class="card-img"><img src="tidio-ai-chatbot-that-actually-closes-deals-ai-hero.png.logo.png" alt="Tidio — AI Chatbot That Actually Closes Deals — A..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Tidio — AI Chatbot That Actually Closes Deals — A...</h3>
@@ -980,7 +1074,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🔥 LIMITED — Deal expires soon</div>
-      <div class="card-img"><img src="kartra-hero.png" alt="Kartra" loading="lazy"></div>
+      <div class="card-img"><img src="kartra-hero.png.logo.png" alt="Kartra" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Kartra</h3>
@@ -994,7 +1088,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⚡ EXCLUSIVE — Special pricing active</div>
-      <div class="card-img"><img src="eleven-labs-hero.png" alt="Eleven Labs" loading="lazy"></div>
+      <div class="card-img"><img src="eleven-labs-hero.png.logo.png" alt="Eleven Labs" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Eleven Labs</h3>
@@ -1008,7 +1102,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🚀 TRENDING — High demand this week</div>
-      <div class="card-img"><img src="carepatron-hero.png" alt="Carepatron" loading="lazy"></div>
+      <div class="card-img"><img src="carepatron-hero.png.logo.png" alt="Carepatron" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Carepatron</h3>
@@ -1022,7 +1116,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💎 VERIFIED — Partner deal confirmed</div>
-      <div class="card-img"><img src="blackbox-ai-hero.png" alt="BLACKBOX AI" loading="lazy"></div>
+      <div class="card-img"><img src="blackbox-ai-hero.png.logo.png" alt="BLACKBOX AI" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>BLACKBOX AI</h3>
@@ -1036,7 +1130,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⏰ ACT FAST — Slots filling up</div>
-      <div class="card-img"><img src="closely-hero.png" alt="Closely" loading="lazy"></div>
+      <div class="card-img"><img src="closely-hero.png.logo.png" alt="Closely" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Closely</h3>
@@ -1064,7 +1158,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🏆 TOP PICK — Editor's choice</div>
-      <div class="card-img"><img src="heygen-hero.png" alt="HeyGen" loading="lazy"></div>
+      <div class="card-img"><img src="heygen-hero.png.logo.png" alt="HeyGen" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>HeyGen</h3>
@@ -1078,7 +1172,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💰 SAVE BIG — Discount window open</div>
-      <div class="card-img"><img src="whatconverts-marketing-attribution-that-actually-hero.png" alt="WhatConverts — Marketing Attribution That Actuall..." loading="lazy"></div>
+      <div class="card-img"><img src="whatconverts-marketing-attribution-that-actually-hero.png.logo.png" alt="WhatConverts — Marketing Attribution That Actuall..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>WhatConverts — Marketing Attribution That Actuall...</h3>
@@ -1092,7 +1186,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🔒 LOCKED IN — Price guaranteed today</div>
-      <div class="card-img"><img src="refresh-me-hero.png" alt="Refresh.me" loading="lazy"></div>
+      <div class="card-img"><img src="refresh-me-hero.png.logo.png" alt="Refresh.me" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Refresh.me</h3>
@@ -1106,7 +1200,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⭐ BEST VALUE — Lowest price we've found</div>
-      <div class="card-img"><img src="capsule-crm-the-crm-that-actually-works-ai-too-hero.png" alt="Capsule CRM — The CRM That Actually Works — AI To..." loading="lazy"></div>
+      <div class="card-img"><img src="capsule-crm-the-crm-that-actually-works-ai-too-hero.png.logo.png" alt="Capsule CRM — The CRM That Actually Works — AI To..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Capsule CRM — The CRM That Actually Works — AI To...</h3>
@@ -1134,7 +1228,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⚡ EXCLUSIVE — Special pricing active</div>
-      <div class="card-img"><img src="answrr-hero.png" alt="Answrr" loading="lazy"></div>
+      <div class="card-img"><img src="answrr-hero.png.logo.png" alt="Answrr" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Answrr</h3>
@@ -1148,7 +1242,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🚀 TRENDING — High demand this week</div>
-      <div class="card-img"><img src="glam-ai-web-hero.png" alt="Glam AI Web" loading="lazy"></div>
+      <div class="card-img"><img src="glam-ai-web-hero.png.logo.png" alt="Glam AI Web" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Glam AI Web</h3>
@@ -1162,7 +1256,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💎 VERIFIED — Partner deal confirmed</div>
-      <div class="card-img"><img src="webydo-hero.png" alt="Webydo" loading="lazy"></div>
+      <div class="card-img"><img src="webydo-hero.png.logo.png" alt="Webydo" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Webydo</h3>
@@ -1176,7 +1270,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⏰ ACT FAST — Slots filling up</div>
-      <div class="card-img"><img src="wispr-flow-hero.png" alt="Wispr Flow — Type at the Speed of Thought — AI To..." loading="lazy"></div>
+      <div class="card-img"><img src="wispr-flow-hero.png.logo.png" alt="Wispr Flow — Type at the Speed of Thought — AI To..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Wispr Flow — Type at the Speed of Thought — AI To...</h3>
@@ -1190,7 +1284,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🎯 HOT DEAL — Below market rate</div>
-      <div class="card-img"><img src="quillbot-exclusive-deal-review-2026-hero.png" alt="QuillBot — Exclusive Deal & Review (2026)" loading="lazy"></div>
+      <div class="card-img"><img src="quillbot-exclusive-deal-review-2026-hero.png.logo.png" alt="QuillBot — Exclusive Deal & Review (2026)" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>QuillBot — Exclusive Deal & Review (2026)</h3>
@@ -1204,7 +1298,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🏆 TOP PICK — Editor's choice</div>
-      <div class="card-img"><img src="printify-hero.png" alt="Printify — Print-on-Demand for Entrepreneurs — AI..." loading="lazy"></div>
+      <div class="card-img"><img src="printify-hero.png.logo.png" alt="Printify — Print-on-Demand for Entrepreneurs — AI..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Printify — Print-on-Demand for Entrepreneurs — AI...</h3>
@@ -1218,7 +1312,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">💰 SAVE BIG — Discount window open</div>
-      <div class="card-img"><img src="plesk-exclusive-deal-review-2026-hero.png" alt="Plesk — Exclusive Deal & Review (2026)" loading="lazy"></div>
+      <div class="card-img"><img src="plesk-exclusive-deal-review-2026-hero.png.logo.png" alt="Plesk — Exclusive Deal & Review (2026)" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Plesk — Exclusive Deal & Review (2026)</h3>
@@ -1232,7 +1326,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🔒 LOCKED IN — Price guaranteed today</div>
-      <div class="card-img"><img src="partnerstack-hero.png" alt="PartnerStack — Scale Your Affiliate & Partner Rev..." loading="lazy"></div>
+      <div class="card-img"><img src="partnerstack-hero.png.logo.png" alt="PartnerStack — Scale Your Affiliate & Partner Rev..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>PartnerStack — Scale Your Affiliate & Partner Rev...</h3>
@@ -1246,7 +1340,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">⭐ BEST VALUE — Lowest price we've found</div>
-      <div class="card-img"><img src="kit-convertkit-review-2026-email-marketing-bui-hero.png" alt="Kit (ConvertKit) — Email Marketing Built for Crea..." loading="lazy"></div>
+      <div class="card-img"><img src="kit-convertkit-review-2026-email-marketing-bui-hero.png.logo.png" alt="Kit (ConvertKit) — Email Marketing Built for Crea..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Kit (ConvertKit) — Email Marketing Built for Crea...</h3>
@@ -1260,7 +1354,7 @@
     </div>
     <div class="card glitch-block">
       <div class="urgency-bar">🔥 LIMITED — Deal expires soon</div>
-      <div class="card-img"><img src="descript-ai-video-audio-editing-trending-as-creato-hero.png" alt="Descript — Edit Video Like a Doc — AI Tools Insider" loading="lazy"></div>
+      <div class="card-img"><img src="descript-ai-video-audio-editing-trending-as-creato-hero.png.logo.png" alt="Descript — Edit Video Like a Doc — AI Tools Insider" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-offer">🔥 Hot Offer</span>
         <h3>Descript — Edit Video Like a Doc — AI Tools Insider</h3>
@@ -1273,18 +1367,21 @@
       </div>
     </div>
   </div>
+
   <div class="lp-cta-banner">
     <h2>Not sure which tool to pick? Start with our <span class="cyan">top 3 featured deals</span> above.</h2>
     <p>Every offer includes a free trial or money-back guarantee. Zero risk.</p>
   </div>
+
   <hr class="divider">
+
   <div class="section-header">
     <h2><span class="icon">📝</span> Latest Expert Reviews</h2>
     <p>// brutally honest deep-dives — new reviews published every 4 hours</p>
   </div>
   <div class="bento-grid">
     <div class="card">
-      <div class="card-img"><img src="blog/2026-04-12-2121-tapstitch.png" alt="Tapstitch: The Problem-Agitator" loading="lazy"></div>
+      <div class="card-img"><img src="blog/2026-04-12-2121-tapstitch.png.logo.png" alt="Tapstitch: The Problem-Agitator" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-featured">⭐ Latest</span>
         <div class="card-date">2026-04-12</div>
@@ -1310,7 +1407,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="blog/2026-04-12-2121-webydo.png" alt="Webydo: The Mythbuster" loading="lazy"></div>
+      <div class="card-img"><img src="blog/2026-04-12-2121-webydo.png.logo.png" alt="Webydo: The Mythbuster" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-featured">⭐ Latest</span>
         <div class="card-date">2026-04-12</div>
@@ -1323,7 +1420,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="blog/2026-04-12-2025-apolloio-cold-emailing-masterclass.png" alt="Apollo.io (Cold Emailing Masterclass): The Workfl..." loading="lazy"></div>
+      <div class="card-img"><img src="blog/2026-04-12-2025-apolloio-cold-emailing-masterclass.png.logo.png" alt="Apollo.io (Cold Emailing Masterclass): The Workfl..." loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-blog">📝 Blog Post</span>
         <div class="card-date">2026-04-12</div>
@@ -1336,7 +1433,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="blog/2026-04-12-1250-refreshme.png" alt="Refresh.me: The Real ROI of This Link-in-Bio Tool" loading="lazy"></div>
+      <div class="card-img"><img src="blog/2026-04-12-1250-refreshme.png.logo.png" alt="Refresh.me: The Real ROI of This Link-in-Bio Tool" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-blog">📝 Blog Post</span>
         <div class="card-date">2026-04-12</div>
@@ -1349,7 +1446,7 @@
       </div>
     </div>
     <div class="card">
-      <div class="card-img"><img src="blog/2026-04-12-1025-wispr-flows.png" alt="Wispr Flows: The Harsh Truth About This Speech Tool" loading="lazy"></div>
+      <div class="card-img"><img src="blog/2026-04-12-1025-wispr-flows.png.logo.png" alt="Wispr Flows: The Harsh Truth About This Speech Tool" loading="lazy"></div>
       <div class="card-body">
         <span class="badge badge-blog">📝 Blog Post</span>
         <div class="card-date">2026-04-12</div>
@@ -1363,10 +1460,16 @@
     </div>
   </div>
   <div class="view-all"><a href="/blog/">View All 34 Reviews &amp; Articles →</a></div>
+
   <footer>
     <div class="footer-brand"><span class="cyan">AI Tool</span> <span class="purple">Insider</span></div>
-    <p>Updated automatically by AI agents every 4 hours · April 12, 2026</p>
-    <div class="footer-links"><a href="/">Home</a><a href="/blog/">Blog</a></div>
+    <p>Updated automatically by AI agents every 4 hours · April 13, 2026</p>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+    </div>
   </footer>
+
+  <script src="/scripts.js"></script>
 </body>
 </html>
