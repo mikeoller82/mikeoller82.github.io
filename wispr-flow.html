@@ -5,66 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wispr Flow — Type at the Speed of Thought — AI Tools Insider</title>
   <meta name="description" content="Wispr Flow review: Voice-to-text AI that turns speech into polished writing across every app. 4x faster than typing, 220 WPM, 100+ languages. 25% recurring commission.">
-  <meta name="theme-color" content="#06060c">
+  <meta name="theme-color" content="#0a0a0f">
   <meta property="og:title" content="Wispr Flow — Type at the Speed of Thought">
   <meta property="og:description" content="Voice-to-text AI that turns speech into polished writing. 4x faster than typing.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mikeoller82.github.io/wispr-flow.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
-  <style>
-    .lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
-    .lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
-    .lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
-    .lp-proof-item { text-align:center; }
-    .lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
-    .lp-proof-num.gold { color:var(--gold); }
-    .lp-proof-num.purple { color:var(--purple); }
-    .lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
-    .lp-speed-compare { display:grid; grid-template-columns:1fr 1fr; gap:0; max-width:500px; margin:32px auto; border-radius:12px; overflow:hidden; border:1px solid var(--border-card); }
-    .lp-speed-side { padding:32px 24px; text-align:center; }
-    .lp-speed-side.slow { background:var(--bg-card); }
-    .lp-speed-side.fast { background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(179,136,255,0.08)); }
-    .lp-speed-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; }
-    .lp-speed-value { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--text-primary); }
-    .lp-speed-unit { font-family:var(--font-mono); font-size:12px; color:var(--text-muted); }
-    .lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
-    .lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
-    .lp-section h2 .cyan { color:var(--cyan); }
-    .lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
-    .lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
-    .lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
-    .lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
-    .lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
-    .lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
-    .lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
-    .lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
-    .lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
-    .lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
-    .lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
-    .lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
-    .lp-faq { margin:32px 0; }
-    .lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
-    .lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
-    .lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
-    .lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
-    .lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
-    .lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
-    .lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
-    @media(max-width:768px){
-      .lp-proof-grid { gap:24px; }
-      .lp-proof-num { font-size:1.6rem; }
-      .lp-steps { grid-template-columns:1fr; }
-      .lp-feature-grid { grid-template-columns:1fr; }
-      .lp-speed-compare { grid-template-columns:1fr; }
-    }
-  </style>
-</head>
+  </head>
 <body>
 
   <div class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-line"></div>
     <div class="hero-line"></div>
     <div class="hero-badge"><span class="live-dot"></span> VOICE-TO-TEXT · EVERY APP · EVERY DEVICE</div>
     <h1>Stop typing.<br><span class="cyan">Start flowing.</span></h1>
@@ -103,7 +57,7 @@
       </div>
       <div class="lp-speed-side fast">
         <div class="lp-speed-label">🎤 Wispr Flow</div>
-        <div class="lp-speed-value" style="color:var(--cyan);">220</div>
+        <div class="lp-speed-value">220</div>
         <div class="lp-speed-unit">words per minute</div>
       </div>
     </div>
@@ -213,7 +167,9 @@
   <div class="lp-cta-box">
     <h2>Type at the speed of <span class="cyan">thought</span></h2>
     <p>Stop bottlenecking your ideas at 45 WPM. Join the professionals who've already switched to voice.</p>
+    <div class="safe-cta-wrap">
     <a href="https://ref.wisprflow.ai/scott-oller" class="btn btn-gold">Get Wispr Flow Now →</a>
+    </div>
     <div class="lp-urgency">⚡ 25% recurring · 1 year cookie · Works everywhere</div>
   </div>
 
@@ -226,5 +182,6 @@
     </div>
   </footer>
 
+  <script src="/scripts.js"></script>
 </body>
 </html>

@@ -1223,43 +1223,162 @@ footer .footer-links a:hover { color: var(--cyan); }
   margin: 32px 0;
   width: 100%;
 }
-/* Buttons inside safe-cta-wrap are NEVER full-width */
-.safe-cta-wrap .btn {
+
+
+/* ============================================================================
+   AGENT-GENERATED LANDING PAGE COMPATIBILITY LAYER
+   The pipeline agent consistently produces these class names.
+   These rules make them render correctly against the cyberpunk theme.
+   ============================================================================ */
+
+/* lp-hero — agent's hero wrapper (not the .hero hero section) */
+div.lp-hero {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 28px 40px;
+  text-align: center;
+}
+div.lp-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+div.lp-hero .hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+div.lp-hero .hero-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto 24px;
+  line-height: 1.75;
+}
+/* Hero image inside lp-hero — center it */
+div.lp-hero img,
+div.lp-hero .hero-image {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  margin: 28px auto;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--cyan-border);
+  box-shadow: 0 0 40px rgba(0,255,213,0.1), var(--shadow-hover);
+}
+/* CTA button inside lp-hero — never full width */
+div.lp-hero .btn,
+div.lp-hero a.btn {
   width: auto !important;
   display: inline-flex !important;
   padding: 16px 40px;
   font-size: 13px;
   border-radius: var(--radius-md);
+  margin: 8px auto 0;
 }
 
-/* ── Landing page button width overrides ──────────────────────────
-   .btn defaults to width:100% for card contexts.
-   Every LP section context must override to auto-width.            */
-.lp-text .btn,
-.lp-text a.btn,
-.lp-faq .btn,
-.lp-faq a.btn,
-.faq-item p .btn,
-.faq-item p a.btn {
+/* section.features, section.social-proof, section.how-it-works,
+   section.pricing-cta, section.objections, section.final-cta
+   — agent wraps content sections in <section> with these class names */
+section.features,
+section.social-proof,
+section.how-it-works,
+section.pricing-cta,
+section.objections,
+section.final-cta {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0 48px;
+}
+section.features .section-header,
+section.social-proof .section-header,
+section.how-it-works .section-header,
+section.pricing-cta .section-header,
+section.objections .section-header,
+section.final-cta .section-header {
+  max-width: 1280px;
+  margin: 48px auto 28px;
+  padding: 0 28px;
+}
+
+/* Standalone p and btn inside section.pricing-cta and section.final-cta */
+section.pricing-cta > p,
+section.final-cta > p {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  line-height: 1.75;
+  padding: 0 28px;
+}
+section.pricing-cta > p.hero-description,
+section.final-cta > p.hero-description {
+  color: var(--text-secondary);
+}
+
+/* CTA buttons directly inside section wrappers — NEVER full-width */
+section.pricing-cta > a.btn,
+section.final-cta > a.btn,
+section.features > a.btn,
+section.social-proof > a.btn,
+section.how-it-works > a.btn,
+section.objections > a.btn {
   width: auto !important;
-  display: block;
-  margin: 20px auto;
+  display: block !important;
+  margin: 0 auto 16px !important;
   max-width: fit-content;
-  padding: 14px 36px;
-  font-size: 12px;
+  padding: 16px 40px;
+  font-size: 13px;
   border-radius: var(--radius-md);
 }
 
-/* ── lp-hero-img centering hardener ───────────────────────────────
-   Prevents left-drift when agent omits margin:auto on the wrapper  */
-.lp-hero-img {
-  display: block;
+/* Disclosure paragraph */
+section.final-cta > p.disclosure,
+div.lp-hero p.disclosure,
+p.disclosure {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.3px;
+  margin-top: 16px;
+  padding: 0 28px;
+}
+
+/* hero-subtitle and hero-description used outside .hero context */
+p.hero-subtitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+p.hero-description {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+/* ── Global button width safety net ───────────────────────────────
+   Any .btn that is a direct child of a section, div.lp-hero,
+   or appears after a paragraph in body context — never full-width */
+section > a.btn,
+section > div > a.btn,
+div.lp-hero > a.btn {
+  width: auto !important;
+  display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
-  text-align: center;
-}
-.lp-hero-img img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: fit-content;
 }
