@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardAnimations();
   initCountUp();
   initSmoothTransitions();
+  initToolTicker();
 });
 
 // ----------------------------------------------------------------------------
@@ -257,4 +258,40 @@ function initSmoothTransitions() {
     if (e.key === '/' && s && document.activeElement !== s) { e.preventDefault(); s.focus(); }
     if (e.key === 'Escape' && s && document.activeElement === s) { s.blur(); s.value = ''; filterCards(''); }
   });
+}
+
+// ----------------------------------------------------------------------------
+// INFINITE SCROLLING TOOL TICKER
+// ----------------------------------------------------------------------------
+function initToolTicker() {
+  const tickerContainer = document.getElementById('tool-ticker');
+  if (!tickerContainer) return;
+  
+  const tickerTrack = tickerContainer.querySelector('.ticker-track');
+  if (!tickerTrack) return;
+  
+  // Clone items for infinite scroll effect
+  const originalItems = tickerTrack.innerHTML;
+  tickerTrack.innerHTML = originalItems + originalItems;
+  
+  let position = 0;
+  const speed = 0.7;
+  
+  function animateTicker() {
+    position += speed;
+    
+    // Reset position when half the track has scrolled
+    if (position >= tickerTrack.scrollWidth / 2) {
+      position = 0;
+    }
+    
+    tickerTrack.style.transform = `translateX(-${position}px)`;
+    requestAnimationFrame(animateTicker);
+  }
+  
+  // Pause on hover
+  tickerContainer.addEventListener('mouseenter', () => speed = 0);
+  tickerContainer.addEventListener('mouseleave', () => speed = 0.7);
+  
+  animateTicker();
 }
