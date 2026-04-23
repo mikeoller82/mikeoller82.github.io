@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostSyncer — AI Social Media Scheduling Platform — Affiliate Insider</title>
+  <meta name="description" content="PostSyncer review: AI-native social media scheduling with 40% lifetime recurring commission. Auto-captions, multi-platform posting, deep analytics. MCP integration built-in.">
+  <meta name="theme-color" content="#06060c">
+  <meta property="og:title" content="PostSyncer — AI Social Media Scheduling Platform">
+  <meta property="og:description" content="All-in-one AI social posting platform with 40% lifetime recurring commission. Auto-generates captions, optimizes timing, posts to 10+ platforms.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mikeoller82.github.io/postsyncer.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .lp-proof { text-align:center; padding:48px 28px; background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle); }
+    .lp-proof-label { font-family:var(--font-mono); font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); margin-bottom:20px; }
+    .lp-proof-grid { display:flex; justify-content:center; gap:48px; flex-wrap:wrap; max-width:800px; margin:0 auto; }
+    .lp-proof-item { text-align:center; }
+    .lp-proof-num { font-family:var(--font-display); font-weight:800; font-size:2.2rem; color:var(--cyan); letter-spacing:-1px; }
+    .lp-proof-num.gold { color:var(--gold); }
+    .lp-proof-num.purple { color:var(--purple); }
+    .lp-proof-desc { font-family:var(--font-mono); font-size:11px; color:var(--text-muted); margin-top:4px; text-transform:uppercase; letter-spacing:1px; }
+    .lp-section { max-width:800px; margin:0 auto; padding:64px 28px; }
+    .lp-section h2 { font-family:var(--font-display); font-weight:700; font-size:1.6rem; color:var(--text-primary); margin-bottom:16px; letter-spacing:-0.5px; }
+    .lp-section h2 .cyan { color:var(--cyan); }
+    .lp-section p { color:var(--text-secondary); line-height:1.8; font-size:15px; margin-bottom:20px; }
+    .lp-feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; margin:32px 0; }
+    .lp-feature { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:24px; transition:var(--transition-smooth); }
+    .lp-feature:hover { border-color:var(--border-hover); transform:translateY(-2px); }
+    .lp-feature-icon { font-size:1.6rem; margin-bottom:12px; }
+    .lp-feature h4 { font-family:var(--font-display); font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:8px; }
+    .lp-feature p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+    .lp-model-grid { display:flex; flex-wrap:wrap; gap:12px; margin:24px 0; justify-content:center; }
+    .lp-model-badge { background:var(--bg-elevated); border:1px solid var(--border-card); border-radius:8px; padding:12px 20px; text-align:center; }
+    .lp-model-badge .name { font-family:var(--font-display); font-weight:700; font-size:0.95rem; color:var(--cyan); }
+    .lp-model-badge .desc { font-family:var(--font-mono); font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-top:4px; }
+    .lp-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin:32px 0; }
+    .lp-step { text-align:center; padding:24px 16px; background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; position:relative; }
+    .lp-step-num { font-family:var(--font-display); font-weight:800; font-size:2.5rem; color:var(--cyan); opacity:0.15; position:absolute; top:8px; right:16px; }
+    .lp-step h4 { font-family:var(--font-display); font-weight:600; color:var(--text-primary); margin-bottom:8px; font-size:1rem; }
+    .lp-step p { color:var(--text-secondary); font-size:14px; line-height:1.6; margin:0; }
+    .lp-faq { margin:32px 0; }
+    .lp-faq-item { background:var(--bg-card); border:1px solid var(--border-card); border-radius:12px; padding:20px 24px; margin-bottom:12px; }
+    .lp-faq-q { font-family:var(--font-display); font-weight:600; color:var(--text-primary); font-size:0.95rem; margin-bottom:8px; }
+    .lp-faq-a { color:var(--text-secondary); font-size:14px; line-height:1.7; margin:0; }
+    .lp-cta-box { text-align:center; padding:64px 28px; background:linear-gradient(135deg,rgba(0,229,255,0.05),rgba(179,136,255,0.05)); border-top:1px solid var(--border-subtle); }
+    .lp-cta-box h2 { font-family:var(--font-display); font-weight:800; font-size:2rem; color:var(--text-primary); margin-bottom:12px; }
+    .lp-cta-box p { color:var(--text-secondary); font-size:16px; max-width:500px; margin:0 auto 28px; }
+    .lp-urgency { font-family:var(--font-mono); font-size:12px; color:var(--gold); letter-spacing:1px; text-transform:uppercase; margin-top:12px; }
+    @media(max-width:768px){ .lp-proof-grid { gap:24px; } .lp-proof-num { font-size:1.6rem; } .lp-steps { grid-template-columns:1fr; } .lp-feature-grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-line"></div>
+    <div class="hero-badge"><span class="live-dot"></span> #1 SOCIAL MEDIA SCHEDULER ON PH · 40% LIFETIME COMMISSION</div>
+    <h1><span class="cyan">AI-Native</span> Social Posting</h1>
+    <p>PostSyncer auto-generates captions, optimizes timing, and schedules content across 10+ platforms with MCP integration. Zero manual work, 40% recurring payouts.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-value">10+</span>
+        <span class="hero-stat-label">Platforms</span>
+      </div>
+      <div class="hero-stat-dot"></div>
+      <div class="hero-stat purple-val">
+        <span class="hero-stat-value">40%</span>
+        <span class="hero-stat-label">Commission</span>
+      </div>
+      <div class="hero-stat-dot"></div>
+      <div class="hero-stat gold-val">
+        <span class="hero-stat-value">3×</span>
+        <span class="hero-stat-label">vs Buffer</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="pill-nav">
+    <a href="/" class="active">🏠 Home</a>
+    <a href="/blog/">📝 Blog</a>
+  </nav>
+
+  <!-- CTA 1 -->
+  <div class="lp-cta-box" style="padding:32px 28px;">
+    <a href="https://postsyncer.com/?via=scott" class="btn btn-gold" style="font-size:1.1rem; padding:14px 32px;">Start Free Trial — 40% Recurring Commission →</a>
+  </div>
+
+  <!-- PROOF -->
+  <div class="lp-proof">
+    <div class="lp-proof-label">Trusted by creators & agencies</div>
+    <div class="lp-proof-grid">
+      <div class="lp-proof-item">
+        <div class="lp-proof-num gold">10x</div>
+        <div class="lp-proof-desc">Higher Commission</div>
+      </div>
+      <div class="lp-proof-item">
+        <div class="lp-proof-num purple">10+</div>
+        <div class="lp-proof-desc">Platforms Supported</div>
+      </div>
+      <div class="lp-proof-item">
+        <div class="lp-proof-num">AI-First</div>
+        <div class="lp-proof-desc">Native Automation</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="lp-section">
+    <h2><span class="cyan">AI-Native</span> Social Management</h2>
+    <p>PostSyncer generates captions, analyzes engagement, and auto-posts to TikTok, Instagram, LinkedIn, Twitter, Threads — all with MCP integration for Claude workflows.</p>
+    <div class="lp-feature-grid">
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🤖</div>
+        <h4>AI Caption Generation</h4>
+        <p>Auto-generates platform-optimized captions with emoji, hashtags, and CTAs in your brand voice.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">📊</div>
+        <h4>Smart Scheduling</h4>
+        <p>AI analyzes your audience's activity to automatically select optimal posting times.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">🔗</div>
+        <h4>Multi-Platform</h4>
+        <p>Instagram, TikTok, Twitter, LinkedIn, Facebook, Pinterest, Threads, Mastodon — all managed centrally.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">💰</div>
+        <h4>40% Lifetime Recurring</h4>
+        <p>Highest PartnerStack rate in the stack. Earn 40% on every referral for life.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">📈</div>
+        <h4>Deep Analytics</h4>
+        <p>Track engagement, reach, conversions. Benchmark against Buffer/Hootsuite performance.</p>
+      </div>
+      <div class="lp-feature">
+        <div class="lp-feature-icon">⚡</div>
+        <h4>MCP Integration</h4>
+        <p>Connect Claude directly to your social channels via Model Context Protocol for seamless workflow automation.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPARISON -->
+  <div class="lp-section" style="padding:32px 28px;">
+    <h2 style="text-align:center;">PostSyncer vs Buffer vs Hootsuite</h2>
+    <div class="lp-steps" style="margin-top:24px;">
+      <div class="lp-step">
+        <span class="lp-step-num">1</span>
+        <h4>Commission Rate</h4>
+        <p><strong style="color:var(--cyan);">40%</strong> lifetime recurring<br>vs ~20% for Buffer<br>vs ~10% for Hootsuite</p>
+      </div>
+      <div class="lp-step">
+        <span class="lp-step-num">2</span>
+        <h4>AI Capabilities</h4>
+        <p><strong style="color:var(--cyan);">AI Caption Generation</strong><br>vs Limited for Buffer<br>vs None for Hootsuite</p>
+      </div>
+      <div class="lp-step">
+        <span class="lp-step-num">3</span>
+        <h4>Platform Support</h4>
+        <p><strong style="color:var(--gold);">TikTok/Threads/Patreon</strong><br>vs Partial for Buffer<br>vs Partial for Hootsuite</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA 2 -->
+  <div class="lp-cta-box">
+    <h2>Start Earning 40% Lifetime Commissions</h2>
+    <p>Join PostSyncer's partner program and get paid for everyone who signs up using your link. Industry-leading recurring rates.</p>
+    <div class="lp-urgency">↑ 40% Commission — Best in the Stack ↑</div>
+    <a href="https://postsyncer.com/?via=scott" class="btn btn-gold" style="font-size:1.1rem; padding:14px 48px;">Get PostSyncer Partner Access →</a>
+  </div>
+
+  <!-- FAQ -->
+  <div class="lp-section">
+    <h2><span class="cyan">Affiliate</span> Questions</h2>
+    <div class="lp-faq">
+      <div class="lp-faq-q">How are commissions paid?</div>
+      <div class="lp-faq-a">Commissions are paid monthly via PartnerStack. Minimum payout is $50.</div>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq-q">Is this recurring?</div>
+      <div class="lp-faq-a">Yes — 40% recurring for the lifetime of each referral. Stacking commissions across multiple referrals.</div>
+    </div>
+    <div class="lp-faq">
+      <div class="lp-faq-q">Cookie duration?</div>
+      <div class="lp-faq-a">60-day cookie window. Last click attribution.</div>
+    </div>
+  </div>
+
+  <div class="lp-cta-box">
+    <p>Ready to scale your social posting and earn 40% lifetime commissions?</p>
+    <a href="https://postsyncer.com/?via=scott" class="btn btn-gold">Start Free Trial with 40% Partner Program →</a>
+  </div>
+
+  <footer>
+    <div style="max-width:800px;margin:0 auto;padding:32px 28px;text-align:center;">
+      <p style="color:var(--text-muted);font-size:13px;">Disclosure: This page contains affiliate links. I may earn a commission at no extra cost to you.</p>
+      <p style="color:var(--text-muted);font-size:12px;margin-top:8px;">© 2026 Affiliate Insider. Built for the OpenClaw Empire.</p>
+    </div>
+  </footer>
+</body>
+</html>
